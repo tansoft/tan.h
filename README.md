@@ -5,19 +5,31 @@
 
 * 增加目录到系统include目录中
 * 解压lib下的库文件，增加lib目录到系统lib目录中
-* 打开 prj/Tan.h.prj, 进行需要版本的编译（Debug，Release等）
+* 打开 prj/tan.sln, 进行需要版本的编译，尤其是Arith是各种算法库的预编译（Debug，Release等）
 
 # 文档
 建议使用doc目录下的doxgen，进行生成使用
 
 # 常用用法
+
+## 界面
 * 动画组件可以使用：THSkinButton，THSkinStatic，THSkinButtonStatic。
+* 对话框可以使用：THBaseDialog，THBasePassDialog，THBaseUserPassDialog，THBaseInputDialog，THBaseWaitingDialog，THBaseMulSelectDialog，THBaseTreeDialog。
 * 数据库数据显示可以使用：THDBQueryCtrls 里的 THDBQueryXXX 系列组件。
-* Flash控件交互对话框可以使用：THFlashDlg。
+* Flash相关：THFlashDlg：控件交互对话框；THAmfParser：Flash命令解释。
+
+## 算法
+* THArith：各种算法封装（THMd5，THBase64，THGzip，THCrc，。。。）
+* THBitParser：位处理
+* THAes：Aes
+* THNettleLib：nettlelib的算法。
+
+## 硬件
 * 硬件相关操作，包括读卡器，显示屏，打印机等使用Hardware里的类。
 
 # 实用例子
 * HttpServer: 提供强大的HttpServer例子
+* prj/tan.sln: 提供几个项目的例子
 * MiscTools: 各种杂项操作演示
 * LiveUpdateDll: 通用在线更新例子
 * PopupDlgDll: 通用弹窗例子
@@ -28,6 +40,7 @@
 * RemoteHookDll: 远程钩子例子
 * SimpleShare: 局域网共享例子
 * THScriptDebugger: THScript调试器
+* sniffercap: 进行网络抓包分析例子
 
 # 目录结构
 * BaseCtrls: 一些界面组件
@@ -38,7 +51,7 @@
 * ResizableLib: Resizable控件封装
 * SkinPlusPlus: Skin++控件封装
 * SqliteDll: Sqlite封装
-* aeslib,gzlib,md5lib,nettlelib,opencvlib,openssl,vldlib,zlib: 常用算法实现的封装，统一编译到THArch
+* aeslib,gzlib,md5lib,nettlelib,opencvlib,openssl,zlib: 常用算法实现的封装，统一编译到THArch
 * doc: doxgen相关配置，可生成说明文档
 * flash: flash相关配置，提供flash控件的皮肤类skinloader，以及所见即所得编辑器wysiwygeditor
 * lib: 提供预编译好的环境。
