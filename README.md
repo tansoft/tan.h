@@ -39,6 +39,7 @@
 ## 文字处理、内存处理
 * 编码处理：THCharset
 * 字符串：THString
+* 常用数据结构：THStruct
 * 调试：THDebug
 * Guid：THGuid
 * Json处理：THJsonParser
@@ -52,25 +53,34 @@
 * 常规文件：THFile
 * 文件块：THBlockFile，内存文件缓存：THMemCache
 * 文件设备封装：THFileStore，可把资源文件，镜像文件，ftp文件等进行文件系统映射
+* 自动关闭文件：THTimeoutFile
 * 文件变更监听：THFileWatcher
 * 可执行文件版本信息：THFileVersionInfo
+* 可执行文件图标管理：THSystemIconList
 * Icon文件处理：THIconParser
 * Ini文件处理：THIni
 * 快捷方式文件处理：THLinkFile
 * Flv文件处理：THFlvParser
 * Mp4文件处理：THMp4Parser
-* 内存映射：THMapFile 
+* Swf文件处理：THSwfParser
+* 内存映射：THMapFile
 
 ## 进程处理
 * 进程管理：THCmdProcess
-* 系统调用：THSystem
+* 线程管理：THThread
+* 系统类库：THSystem，THSysMisc，THSysCallRapper
+* 锁：THSyn
 * 类库加载：THDllLoader
 * 崩溃信息：THExceptionHandler
 * IE管理：THIeHandler，THRemoteIeAccess，THIeHtmlElementParser
 * 插件管理：THPlugin
 * 注册表管理：THReg
 * 单一进程：THSingleProcess
+* WinApp基类：THWinApp
 * Skin++基类：THSkinWinApp
+* 系统栏图标：THTrayIcon
+* 系统时间：THTime
+* Vista DWM：THVistaDwm
 
 ## 网络处理
 * 网络处理：THNetWork
@@ -92,6 +102,9 @@
 * inet库封装：THINetXXX
 * smtp：THSmtpClient
 * socket代理：THSocketProxyServer
+* 对时协议：THTimeClient
+* Telnet：THTelnetServer
+* Whois：THWhoisClient
 
 ## 数据库管理
 * 数据库：THDataBase
@@ -108,6 +121,7 @@
 * 硬盘：THPhysicalHardDiskAccess
 * CPU：THPhysicalCpuAccess
 * 串口：THSerialPort
+* 系统信息：THSysInfo
 
 # 实用例子
 * HttpServer: 提供强大的HttpServer例子
