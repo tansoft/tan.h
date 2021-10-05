@@ -18,6 +18,7 @@
 * 对话框组件：THDlgItemXXX
 * 数据库数据显示可以使用：THDBQueryCtrls 里的 THDBQueryXXX 系列组件。
 * 图片处理：THBitmap
+* 自动更新：THLiveUpdate，THLiveUpdateDll
 
 ## Flash相关
 * THFlashDlg：控件交互对话框；
@@ -30,22 +31,37 @@
 * THBitParser：位处理
 * THAes：Aes
 * THNettleLib：nettlelib的算法。
+* THMeasure：度量单位转换。
 
 ## 文字处理
 * 编码处理：THCharset
 * 调试：THDebug
+* Guid：THGuid
+* Json处理：THJsonParser
+* 四则运算：THLogicCalc
+* 内存缓冲管理类：THMemBuf
 
 ## 文件处理
 * 常规文件：THFile
 * 文件块：THBlockFile
-* 文件设备封装：THFileStore，可把资源文件，ftp文件等进行文件系统映射
+* 文件设备封装：THFileStore，可把资源文件，镜像文件，ftp文件等进行文件系统映射
 * 文件变更监听：THFileWatcher
 * 可执行文件版本信息：THFileVersionInfo
+* Icon文件处理：THIconParser
+* Ini文件处理：THIni
+* 快捷方式文件处理：THLinkFile
+* 内存映射：THMapFile 
 
 ## 进程处理
 * 进程管理：THCmdProcess
 * 类库加载：THDllLoader
 * 崩溃信息：THExceptionHandler
+* IE管理：THIeHandler，THRemoteIeAccess，THIeHtmlElementParser
+
+## 协议实现
+* THHttpProxyServer：http代理
+* THHttpServer：http服务器实现
+* THINetXXX：inet库封装
 
 ## 数据库管理
 * 数据库：THDataBase
