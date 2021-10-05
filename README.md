@@ -16,62 +16,98 @@
 * 动画组件可以使用：THSkinButton，THSkinStatic，THSkinButtonStatic。
 * 对话框可以使用：THBaseDialog，THBasePassDialog，THBaseUserPassDialog，THBaseInputDialog，THBaseWaitingDialog，THBaseMulSelectDialog，THBaseTreeDialog。
 * 对话框组件：THDlgItemXXX
+* 对话框位置控制：THResizeDialogRect
+* 自适应对话框：THResizeDlg
 * 数据库数据显示可以使用：THDBQueryCtrls 里的 THDBQueryXXX 系列组件。
-* 图片处理：THBitmap
+* 图片处理：THBitmap，THMemDC
 * 自动更新：THLiveUpdate，THLiveUpdateDll
 
 ## Flash相关
 * THFlashDlg：控件交互对话框；
 * THAmfParser：Flash命令解释。
 * THFlashBase：Flash处理基类。
-* THFlvParser：Flv文件处理。
 
 ## 算法
 * THArith：各种算法封装（THMd5，THBase64，THGzip，THCrc，。。。）
 * THBitParser：位处理
 * THAes：Aes
+* THSha：Sha
 * THNettleLib：nettlelib的算法。
 * THMeasure：度量单位转换。
+* THSpeedCounting：计数器
 
-## 文字处理
+## 文字处理、内存处理
 * 编码处理：THCharset
+* 字符串：THString
 * 调试：THDebug
 * Guid：THGuid
 * Json处理：THJsonParser
 * 四则运算：THLogicCalc
-* 内存缓冲管理类：THMemBuf
+* 内存缓冲管理类：THMemBuf，内存管理：THMenManager，内存检查：THMemCheck，对象池管理：THObjectBuffer
+* 正则表达式：THRegExpDll
+* 脚本引擎：THScript
+* stl库扩展：THStlEx
 
 ## 文件处理
 * 常规文件：THFile
-* 文件块：THBlockFile
+* 文件块：THBlockFile，内存文件缓存：THMemCache
 * 文件设备封装：THFileStore，可把资源文件，镜像文件，ftp文件等进行文件系统映射
 * 文件变更监听：THFileWatcher
 * 可执行文件版本信息：THFileVersionInfo
 * Icon文件处理：THIconParser
 * Ini文件处理：THIni
 * 快捷方式文件处理：THLinkFile
+* Flv文件处理：THFlvParser
+* Mp4文件处理：THMp4Parser
 * 内存映射：THMapFile 
 
 ## 进程处理
 * 进程管理：THCmdProcess
+* 系统调用：THSystem
 * 类库加载：THDllLoader
 * 崩溃信息：THExceptionHandler
 * IE管理：THIeHandler，THRemoteIeAccess，THIeHtmlElementParser
+* 插件管理：THPlugin
+* 注册表管理：THReg
+* 单一进程：THSingleProcess
+* Skin++基类：THSkinWinApp
+
+## 网络处理
+* 网络处理：THNetWork
+* Socket封装：THRawSocket
+* 广播：THRawBoardcastSocket
+* 客户端连接管理：THRawSocketClients
+* 封包管理：THSimplePacket
+* 授权管理：THSoftwareAuth
+* ssl：THSsl
+* url处理：THUrlExplain
+* http头处理：THHttpHeaderParser，THHttpHeaderResponseMaker，THHttpHeaderRequestMaker
+* cookie处理：THHttpHeaderCookieParser
 
 ## 协议实现
-* THHttpProxyServer：http代理
-* THHttpServer：http服务器实现
-* THINetXXX：inet库封装
+* http代理：THHttpProxyServer
+* http服务器：THHttpServer
+* 简单文件共享：THSimpleShare
+* rtmp协议处理：THRtmpParser
+* inet库封装：THINetXXX
+* smtp：THSmtpClient
+* socket代理：THSocketProxyServer
 
 ## 数据库管理
 * 数据库：THDataBase
 * 查询：THDBQuery
 * ODBC：THDBOdbc
 * 数据显示可以使用：THDBQueryXXX 系列组件
-
+* Sqlite：THSqliteDll
 
 ## 硬件
 * 硬件相关操作，包括读卡器，显示屏，打印机等使用Hardware里的类。
+* Modem处理：THModem
+* 摄像头：THOpencvCamera，opencv常用操作：THOpencvXXX
+* Bios：THPhysicalBiosAccess
+* 硬盘：THPhysicalHardDiskAccess
+* CPU：THPhysicalCpuAccess
+* 串口：THSerialPort
 
 # 实用例子
 * HttpServer: 提供强大的HttpServer例子
