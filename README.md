@@ -4,7 +4,7 @@
 # 使用方法
 
 * 增加目录到系统include目录中
-* 打开 prj/Tan.h.prj, 进行几个版本的编译
+* 打开 prj/Tan.h.prj, 进行需要版本的编译（Debug，Release等）
 
 # 文档
 建议使用doc目录下的doxgen，进行生成使用
@@ -13,14 +13,28 @@
 * 动画组件可以使用：THSkinButton，THSkinStatic，THSkinButtonStatic。
 * 数据库数据显示可以使用：THDBQueryCtrls 里的 THDBQueryXXX 系列组件。
 * Flash控件交互对话框可以使用：THFlashDlg。
+* 硬件相关操作，包括读卡器，显示屏，打印机等使用Hardware里的类。
+
+# 实用例子
+* HttpServer: 提供强大的HttpServer例子
+* MiscTools: 各种杂项操作演示
+* LiveUpdateDll: 通用在线更新例子
+* PopupDlgDll: 通用弹窗例子
+* DBBrowser: 一个SqlServer查询的例子
+* DataMaker: 二进制打印数据的例子
+* ProxyDll: 进程插入例子
+* RegExpDll: 正则表达式例子
+* RemoteHookDll: 远程钩子例子
+* SimpleShare: 局域网共享例子
 
 # 目录结构
 * BaseCtrls: 一些界面组件
 * Dialogs: 一些对话框组件
-* DBBrowser: 一个SqlServer查询的例子
-* DataMaker: 二进制打印数据的例子
 * FlashReport: FusionCharts报表
-* HardWare: 硬件操作类
+* HardWare: 硬件操作类，包括读卡器，显示屏，打印机等
+* MsgHookDll: 鼠标，键盘钩子处理
+* ResizableLib: Resizable控件封装
+* SkinPlusPlus: Skin++控件封装
 
 # 常用类
 
