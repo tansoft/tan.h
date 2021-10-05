@@ -4,6 +4,7 @@
 # 使用方法
 
 * 增加目录到系统include目录中
+* 解压lib下的库文件，增加lib目录到系统lib目录中
 * 打开 prj/Tan.h.prj, 进行需要版本的编译（Debug，Release等）
 
 # 文档
@@ -26,6 +27,7 @@
 * RegExpDll: 正则表达式例子
 * RemoteHookDll: 远程钩子例子
 * SimpleShare: 局域网共享例子
+* THScriptDebugger: THScript调试器
 
 # 目录结构
 * BaseCtrls: 一些界面组件
@@ -35,6 +37,11 @@
 * MsgHookDll: 鼠标，键盘钩子处理
 * ResizableLib: Resizable控件封装
 * SkinPlusPlus: Skin++控件封装
+* SqliteDll: Sqlite封装
+* aeslib,gzlib,md5lib,nettlelib,opencvlib,openssl,vldlib,zlib: 常用算法实现的封装，统一编译到THArch
+* doc: doxgen相关配置，可生成说明文档
+* flash: flash相关配置，提供flash控件的皮肤类skinloader，以及所见即所得编辑器wysiwygeditor
+* lib: 提供预编译好的环境。
 
 # 常用类
 
