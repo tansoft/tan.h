@@ -1,4 +1,4 @@
-# tan.h
+# Tan.H
 多年整理的，非常实用的Windows工具类库
 
 # 使用方法
@@ -9,7 +9,18 @@
 # 文档
 建议使用doc目录下的doxgen，进行生成使用
 
+# 常用用法
+* 动画组件可以使用：THSkinButton，THSkinStatic，THSkinButtonStatic。
+* 数据库数据显示可以使用：THDBQueryCtrls 里的 THDBQueryXXX 系列组件。
+* Flash控件交互对话框可以使用：THFlashDlg。
+
 # 目录结构
+* BaseCtrls: 一些界面组件
+* Dialogs: 一些对话框组件
+* DBBrowser: 一个SqlServer查询的例子
+* DataMaker: 二进制打印数据的例子
+* FlashReport: FusionCharts报表
+* HardWare: 硬件操作类
 
 # 常用类
 
