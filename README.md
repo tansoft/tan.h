@@ -15,14 +15,44 @@
 ## 界面
 * 动画组件可以使用：THSkinButton，THSkinStatic，THSkinButtonStatic。
 * 对话框可以使用：THBaseDialog，THBasePassDialog，THBaseUserPassDialog，THBaseInputDialog，THBaseWaitingDialog，THBaseMulSelectDialog，THBaseTreeDialog。
+* 对话框组件：THDlgItemXXX
 * 数据库数据显示可以使用：THDBQueryCtrls 里的 THDBQueryXXX 系列组件。
-* Flash相关：THFlashDlg：控件交互对话框；THAmfParser：Flash命令解释。
+* 图片处理：THBitmap
+
+## Flash相关
+* THFlashDlg：控件交互对话框；
+* THAmfParser：Flash命令解释。
+* THFlashBase：Flash处理基类。
+* THFlvParser：Flv文件处理。
 
 ## 算法
 * THArith：各种算法封装（THMd5，THBase64，THGzip，THCrc，。。。）
 * THBitParser：位处理
 * THAes：Aes
 * THNettleLib：nettlelib的算法。
+
+## 文字处理
+* 编码处理：THCharset
+* 调试：THDebug
+
+## 文件处理
+* 常规文件：THFile
+* 文件块：THBlockFile
+* 文件设备封装：THFileStore，可把资源文件，ftp文件等进行文件系统映射
+* 文件变更监听：THFileWatcher
+* 可执行文件版本信息：THFileVersionInfo
+
+## 进程处理
+* 进程管理：THCmdProcess
+* 类库加载：THDllLoader
+* 崩溃信息：THExceptionHandler
+
+## 数据库管理
+* 数据库：THDataBase
+* 查询：THDBQuery
+* ODBC：THDBOdbc
+* 数据显示可以使用：THDBQueryXXX 系列组件
+
 
 ## 硬件
 * 硬件相关操作，包括读卡器，显示屏，打印机等使用Hardware里的类。
