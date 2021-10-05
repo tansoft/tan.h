@@ -1,0 +1,824 @@
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    <meta http-equiv="content-type" content="text/html;charset=gbk"/>
+    <meta http-equiv="content-style-type" content="text/css"/>
+    <meta http-equiv="content-script-type" content="text/javascript"/>
+    <meta name="version" content="neblog-1.0"/>
+    <script type="text/javascript">
+      
+      
+      document.uniqueID!=document.uniqueID&&!!location.hash&&(location.hash=location.hash); 
+      document.domain = location.hostname.replace(/^.*\.([\w]+\.[\w]+)$/,'$1');
+      window.focus();
+      window.getMusicTimeStamp=function(){return '168e49560131241db5a3f8f38d552801';};
+    </script>
+<title>Linux+Apache安装生成配置SSL证书 - zhuzhu的日志 - 网易博客</title>
+<meta name="author" content="zhumeng8337797,zhuzhu"/>
+<meta name="keywords" content="Linux+Apache安装生成配置SSL证书,日志,zhuzhu,津津计较,网易博客,网易,blog"/>
+<meta name="description" content="Linux+Apache安装生成配置SSL证书,zhuzhu的网易博客,遗传记忆,"/>
+  <script type="text/javascript">
+    (function(){
+     var R=24,C=11,a=[];
+     for(var i=0;i<C;i++)for(var j=0;j<R;a.push('.icn0-'+i+j+'{background-position:'+(i>0?('-'+i*40+'px'):'0')+' '+(j>0?('-'+j*20+'px'):'0')+';}'),j++);
+          document.write('<style type="text/css">'+a.join('')+'</st'+'yle>');
+    })();
+  </script>
+    <link type="text/css" rel="stylesheet" href="http://b2.bst.126.net/newpage/r/c/c.css?v=1413704962"/>
+    <link type="text/css" rel="stylesheet" href="http://b.bst.126.net/newpage/style/nblog/4196/nb.css" id="blog-163-com-theme"/>
+  <!--[if lte IE 6]>
+  <style type="text/css">
+    html,body,#blog-163-com-ie6body{height:100%;width:100%;overflow:hidden;}
+    #blog-163-com-ie6body{overflow:auto;overflow-y:scroll;}
+    #blog-163-com{background:none;}
+  </style>
+  <![endif]-->
+  
+  <style type="text/css">.m-3 .nbw-ryt .left .mcnt{padding-left:10px;}.m-3 .nbw-ryt .right .acts{position:relative;margin:0 0 35px 0;line-height:20px;}.m-3 .nbw-ryt .right .more{margin-top:-15px;height:24px;line-height:24px;}#blog-163-com .m-3 .phide{display:none;}.m-3 .nbw-ryt .left .nbw-bitm{margin:0;padding:0 0 0 10px;}.m-3 .nbw-ryt .left .nbw-bitm .title{margin:30px 0 20px 0;}.m-3 .nbw-ryt .left .nbw-bitm .title .tcnt{font-size:20px;font-family:'微软雅黑','黑体',Arial,Helvetica,Sans-Serif;}.m-3 .nbw-ryt .left .nbw-bitm .tdep{margin-bottom:20px;}.m-3 .nbw-ryt .left .nbw-bitm .tbar{margin:5px 0;padding:10px 10px 10px 0;line-height:20px;text-align:right;}.m-3 .nbw-ryt .left .nbw-bitm .bct{font-size:14px;padding-left:0}.m-3 .nbw-ryt .left .snl .pnb div{line-height:20px;text-align:left;}.m-3 .nbw-ryt .cite{margin:0 0 0 50px;line-height:24px;text-align:left;}.m-3 .nbw-ryt .cite .close{margin:20px 0;text-align:right;}.m-3 .nbw-ryt .cite span{cursor:pointer;}.m-3 .nbw-ryt .cite .nbw-act{text-align:center;}.m-3 .nbw-ryt .cite .ads{margin-left:20px;width:400px;}.m-3 .nbw-ryt .cite .tbac{margin-left:60px;padding:0;border:0;list-style:none;line-height:24px;}.m-3 .nbw-ryt .cite .tbl{width:150px;overflow:hidden;}.m-3 .nbw-ryt .cite .tbr{margin-left:20px;overflow:hidden;}.m-3 .nbw-act-share{position:relative;}.m-3 .nbw-act-share .nas-wrap{visibility:hidden;}.m-3 .nbw-act-share:hover .nas-wrap,.m-3 .js-share-hover .nas-wrap{visibility:visible;}.m-3 .nas-wrap,.nas-itm,.nas-wb{background:url(/newpage/images/blog/icn-share.png?0010) no-repeat 9999px 9999px;}.m-3 .nas-wrap{margin-top:5px;}.nas-itm,.nas-wb{text-decoration:none;}.nas-itm,.nas-wb:hover{text-decoration:underline;}.m-3 .nas-itm{float:left;width:16px;height:16px;margin:0 1px 0 6px;overflow:hidden;cursor:pointer;}.m-3 .nas-itm0{background-position:0 -173px;}.m-3 .nas-itm1{background-position:0 -56px;}.m-3 .nas-itm2{background-position:0 -85px;}.m-3 .nas-itm3{background-position:0 -227px;}.m-3 .nas-itm4{background-position:0 -143px;}.m-3 .nas-itm5{background-position:0 -201px;}.m-3 .nas-itm6{background-position:0 -249px;}.m-3 .nas-itm7{background-position:0 -283px;}.m-3 .nas-itm8{background-position:0 -313px;}.nas-wb{padding-left:20px;cursor:pointer;line-height:normal;background-position:0 -173px;}.nas-icn0fix{margin-top:4px;}.nas-tofix{margin-top:0;*margin-top:2px;line-height:25px;}.m-3 .relateblog{text-align:left;}.m-3 .relateblog h4{margin:0;padding:0 0 0 10px;line-height:30px;}.m-3 .relateblog .cnt{padding-left:8px;margin:10px 0 10px 0px;}.m-3 .relateblog .cnt ul{margin:0;padding:0;list-style:none;}.m-3 .relateblog .cnt ul li{height:24px;margin-right:20px;line-height:24px;}.m-3 .relateblog .cnt ul li span{margin:0 8px;}.m-3 .author, .m-3 .comment{text-align:left;}.m-3 .author .nlogif{width:150px;line-height:20px;margin-left:5px;_margin-left:3px;}.m-3 .author .nlogif .nbw-fce{margin:0 3px 0 10px;_margin-left:5px}.m-3 .author .nlogif .pright{width:85px;margin:0;padding:5px 0;_padding-top:10px}.m-3 .nbw-ryt .right h4{margin:0;padding:0;line-height:30px;}.m-3 .author h4, .m-3 .comment h4{margin:0;padding:0 0 0 10px;line-height:30px;}.m-3 .author .cwd{border:0;text-align:left;}.m-3 .author .vname{width:50px;}.m-3 .author .cnt{margin:10px 0 10px -5px;}.m-3 .author .nbw-fce{margin:0 11px;}.m-3 .author .nbw-f50{width:50px}.m-3 .nbw-ryt .left .top{position:relative;padding-bottom:5px;line-height:20px;}.m-3 .nbw-ryt .left .top .ilft{position:absolute;left:0;top:0;}.m-3 .nbw-ryt .left .top .irgt{position:absolute;right:-10px;top:0;}.m-3 .nbw-ryt .left .top .pleft{margin-left:20px;_margin-left:10px;overflow:hidden;width:40%;height:20px;text-align:left}.m-3 .nbw-ryt .left .top .pright{margin-right:10px;_margin-right:5px;overflow:hidden;width:40%;height:20px;text-align:right}.m-3 .nbw-ryt .left .snl .top{position:relative;padding:5px 0 15px 0;line-height:20px;}.m-3 .nbw-ryt .left .snl .top .ilft{position:absolute;left:-10px;top:5px;}.m-3 .nbw-ryt .left .snl .top .irgt{position:absolute;right:-10px;top:5px;}.m-3 .nbw-ryt .left .snl .top .pleft{margin-left:10px;_margin-left:5px;overflow:hidden;width:40%;height:20px;text-align:left}.m-3 .nbw-ryt .left .snl .top .pright{margin-right:10px;_margin-left:5px;overflow:hidden;width:40%;height:20px;text-align:right}.m-3 .nbw-ryt .left .snl .pnb{padding:5px 0 10px 10px;overflow:hidden;_width:100%}.m-3 .comment h4{padding:0 0 0 10px}.m-3 .comment .publish{margin:10px 0;padding:0 0 10px 5px;text-align:left;}.m-3 .comment .publish .nbw-fce{padding-top:0;}.m-3 .comment .publish .nbw-fce .cwd{border:0;}.m-3 .comment .publish .redt{margin-left:65px;}.m-3 .comment .nolog{border:1px solid #000;background-color:#FFFFE1;height:40px;line-height:40px;text-align:center;padding:0;_padding:10px 0;_height:20px;}.m-3 .comment .case{padding-left:5px}.m-3 .comment .vgl{margin:8px;width:75%;text-align:center;}#blog-163-com .m-3 .comment .nbw-cmt .cnt{width:488px;}#blog-163-com .m-3 .comment .nbw-cmt .nbw-cmt .cnt{width:444px;}.m-3 .edt-cmt{width:444px;}.m-3 .comment .publish .edt-cmt{width:488px;}.m-3 .comment .publish .edt-cmt .zbcc{display:none;}.m-3 .nbw-ryt .left .nbw-bitm .js-fs0,.m-3 .nbw-ryt .left .nbw-bitm .js-fs0 *{font-size:150%;}.m-3 .nbw-ryt .left .nbw-bitm .js-fs1,.m-3 .nbw-ryt .left .nbw-bitm .js-fs1 *{font-size:130%;}.m-3 .nbw-ryt .left .nbw-bitm .js-fs2,.m-3 .nbw-ryt .left .nbw-bitm .js-fs2 *{}.m-3 .js-fcurrent{font-color:#000;font-weight:bold;text-decoration:none;}.m-3 .nbw-bitm .dream{margin-top:-10px;}.m-3 .nbw-bitm .rdif{line-height:24px;height:24px;}.m-3 .nbw-bitm .rdif .pnt{line-height:24px;height:24px;margin-right:10px;}.m-3 .nbw-bitm .rdif .pclass{vertical-align:middle;width:57px;height:22px;}.m-3 .nbw-bitm .rdif .rdct{display:inline-block;}.m-3 .snl .rdcnt{padding:5px;text-align:left}.m-3 .snl .rdcnt .nbw-fce{margin:0 5px}.m-3 .snl .rdcnt p{margin:10px 0}.m-3 .snl .rdcnt .rrb{list-style:none;height:22px;line-height:22px;}.m-3 .acts .iblock{width:18px;}.m-3 .ns{margin:0 0 0 2px;}.m-3 .cancel{display:none;}.m-3 .js-hover .cancel, .m-3 .follow:hover .cancel, .m-3 .frd:hover .cancel{display:inline;}.m-3 .follow{*margin-left:2px;}.m-3 .flw{padding:7px 8px;color:#000;background:#fefce4;border:1px solid #b7b7b7;}.m-3 .acts .flw .iblock{width:20px;}.m-3 .sntesctf{width:15px;margin-left:3px;}.dr-warm{width:480px;padding:12px 18px;margin:18px 0;line-height:20px;border:1px solid #aaa;color:#666;background:#ffffdc;}.dr-warm a,.dr-warm a:hover{text-decoration:underline;color:#02a;}</style>
+  </head>
+<body id="blog-163-com" class="nb-body nb-inr nb-prv">
+  <!--[if lte IE 6]><div id="blog-163-com-ie6bodywrap" class=""><![endif]-->
+    <!--[if lte IE 6]><div id="blog-163-com-ie6body" class="nb-body"><![endif]-->
+
+<div class="nb-nbar clearfix" id="blog-163-com-topbar">
+  <div class="pl fl clearfix">
+  <div class="nbw-im fl im im0">
+    <a class="lbl bd ia noul" href="http://blog.163.com/redirect.html?frompersonalbloghome&amp;url=http://www.163.com/" target="_blank" hidefocus="true"><span class="tx">网易</span><span class="iblock icn0 icn0-421">&nbsp;</span></a>
+    <div class="nbw-tcd box-shadow bd">
+          <a   class="itm noul  " target="_blank" hidefocus="true" href="http://blog.163.com/redirect.html?frompersonalbloghome&amp;url=http://news.163.com/">
+            新闻
+          </a>
+          <a   class="itm noul  " target="_blank" hidefocus="true" href="http://blog.163.com/redirect.html?frompersonalbloghome&amp;url=http://t.163.com/">
+            微博
+          </a>
+          <a   class="itm noul  " target="_blank" hidefocus="true" href="http://blog.163.com/redirect.html?frompersonalbloghome&amp;url=http://email.163.com/">
+            邮箱
+          </a>
+          <a   class="itm noul  " target="_blank" hidefocus="true" href="http://blog.163.com/redirect.html?frompersonalbloghome&amp;url=http://fm.163.com/?fmblogzx0628">
+            闪电邮
+          </a>
+          <a   class="itm noul  " target="_blank" hidefocus="true" href="http://blog.163.com/redirect.html?frompersonalbloghome&amp;url=http://photo.163.com/">
+            相册
+          </a>
+          <a   class="itm noul  " target="_blank" hidefocus="true" href="http://blog.163.com/redirect.html?frompersonalbloghome&amp;url=http://www.youdao.com/">
+            有道
+          </a>
+          <a   class="itm noul  " target="_blank" hidefocus="true" href="http://m.123.163.com/?frombkcp">
+            手机邮
+          </a>
+          <a   class="itm noul  " target="_blank" hidefocus="true" href="http://blog.163.com/redirect.html?frompersonalbloghome&amp;url=http://yxp.163.com/">
+            印像派
+          </a>
+          <a   class="itm noul  " target="_blank" hidefocus="true" href="http://blog.163.com/redirect.html?frompersonalbloghome&amp;url=http://dream.163.com/?from=bkcp">
+            梦幻人生
+          </a>
+        <div class="sep bd space">&nbsp;</div>
+          <a   class="itm noul  " target="_blank" hidefocus="true" href="http://blog.163.com/redirect.html?frompersonalbloghome&amp;url=http://sitemap.163.com/">
+            更多
+          </a>
+        
+    </div>
+  </div>
+  <div class="nbw-im fl im im10">
+    <a class="lbl bd ia noul" href="http://blog.163.com/?frompersonalbloghome" target="_blank" hidefocus="true"><span class="tx">博客</span><span class="iblock icn0 icn0-421">&nbsp;</span></a>
+    <div class="nbw-tcd box-shadow bd">
+          <a   class="itm noul  " target="_blank" hidefocus="true" href="http://blog.163.com/?frompersonalbloghome">
+            博客首页
+          </a>
+          <a   class="itm noul  " target="_blank" hidefocus="true" href="http://blog.163.com/ht/?frompersonalbloghome">
+            博客话题
+          </a>
+          <a   class="itm noul  " target="_blank" hidefocus="true" href="http://blog.163.com/hot/history/?frompersonalbloghome">
+            热点专题
+          </a>
+          <a   class="itm noul youcai " target="_blank" hidefocus="true" href="http://blog.163.com/BLOG_YOUCAI/">
+            博客油菜地
+          </a>
+          <a   class="itm noul  " target="_blank" hidefocus="true" href="http://blog.163.com/findFriend.do?type=5?frompersonalbloghome">
+            找朋友
+          </a>
+          <a   class="itm noul  " target="_blank" hidefocus="true" href="http://q.163.com/#home?frompersonalbloghome">
+            博客圈子
+          </a>
+          <a   class="itm noul  " target="_blank" hidefocus="true" href="http://blog.163.com/public/theme/?frompersonalbloghome">
+            博客风格
+          </a>
+          <a   class="itm noul  " target="_blank" hidefocus="true" href="http://blog.163.com/services/wapblog.html?frompersonalbloghome">
+            手机博客
+          </a>
+          <a   class="itm noul  " target="_blank" hidefocus="true" href="http://blog.163.com/services/emsblog.html?frompersonalbloghome">
+            短信写博
+          </a>
+          <a   class="itm noul  " target="_blank" hidefocus="true" href="http://blog.163.com/services/mailblog.html?frompersonalbloghome">
+            邮件写博
+          </a>
+          <a   class="itm noul  " target="_blank" hidefocus="true" href="http://blog.163.com/clone/clone.html?frompersonalbloghome">
+            博客复制
+          </a>
+        
+    </div>
+  </div>
+    
+  <div class="nbw-im fl im im10">
+    <a class="lbl bd ia noul" href="http://photo.163.com/?frompersonalbloghome" target="_blank" hidefocus="true"><span class="tx">摄影</span><span class="iblock icn0 icn0-421">&nbsp;</span></a>
+    <div class="nbw-tcd box-shadow bd">
+          <a   class="itm noul  " target="_blank" hidefocus="true" href="http://photo.163.com/pp/?frompersonalbloghome">
+            摄影展区
+          </a>
+          <a   class="itm noul  " target="_blank" hidefocus="true" href="http://photo.163.com/pp/zhuanti.html?frompersonalbloghome">
+            每日专题
+          </a>
+          <a   class="itm noul  " target="_blank" hidefocus="true" href="http://photo.163.com/pp/star/">
+            人物志
+          </a>
+          <a   class="itm noul  " target="_blank" hidefocus="true" href="http://photo.163.com/pp/interview/list/">
+            专访
+          </a>
+          <a   class="itm noul  " target="_blank" hidefocus="true" href="http://photo.163.com/pp/zuoye/">
+            交作业
+          </a>
+        
+    </div>
+  </div>
+    
+    <div style="display:none;" class="nbw-im fl im im2">
+      <form class="nbw-tcd bd tsh" onsubmit="return false;" action="http://blog.163.com/redirect.html?frompersonalbloghome&url=http://blog.youdao.com/search?keyfrom=blog.163&suser=user163&ue=gbk&site=blog.163.com&in=page">
+        <div class="ipt bd bg"><input class="txt ztag" type="text"/><a class="iblock bd btn ztag" href="http://blog.youdao.com/" hidefocus="true" target="_blank">搜博文</a><span class="iblock bd icn0 icn0-421">&nbsp;<span class="lnk cs bd nbw-tgl1 ztag">搜博客</span></span></div>
+      </form>
+    </div>
+    
+    <div class="nbw-im fl im1 im seebyway"><a class="lbl bd ima spy" href="http://blog.163.com/randomUser.do">随便看看</a></div>
+    <span class="fl iblock space icn1 icn1-4">&nbsp;</span>
+    <div class="nbw-im fl im1"><span class="lbl bd ima followit ztag">关注此博客</span></div>
+    <span class="fl iblock space icn1 icn1-4">&nbsp;</span>
+    <div class="nbw-im fl im1 im phide randtag"><a target="_blank" class="lbl bd ima moveblog" href="http://blog.163.com/activities/blogbbfg/blogbbfg.do?frompersonalbloghome">选风格不再艰难</a></div>
+    <div class="nbw-im fl im1 im phide randtag"><a target="_blank" class="lbl bd ima moveblog" href="http://blog.163.com/blog_admin/blog/static/72127920109226021617/">搬家送Lomo卡片</a></div>
+  </div>
+  <div class="pr clearfix">
+    <a class="iblock fr ima" href="http://reg.163.com/reg/reg0_new.jsp?product=blog&url=http://blog.163.com/ntesRegBlank.html" target="_blank">注册</a>
+    <span class="fr iblock space icn1 icn1-4 spx">&nbsp;</span>
+    <a class="iblock fr ima ztag" href="#">登录</a>
+  </div>
+</div>
+<script type="text/javascript">
+  (function(){
+      var e = document.getElementById('blog-163-com-main');
+      if(!!e) e.parentNode.insertBefore(document.getElementById('blog-163-com-topbar'),e);
+      e = document.getElementById('blog-notice-email');
+      if(!!e) window.setTimeout(function(){e.style.display='';},50);
+  })()
+</script>
+<div class="blogtoptips phide" id="blog-163-com-toptips">
+    <div id="newbulletinstip" class="newbulletinstip phide">
+    <a class="lnknews fc03 m2a tiptag phide" href="" target="_blank"></a><span class="txtnews tiptag phide"></span>&nbsp;&nbsp;&nbsp;<a class="fc03 ul nextorprevnews tiptag phide" href="" hidefocus="true">显示下一条</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="fc03 ul close tiptag" href="" hidefocus="true">关闭</a>
+  </div>
+</div>  <div class="nb-wrap wsy" id="blog-163-com-main"><div class="nb-are nb-top">
+  <div class="wkg h" id="blog-163-com-banner">
+    
+    <div class="t">
+      <h1 class="n c"><span class="ztag pre">津津计较</span></h1>
+      <p class="d c"><span class="ztag pre">遗传记忆</span></p>
+    </div>
+    <div class="f h ztag"></div>
+    <a class="x" hidefocus="true" target="_blank" href="#"><span class="xx ztag"></span></a>
+  </div>
+</div><div class="nb-are nb-nav">
+  <div class="wkg">
+    <div class="c h">
+      <h2>导航</h2>
+      <ul class="noul clearfix">
+        	        <li class="w w0">
+	          <a class="i i0 fc01 h" hidefocus="true" href="http://zhumeng8337797.blog.163.com/">首页</a>
+	        </li>
+	        <li class="w w1 selected">
+	          <a class="i i1 fc01 h" hidefocus="true" href="http://zhumeng8337797.blog.163.com/blog/">日志</a>
+	        </li>
+	        <li class="w w2">
+	          <a class="i i2 fc01 h" hidefocus="true" href="http://zhumeng8337797.blog.163.com/album/">相册</a>
+	        </li>
+	        <li class="w w3">
+	          <a class="i i3 fc01 h" hidefocus="true" href="http://zhumeng8337797.blog.163.com/music/">音乐</a>
+	        </li>
+	        <li class="w w4">
+	          <a class="i i4 fc01 h" hidefocus="true" href="http://zhumeng8337797.blog.163.com/collection/">收藏</a>
+	        </li>
+	        <li class="w w5">
+	          <a class="i i5 fc01 h" hidefocus="true" href="http://zhumeng8337797.blog.163.com/friends/">博友</a>
+	        </li>
+	        <li class="w w6">
+	          <a class="i i6 fc01 h" hidefocus="true" href="http://zhumeng8337797.blog.163.com/profile/">关于我</a>
+	        </li>
+      </ul><!--
+ --></div>
+    <div class="l h">&nbsp;</div>
+    <div class="r h">&nbsp;</div>
+  </div>
+</div>  <div class="nb-are nb-smt"><div class="wkg h space"><div class="l h">&nbsp;</div><div class="r h">&nbsp;</div><div class="c h">&nbsp;</div></div></div>
+  <div class="nb-are nb-cnt">
+    <div class="wkg">
+      <div class="c wc h clearfix " id="blog-163-com-container">  <div class="nb-mdl lcr m-3" id="-3">
+  <div class="nb-mt lcr th fc02">
+    <div class="c tc th lcr"><h2 class="thide nb-jsc">日志</h2></div>
+    <div class="r tm th nb-jsc"></div>
+    <div class="l tl th">&nbsp;</div>
+    <div class="r tr th">&nbsp;</div>
+  </div>
+    <div class="nb-mc lcr">
+      <div class="c cc lcr nb-jsc"><div class="nbw-ryt ztag clearfix js-auto-098">
+  <div class="right bdwl bds0 bdc0"><div class="cnt ztag"></div></div>
+  <div class="left">
+     <div class="lcnt bdwr bds0 bdc0 ">   
+      <div id="$_divTopLink" class='top fc03 bdwb bdc0 bds2 clearfix'>
+        <span class="ilft iblock icn0 icn0-620">&nbsp;</span>
+        <div class="pleft thide"><a class="m2a"  href="http://zhumeng8337797.blog.163.com/blog/static/10076891420104642636719/">amanda简介与简单配置</a></div>
+        <span class="irgt iblock icn0 icn0-619">&nbsp;</span>
+        <div class="pright thide"><a class="m2a"  href="http://zhumeng8337797.blog.163.com/blog/static/10076891420104655332572/">RHEL5+Apache+Openssl证书管理</a></div>
+     </div> 
+     <div class="mcnt ztag"> 
+      <div class="nbw-bitm bdwb bds2 bdc0">
+        <h3 class="title pre fs1"><span class="tcnt">Linux+Apache安装生成配置SSL证书</span><span class="bgc0 fc07 fw0 fs0"></span></h3>
+        <p class="tdep clearfix nbw-act fc06" style="line-height:20px;">
+          <span class="pleft">
+            <a class="fc03 m2a" href="http://zhumeng8337797.blog.163.com/blog/#m=0&t=1&c=fks_087069083094087075087080086095085086081068082094095066080" title="rhel_apache">rhel_apache</a>
+            <span class="sep">2010-05-06 17:43:43</span>
+            <span class="sep">阅读<span id="$_spanReadCount">122</span></span>
+            <span class="sep">评论<span id="$_spanCommentCount">0</span></span>
+          </span>
+          <span class="pright fc07 ztag"><span class="sep"></span>&nbsp;&nbsp;字号：<span class="ul sep fc04">大</span><span  class="ul sep fc04" >中</span><span  class="sep ul fc04" >小</span></span><span class="pright pnt fc03" id="$_blog_subscribe"><span class="iblock icn0 icn0-919">&nbsp;</span><a class="m2a">订阅</a></span>
+        </p>
+        <div class="bct fc05 fc11 nbw-blog ztag"><P>通过 Linux+Apache+OpenSSL 实现 SSL （ Secure Socket Layer ）证书服务器，提供安全的 HTTPS （ Hypertext Transfer Protocol over Secure Socket Layer ）服务。 <BR>&nbsp; </P>
+<P>安装 SSL </P>
+<P>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 安装 openssl </P>
+<P>tar -zxvf openssl-0.9.8a.tar.gz </P>
+<P>cd openssl-0.9.8a </P>
+<P>./configure </P>
+<P>make </P>
+<P>make install </P>
+<P>openssl 安装在 /usr/local/ssl 目录中 </P>
+<P>&nbsp; </P>
+<P>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 安装 apache </P>
+<P>tar -zxvf httpd-2.0.55.tar.gz </P>
+<P>cd httpd-2.0.55 </P>
+<P>./configure –prefix=/usr/local/apache –enable-ssl&nbsp;&nbsp; –enable-rewrite –enable-so –with-ssl=/usr/local/ssl </P>
+<P>make </P>
+<P>make install </P>
+<P>apache 安装在 /usr/local/apache 目录中 </P>
+<P>&nbsp; </P>
+<P>以上是通过源码方式安装，最佳的安装方式通过 rpm 安装。先安装 apache 的 rpm ，再安装 openssl 的 rpm ， openssl 可自动安装到 apache 目录中。 </P>
+<P>&nbsp; </P>
+<P>证书介绍 </P>
+<P>SSL 安全证书可以自己生成，也可以通过第三方的 CA （ Certification Authority ）认证中心付费申请颁发。 </P>
+<P>SSL 安全证书包括： </P>
+<P>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CA 证书，也叫根证书或中间级证书。单向认证的 https ， CA 证书是可选的。主要目的是使证书构成一个证书链，以达到浏览器信任证书的目的。如果使用了 CA 证书，服务器证书和客户证书都使用 CA 证书来签名。如果不安装 CA 证书，浏览器默认认为是不安全的。 </P>
+<P>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 服务器证书。必选。通过服务器私钥，生成证书请求文件 CSR ，再通过 CA 证书签名生成服务器证书。 </P>
+<P>3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 客户证书。可选。如果有客户证书，就是双向认证的 HTTPS ，否则就是单向认证的 HTTPS 。生成步骤和服务器证书类似。 </P>
+<P>上面几种证书都可以自己生成。商业上，一般自己提供服务器或客户证书端的私钥和证书请求 CSR ，向第三方机构付费申请得到通过 CA 证书签名的服务器证书和客户证书。 </P>
+<P>&nbsp; </P>
+<P>生成证书 </P>
+<P>用 openssl 提供的工具 CA.sh 签名证书，证书放在 /usr/local/apache2/conf/ssl.crt 目录，先把工具拷贝过来： </P>
+<P>cp /usr/share/ssl/misc/CA.sh /usr/local/apache2/conf/ssl.crt </P>
+<P>&nbsp; </P>
+<P>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CA 证书（根证书 / 中间级证书） </P>
+<P>是 CA 认证机构提供，如果是双向认证则必选，否则是可选。通过 CA 证书，构成一个证书链，目的是使浏览器信任你的证书 。如果使用了 CA 证书，用它来签名服务器和客户证书，以达到浏览器信任的目的。 </P>
+<P>自己生成 CA 证书步骤： </P>
+<P>./CA.sh –newca </P>
+<P>回车创建新文件，输入加密密码，并填写证书信息： </P>
+<P>Country Name (2 letter code) [AU]:CN </P>
+<P>State or Province Name (full name) [Some-State]:Guangdong </P>
+<P>Locality Name (eg, city) []:Shenzhen </P>
+<P>Organization Name (eg, company) [Internet Widgits Pty Ltd]:xxx </P>
+<P>Organizational Unit Name (eg, section) []:xxx </P>
+<P>Common Name (eg, YOUR name) []:www.shenmiguo.com </P>
+<P>Email Address []:xxx@xxx.com </P>
+<P>Common Name 填入主机全称是比较好的选择。这个名称必须与通过浏览器访问您网站的 URL 完全相同，否则用户会发现您服务器证书的通用名与站点的名字不匹配，用户就会怀疑您的证书的真实性。服务器证书和客户证书的 Common Name 应该和 CA 一致。 </P>
+<P>生成结果： demoCA/private/cakey.pem 是 CA 证书的私钥文件， demoCA/cacert.pem 是 CA 证书。 </P>
+<P>这样就建好了一个 CA 服务器，有了一个根证书的私钥 cakey.pem 及一张根证书 cacert.pem, 现在就可以用 cacert.pem 来给服务器证书或客户证书签名了。 </P>
+<P>我们规范一下 CA 证书的命名，把 CA 证书和密钥重命名一下： </P>
+<P>cp demoCA/private/cakey.pem ca.key </P>
+<P>cp demoCA/cacert.pem ca.crt </P>
+<P>ca.key 是中间级证书私钥， ca.crt 是中间级证书。 </P>
+<P>&nbsp; </P>
+<P>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 服务器证书 </P>
+<P>a）&nbsp; 生成服务器私钥 </P>
+<P>openssl genrsa -des3 -out server.key 1024 </P>
+<P>输入加密密码，用 128 位 rsa 算法生成密钥，得到 server.key 文件。 </P>
+<P>&nbsp; </P>
+<P>b）&nbsp; 生成服务器证书请求（ CSR ） </P>
+<P>openssl req -new -key server.key -out server.csr </P>
+<P>CSR （ Certificate Signing Request ）是一个证书签名请求，在申请证书之前，首先要在 WEB 服务器上生成 CSR ，并将其提交给 CA 认证中心， CA 才能给您签发 SSL 服务器证书。可以这样认为， CSR 就是一个在您服务器上生成的证书。 CSR 主要包括以下内容： </P>
+<P>Country Name (2 letter code) [AU]:CN </P>
+<P>State or Province Name (full name) [Some-State]:Guangdong </P>
+<P>Locality Name (eg, city) []:Shenzhen </P>
+<P>Organization Name (eg, company) [Internet Widgits Pty Ltd]:xxx </P>
+<P>Organizational Unit Name (eg, section) []:xxx </P>
+<P>Common Name (eg, YOUR name) []:shenmiguo.com </P>
+<P>Email Address []:xxx@xxx.com </P>
+<P>&nbsp; </P>
+<P>Please enter the following ‘extra’ attributes </P>
+<P>to be sent with your certificate request </P>
+<P>A challenge password []: </P>
+<P>An optional company name []: </P>
+<P>Common Name 填入主机名和 CA 一致。 </P>
+<P>&nbsp; </P>
+<P>c）&nbsp; 自己生成服务器证书 </P>
+<P>如果不使用 CA 证书签名的话，用如下方式生成： </P>
+<P>openssl req -x509 -days 1024 -key server.key -in server.csr &gt; server.crt </P>
+<P>用服务器密钥和证书请求生成证书 server.crt ， -days 参数指明证书有效期，单位为天。商业上来说，服务器证书是由通过第三方机构颁发的，该证书由第三方认证机构颁发的。 </P>
+<P>&nbsp; </P>
+<P>如果使用 CA 证书签名，用 openssl 提供的工具 CA.sh 生成服务器证书： </P>
+<P>mv server.csr newreq.pem </P>
+<P>./CA.sh -sign </P>
+<P>mv newcert.pem server.crt </P>
+<P>&nbsp; </P>
+<P>签名证书后，可通过如下命令可查看服务器证书的内容： </P>
+<P>openssl x509 -noout -text -in server.crt </P>
+<P>可通过如下命令验证服务器证书： </P>
+<P>openssl verify -CAfile ca.crt server.crt&nbsp; </P>
+<P>&nbsp;</P>
+<P>3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 客户证书 </P>
+<P>客户证书是可选的。如果有客户证书，就是双向认证 HTTPS ，否则就是单向认证 HTTPS 。 </P>
+<P>a）&nbsp; 生成客户私钥 </P>
+<P>openssl genrsa -des3 -out client.key 1024 </P>
+<P>b）&nbsp; 生成客户证书签名请求 </P>
+<P>openssl req -new -key client.key -out client.csr </P>
+<P>c）&nbsp; 生成客户证书（使用 CA 证书签名） </P>
+<P>openssl ca -in client.csr -out client.crt </P>
+<P>d）&nbsp; 证书转换成浏览器认识的格式 </P>
+<P>openssl pkcs12 -export -clcerts -in client.crt -inkey client.key -out client.pfx </P>
+<P>&nbsp; </P>
+<P>4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 证书列表 </P>
+<P>如果使用双向认证，就会有三个私钥和三个证书。分别是 ca.key, ca.crt, server.key, server.crt, client.key, client.crt ，以及给浏览器的 client.pfx 。 </P>
+<P>如果使用有 CA 证书的单向认证，证书和私钥就是 ca.key, ca.crt, server.key, server.crt 。 </P>
+<P>如果使用无 CA 证书的单向认证，证书和私钥就是 server.key, server.crt 。 </P>
+<P>&nbsp; </P>
+<P>配置证书 </P>
+<P>Apache 规范的做法是将扩展的配置都配置在相应的 conf 文件中， httpd.conf 直接 Include 包含各功能配置的 conf 文件（如 php 相关配置叫 php.conf ， ssl 相关配置叫 ssl.conf ）。这样的好处是配置易于管理和变更， httpd.conf 可以依然保持简要易懂。 </P>
+<P>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 配置 httpd.conf </P>
+<P>&lt;IfModule mod_ssl.c&gt; </P>
+<P>Include conf/ssl.conf </P>
+<P>&lt;/IfModule&gt; </P>
+<P>&nbsp; </P>
+<P>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 配置 ssl.conf </P>
+<P>主要配置包括证书路径和认证策略： </P>
+<P>Listen 443&nbsp;&nbsp; #https 端口 </P>
+<P>SSLRandomSeed startup builtin </P>
+<P>SSLPassPhraseDialog builtin </P>
+<P>SSLSessionCache dbm:logs/ssl_scache </P>
+<P>SSLSessionCacheTimeout 300 </P>
+<P>SSLMutex default </P>
+<P>&nbsp; </P>
+<P>&lt;VirtualHost *:443&gt; </P>
+<P>ServerAdmin  </P>
+<P>DocumentRoot /usr/local/apache2/htdocs/ </P>
+<P>#DirectoryIndex digitalidCenter.htm </P>
+<P>ServerName shenmiguo.com:443 </P>
+<P>ErrorLog logs/443-error_log </P>
+<P>CustomLog /usr/local/apache2/logs/ssl_request_log "%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \"%r\" %b" </P>
+<P>LogLevel info </P>
+<P>&lt;IfModule mod_ssl.c&gt; </P>
+<P>SSLEngine on </P>
+<P>SSLCipherSuite ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP:+eNULL </P>
+<P>SSLCertificateFile /usr/local/apache2/conf/ssl.crt/server.crt # 指定服务器证书路径 </P>
+<P>SSLCertificateKeyFile /usr/local/apache2/conf/ssl.crt/server.key # 服务器证书私钥路径 </P>
+<P>SSLCertificateChainFile /usr/local/apache2/conf/ssl.crt/ca.crt #CA 中间级证书路径 </P>
+<P>SSLCACertificatePath /usr/local/apache2/conf/ssl.crt # 客户证书目录 ( 双向认证才用 ) </P>
+<P>SSLCACertificateFile /usr/local/apache2/conf/ssl.crt/client.crt # 客户证书路径 ( 双向认证才用 ) </P>
+<P>SSLVerifyClient require # 强制客户必须持有 SSL 证书请求 </P>
+<P>SSLVerifyDepth 10 </P>
+<P>&lt;/IfModule&gt; </P>
+<P>&lt;/VirtualHost&gt; </P>
+<P>更多 mod_ssl 配置选项说明可以见 apache 的文档： </P>
+<P><A href="http://lamp.linux.gov.cn/Apache/ApacheMenu/mod/mod_ssl.html">http://lamp.linux.gov.cn/Apache/ApacheMenu/mod/mod_ssl.html</A> </P>
+<P>&nbsp; </P>
+<P>3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 启动 Apache </P>
+<P>cd /usr/local/apache2/bin </P>
+<P>./apachectl startssl </P>
+<P>&nbsp;</P>
+<P>可修改 apachectl 脚本，改成默认 ssl 方式启动 apache 。 apachectl 脚本中的： </P>
+<P>start|stop|restart |graceful) </P>
+<P>&nbsp;&nbsp;&nbsp; $HTTPD -k $ARGV </P>
+<P>&nbsp;&nbsp;&nbsp; ERROR=$? </P>
+<P>&nbsp;&nbsp;&nbsp; ;; </P>
+<P>startssl|sslstart|start-SSL) </P>
+<P>&nbsp;&nbsp;&nbsp; $HTTPD -k start -DSSL </P>
+<P>&nbsp;&nbsp;&nbsp; ERROR=$? </P>
+<P>;; </P>
+<P>修改为： </P>
+<P>stop|graceful) </P>
+<P>&nbsp;&nbsp;&nbsp; $HTTPD -k $ARGV </P>
+<P>&nbsp;&nbsp;&nbsp; ERROR=$? </P>
+<P>&nbsp;&nbsp;&nbsp; ;; </P>
+<P>restart ) </P>
+<P>&nbsp;&nbsp;&nbsp; killall -9 httpd </P>
+<P>&nbsp;&nbsp;&nbsp; $HTTPD -k start -DSSL </P>
+<P>&nbsp;&nbsp;&nbsp; ;; </P>
+<P>start |startssl|sslstart|start-SSL) </P>
+<P>&nbsp;&nbsp;&nbsp; $HTTPD -k start -DSSL </P>
+<P>&nbsp;&nbsp;&nbsp; ERROR=$? </P>
+<P>&nbsp;&nbsp;&nbsp; ;; </P>
+<P>&nbsp; </P>
+<P>启动的时候需要输入 server.key 的密码。可以通过服务器私钥解密存储，重启也无需输入密码： </P>
+<P>openssl rsa -in server.key -out my-server.key </P>
+<P>chmod 400 server.key </P>
+<P>ssl.conf 中的配置变更成： </P>
+<P>SSLCertificateKeyFile /usr/local/apache2/conf/ssl.crt/my-server.key # 服务器证书解密私钥路径 </P>
+<P>&nbsp;</P>
+<P>本文来自CSDN博客，转载请标明出处：<A href="http://blog.csdn.net/yuhaibao324/archive/2010/03/22/5405343.aspx">http://blog.csdn.net/yuhaibao324/archive/2010/03/22/5405343.aspx</A></P></div>
+        
+        <div class="nbw-act tbar fc03 clearfix">
+          <div class="pleft rdif">
+	          <span class="pnt pleft" id="$_spanRecommend"><img class="pclass" src="http://b.bst.126.net/style/common/tuijian.png"/></span>
+	        <span id="$_spanShowRecommend" class="pleft rdct  phide">
+	          <span class="pleft ul fc03"><span id="$_spanRecommendCount">0</span>人</span><span class="pleft iblock icn0 icn0-722 nbw-tgl1 nas-icn0fix">&nbsp;</span><span class="pleft iblock icn0 icn0-621 nbw-tgl0 nas-icn0fix">&nbsp;</span><span class="fc07"></span>|&nbsp;
+	        </span>
+	         <span class="fc07 pleft nas-tofix">分享到：</span><span class="nas-wrap pleft"><span id="$_shareBtn_email" title="分享到邮件" class="nas-itm nas-itm5">&nbsp;</span><span id="$_shareBtn_163weibo" title="分享到网易微博" class="nas-itm nas-itm0">&nbsp;</span><span id="$_shareBtn_sinaweibo" title="分享到新浪微博" class="nas-itm nas-itm6">&nbsp;</span><span class="nas-itm nas-itm7" title="分享到MSN" id="$_shareBtn_msn">&nbsp;</span><span class="nas-itm nas-itm3" title="分享到QQ空间" id="$_shareBtn_qq">&nbsp;</span><span class="nas-itm nas-itm1" title="分享到人人网" id="$_shareBtn_renren">&nbsp;</span><span class="nas-itm nas-itm2" title="分享到开心网" id="$_shareBtn_kaixin">&nbsp;</span><span class="nas-itm nas-itm4" title="分享到豆瓣" id="$_shareBtn_douban">&nbsp;</span><span class="nas-itm nas-itm8" title="分享到梦幻人生" id="$_shareBtn_dream">&nbsp;</span></span></span>
+          </div>
+          <div class="pright">
+              <span class="fc07">阅读(<span id="$_spaniReadCount">122</span>)</span><span class="sep fc07">|</span>
+              <span class="fc07">评论(<span id="$_spaniCommentCount">0</span>)</span><span class="sep fc07">|</span>
+              <span class="m2a" id="$_spanCite">引用(<span id="$_spanCiteCount">0</span>)</span>
+              <span class="sep fc07">|</span><span id="$_spanReport" class="m2a">举报</span>
+          </div>
+        </div>
+      </div>
+      <div class="snl">
+        <div class="phide bdwb bds2 bdc0 rdcnt" id="$_divRecommendContent"></div>
+        <div id="$_divTopLink" class='top fc03 clearfix'>
+	        <span class="ilft iblock icn0 icn0-620">&nbsp;</span>
+	        <div class="pleft thide"><a class="m2a"  href="http://zhumeng8337797.blog.163.com/blog/static/10076891420104642636719/">amanda简介与简单配置</a></div>
+	        <span class="irgt iblock icn0 icn0-619">&nbsp;</span>
+	        <div class="pright thide"><a class="m2a"  href="http://zhumeng8337797.blog.163.com/blog/static/10076891420104655332572/">RHEL5+Apache+Openssl证书管理</a></div>
+	     </div> 
+	    <div class="relateblog phide">
+          <h4 class="bdwb bds2 bdc0 fc07 fs0">历史上的今天</h4>
+          <div class="cnt ztag clearfix"></div>
+        </div>
+	    <div class="relateblog phide">
+          <h4 class="bdwb bds2 bdc0 fc07 fs0">相关文章</h4>
+          <div class="cnt ztag clearfix"></div>
+        </div>
+	    <div class="author">
+	      <h4 class="bdwb bds2 bdc0 fc07 fs0">最近读者</h4>
+	      <div class="cnt ztag clearfix"></div>
+	    </div>
+	    <div class="comment">
+	      <h4 class="bdwb bds2 bdc0 fc07 fs0">评论</h4>
+	      <a name="blogComment" id="blogComment"></a>
+	      <div class="ztag"></div>
+	    </div>
+      </div>
+      <div class="cite ztag fc03"></div>
+    </div>
+   </div>
+  </div>
+</div>
+<div class="phide nb-init">
+  <textarea name="js">
+    this.p={  m:2,
+              b:2,
+              id:'fks_080069087082081068087082086095085086081068082094095066080',
+              blogTitle:'Linux+Apache安装生成配置SSL证书',
+              blogAbstract:'<P\>通过 Linux+Apache+OpenSSL 实现 SSL （ Secure Socket Layer ）证书服务器，提供安全的 HTTPS （ Hypertext Transfer Protocol over Secure Socket Layer ）服务。 <BR\>&nbsp; </P\>\r\n<P\>安装 SSL </P\>\r\n<P\>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 安装 openssl </P\>\r\n<P\>tar -zxvf openssl-0.9.8a.tar.gz </P\>\r\n<P\>cd openssl-0.9.8a </P\>\r\n<P\>./configure </P\>\r\n<P\>make </P\>\r\n<P\>make install </P\>\r\n<P\>openssl 安装在 /usr/local/ssl 目录中 </P\>\r\n<P\></P\>',
+              blogUrl:'blog/static/10076891420104654343279',
+              isPublished:1,
+              istop:false,
+              type:2,
+              modifyTime:0,
+              publishTime:1273139023279,
+              permalink:'blog/static/10076891420104654343279',
+              commentCount:0,
+              mainCommentCount:0,
+              recommendCount:0,
+              friendstatus:'none',
+              followstatus:'unFollow',
+              pubSucc:'',
+              visitorProvince:'北京',
+              visitorCity:'未设置',
+              isWeekend:0,
+              taobaoVersion:5,
+              taobaolink:"http://g.163.com/a?CID=4399&Values=196696023&Redirect=http://ju.atpanel.com/?url=http://3c.tmall.com/go/act/sale/tgj12.php?ad_id=10004028940c5c0a7bb1&am_id=13004025335d20ec9e08&cm_id=&pm_id=",
+              taobaobgimage:"http://blog.163.com/newpage/images/taobaolayerbg4.jpg",
+              mset:'000',
+              mcon:''
+            }
+  </textarea>
+  <textarea name="jst" id="m-3-jst-1">
+    {list a as x}
+    {if !!x}
+    <div class="iblock nbw-fce nbw-f40">
+      <a class="fc03 noul" target="_blank" hidefocus="true" href="http://blog.163.com/${x.visitorName}/">
+      <img alt="${x.visitorNickname|escape}" onerror="location.f40" class="cwd bdwa bdc0" src="${fn1(x.visitorName)}"/>
+      </a>
+      <div class="cwd vname thide">
+        {if x.moveFrom=='wap'}
+          <a class="noul pnt" target="_blank" href="http://blog.163.com/services/wapblog.html?frompersonalbloghome"><span title="通过手机博客访问" class="iblock icn0 icn0-417">&nbsp;</span></a>
+        {/if}
+        <a class="fc03 m2a"  target="_blank" hidefocus="true" href="http://blog.163.com/${x.visitorName}/">
+          ${fn(x.visitorNickname,8)|escape}
+        </a>
+      </div>
+    </div>
+    {/if}
+    {/list}
+  </textarea>
+  <textarea name="jst" id="m-3-jst-2">
+    {if !!a}
+    <a href="http://blog.163.com/${a.userName}/"><img class="bdwa bdc0 pnt" onerror="location.f60" src="${fn1(a.userName)}"/></a>
+    <a class="fc03 m2a" href="http://blog.163.com/${a.userName}/">${fn(a.nickname,8)|escape}</a>
+    <div class="intro fc05">${a.selfIntro|escape}</div>
+	    <div class="acts ztag"></div>
+    {/if}
+  </textarea>
+  <#--最新日志-->
+  <textarea name="jst" id="m-3-jst-3">
+    {list a as x}
+    {if !!x}
+    <li class="thide"><a class="fc03 m2a" href="${furl()}${x.permalink}/?latestBlog">${fn(x.title,26)|escape}</a></li>
+    {/if}
+    {/list}
+  </textarea>
+  <#--推荐日志-->
+  <textarea name="jst" id="m-3-jst-4">
+    <p class="fc06">推荐过这篇日志的人：</p>
+    <div>
+      {list a as x}
+      {if !!x}
+      <div class="iblock nbw-fce nbw-f40">
+        <a class="fc03 noul" target="_blank" hidefocus="true" href="http://blog.163.com/${x.recommenderName}/">
+        <img alt="${x.recommenderNickname}" onerror="location.f40" class="cwd bdwa bdc0" src="${fn1(x.recommenderName)}"/>
+        </a>
+        <div class="cwd thide">
+          <a class="fc03 m2a" target="_blank" hidefocus="true" href="http://blog.163.com/${x.recommenderName}/">
+            ${fn(x.recommenderNickname,6)|escape}
+          </a>
+        </div>
+      </div>
+      {/if}
+      {/list}
+    </div>
+    {if !!b&&b.length>0}
+    <p  class="fc06">他们还推荐了：</p>
+    <ul>
+    {list b as y}
+      {if !!y}
+        <li class="rrb"><span class="iblock">&#183;</span><a class="fc03 m2a" target="_blank" href="http://blog.163.com/${y.recommendBlogPermalink}/?from=blog/static/10076891420104654343279">${y.recommendBlogTitle}</a></li>
+      {/if}
+    {/list}
+    </ul>
+    {/if}
+  </textarea>
+  <#--引用记录-->
+  <textarea name="jst" id="m-3-jst-5">
+    <span class="pleft fc07">引用记录：</span>
+    <ul class="tbac">
+    {list d as x}
+      <li class="clearfix">
+        <span class="pleft iblock">&#183;</span>
+        <div class="tbl thide pleft"><span><a target="_blank" class="fc07 m2a" href="${x.referBlogUrl}">${x.referBlogTitle}</a></span></div>
+        <div class="tbr pleft"><span><a target="_blank" class="fc07 m2a" href="${x.referHomePage}">${x.referUserName}</a></span></div>
+      </li>
+    {/list}
+    </ul>
+  </textarea>
+  <#--博主推荐-->
+  <textarea name="jst" id="m-3-jst-6">
+    {list a as x}
+    {if !!x}
+    <li class="thide"><a class="fc03 m2a" href="http://blog.163.com/${x.userName}/${x.permalink}/?recommendBlog" title="${x.title|default:""|escape}">${x.title|default:""|escape}</a></li>
+    {/if}
+    {/list}
+  </textarea>
+  <#--随机阅读-->
+  <textarea name="jst" id="m-3-jst-7">
+    {list a as x}
+    {if !!x}
+    <li class="thide"><a class="fc03 m2a" href="http://blog.163.com/${x.userName}/${x.permalink}/?personalRecomBlog" title="${x.title|default:""|escape}">${x.title|default:""|escape}</a></li>
+    {/if}
+    {/list}
+  </textarea>
+  <#--首页推荐-->
+  <textarea name="jst" id="m-3-jst-8">
+    {list a as x}
+    {if !!x}
+    <li class="thide"><a class="fc03 m2a" target="_blank" href="${x.blogUrl|default:""|escape}?recommendReader" title="${x.blogTile|default:""|escape}">${x.blogTile|default:""|escape}</a></li>
+    {/if}
+    {/list}
+  </textarea>
+  <#--相关文章-->
+  <textarea name="jst" id="m-3-jst-9">
+    <ul>
+      {list a as x}
+      {if x_index>9}{break}{/if}
+      {if !!x}
+        <li class="thide fc03">
+          <a class="m2a" target="_blank"  href="${x.url|default:""}?fromdm&fromSearch&isFromSearchEngine=${isFromSearchEngine|default:"no"}"  title="${x.title|default:""|escape}">${x.title|default:""|escape}</a><span class="fc07">${fn2(parseInt(x.date),'yyyy-MM-dd HH:mm:ss')}</span>
+        </li>
+      {/if}
+      {/list}
+    </ul>
+  </textarea>
+  <#--历史上的今天-->
+  <textarea name="jst" id="m-3-jst-10">
+    <ul>
+      {list a as x}
+      {if x_index>4}{break}{/if}
+      {if !!x}
+        <li class="thide fc03">
+          <a class="m2a" target="_blank"  href="http://blog.163.com/${x.userName}/${x.permalink|default:""}"  title="${x.title|default:""|escape}">${x.title|default:""|escape}</a><span class="fc07">${fn2(x.publishTime,'yyyy-MM-dd HH:mm:ss')}</span>
+        </li>
+      {/if}
+      {/list}
+    </ul>
+  </textarea>
+  <#--右边模块结构-->
+  <textarea name="txt" id="m-3-txt-0">
+    <div class="uinfo ztag"></div>
+    <h4 class="fc07 fs0 ltt">最新日志</h4>
+    <ul class="ztag blst"></ul>
+    <h4 class="fc07 fs0 ltt phide ztag">博主推荐</h4>
+    <ul class="ztag blst"></ul>
+    <h4 class="fc07 fs0 ltt phide ztag">相关日志</h4>
+    <ul class="ztag blst"></ul>
+    <h4 class="fc07 fs0 ltt phide ztag">随机阅读</h4>
+    <ul class="ztag blst"></ul>
+    <h4 class="fc07 fs0 ltt phide ztag">首页推荐</h4>
+    <ul class="ztag blst"></ul>
+    <div class="more"><a target="_blank" class="fc03 m2a" href="http://blog.163.com">更多&gt;&gt;</a></div>
+    <br/><br/>
+    <a href="http://yxp.163.com/h/action/photoplay.html?sss=frombkerz1116" target="_blank"><img style="border:none;" src="http://blog.163.com/newpage/images/yxpinblog.jpg"/></a>
+  </textarea>
+  <#--评论模块结构-->
+  <textarea name="txt" id="m-3-txt-1">
+    <div class="publish ztag"></div>
+    <div class="ztag bdwt bds2 bdc0">
+      <div class="case"></div>
+      <div class="clearfix"></div>
+    </div>
+  </textarea>
+  <#--引用模块结构-->
+  <textarea name="jst" id="m-3-txt-2">
+     <div class="close">
+       <span class="ztag iblock icn0 icn0-57">&nbsp;</span>
+     </div>
+	 <div>
+	   <span class="iblock">－</span>
+	   <a target="_blank" class="noul ztag" href="${curl}">引用此篇日志到我的博客</a>
+	 </div>
+	 <div class="ztag phide"></div>
+	 <div>
+	   <span class="iblock">－</span>
+	   <a href="javascript:return false;" class="ztag noul">复制此篇日志网址</a>
+	   <input class="ads ztag phide" type="text" />
+	 </div>
+	 <div>
+	   <span class="iblock">－</span>
+	   <span class="ztag">发送给博友</span>
+	 </div>
+  </textarea>
+</div>
+</div>
+      <div class="l cl h100">&nbsp;</div>
+      <div class="r cr h100">&nbsp;</div>
+    </div>
+    <div class="nb-mb lcr bh space">
+      <div class="l bl bh">&nbsp;</div>
+      <div class="r br bh">&nbsp;</div>
+      <div class="c bc bh lcr">&nbsp;</div>
+    </div>
+  </div>
+</div>
+      <div class="l wl g lg h100">&nbsp;</div>
+      <div class="l wl t lt">&nbsp;</div>
+      <div class="l wl b lb">&nbsp;</div>
+      <div class="r wr g rg h100">&nbsp;</div>
+      <div class="r wr t rt">&nbsp;</div>
+      <div class="r wr b rb">&nbsp;</div>
+    </div>
+  </div>
+  <div class="nb-are nb-smb"><div class="wkg h space"><div class="l h">&nbsp;</div><div class="r h">&nbsp;</div><div class="c h">&nbsp;</div></div></div>
+<div class="nb-are nb-fot">
+  <div class="wkg h">
+    <h2>页脚</h2>
+    <div class="k">      <a class="m2a fc08" target="_blank" href="http://corp.163.com/index_gb.html">公司简介</a>
+      <span class="p fc10">-</span>
+      <a class="m2a fc08" target="_blank" href="http://gb.corp.163.com/gb/contactus.html">联系方法</a>
+      <span class="p fc10">-</span>
+      <a class="m2a fc08" target="_blank" href="http://corp.163.com/gb/job/job.html">招聘信息</a>
+      <span class="p fc10">-</span>
+      <a class="m2a fc08" target="_blank" href="http://help.163.com/?b13abk1">客户服务</a>
+      <span class="p fc10">-</span>
+      <a class="m2a fc08" target="_blank" href="http://corp.163.com/gb/legal/legal.html">相关法律</a>
+      <span class="p fc10">-</span>
+      <a class="m2a fc08" target="_blank" href="http://blog.163.com/public/theme/">博客风格</a>
+      <span class="p fc10">-</span>
+      <a class="m2a fc08" target="_blank" href="http://blog.163.com/services/wapblog.html">手机博客</a>
+      
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="http://zhumeng8337797.blog.163.com/rss/"/>
+      <span class="p fc10">-</span><span class="fc08" id="$_foot_subscribe"><span class="iblock m2a icn0 icn0-919">&nbsp;</span><a class="m2a fc08">订阅此博客</a></span>
+    </div>
+    <p class="fc08">网易公司版权所有&nbsp;&copy;1997-2010</p>
+  </div>
+</div></div>
+    <!--[if lte IE 6]></div><![endif]-->
+  <!--[if lte IE 6]></div><![endif]-->
+  <div class="nb-layer" id="blog-163-com-layer"></div>
+  <div class="nb-tpl nb-init phide" id="blog-163-com-template" style="display:none;">  <textarea rows="1" cols="1" name="jst" id="nb-jst-a1">  <a class="pr" target="_blank" href="http://help.163.com/special/007525FT/blog.html?b13aze1">帮助</a>
+  <span class="fr iblock space icn1 icn1-4">&nbsp;</span>
+  <a class="pr" target="_blank" href="http://blog.163.com/activation.do?host=activation&&username=${u}">${u}</a>
+</textarea>
+  <textarea rows="1" cols="1" name="jst" id="nb-jst-d0">      {list wl as x}
+        <div class="grp">${x.g}</div>
+        {list x.l as y}
+        <a class="itm noul" href="#" hidefocus="true" name="{if typeof(y.v)=='string'}${y.v}{else}${y_index}{/if}">${y.n}</a>
+        {/list}
+      {/list}
+</textarea>
+  <textarea rows="1" cols="1" name="jst" id="nb-jst-d1">	{if defined('wl')}
+        {list wl as x}<a class="itm noul" href="#" hidefocus="true" name="${x.v}">${x.n}</a>{/list}
+    {/if}
+</textarea>
+</div>
+<script type="text/javascript">
+  window.N = {tm:{'zbtn':'nbtn',
+                  'bdc0':'bdc0','bdc2':'bdc1',
+				  'bgc0':'bgc0','bgc1':'bgc1','bgc2':'bgc2','bgh0':'bgc9',
+				  'fc00':'fc03','fc01':'fc04','fc02':'fc05','fc03':'fc06','fc04':'fc07','fc05':'fc09'}};
+  Date.servTime = '12/02/2010 14:35:22';
+  location.api = 'http://api.blog.163.com/';
+  location.msg = 'http://api.blog.163.com/msg/dwr';
+  location.dwr = 'http://api.blog.163.com/zhumeng8337797/dwr';
+  location.vcd = 'http://api.blog.163.com/cap/captcha.jpgx?parentId=100768914&r=';
+  location.mrt = 'http://b.bst.126.net/newpage/style/mbox/';
+  location.fce = 'http://os.blog.163.com/common/ava.s?host=';
+  location.fce2= 'http://os.blog.163.com/common/ava.s?a=1&t=7750&host=';
+  location.passportfce = 'http://os.blog.163.com/common/ava.s?passport=';
+  location.fpr = 'http://b.bst.126.net/common/portrait/face/preview/';
+  location.f60 = 'http://b.bst.126.net/common/face60.png';
+  location.f140= 'http://b.bst.126.net/common/face140.png';
+  location.adf140= 'http://b.bst.126.net/common/admireface140.png';
+  location.ept = 'http://b.bst.126.net/common/empty.png';
+  location.guide_profile_add= 'http://b.bst.126.net/common/guide_profile_add.gif';
+  location.phtoto_dream = 'http://photo.dream.163.com/blog/writeBlogCallback.do';
+  window.CF = {
+    ca:false
+   ,cb:''
+   ,cc:false
+   ,cd:false
+   ,ce:'-3'
+   ,ck:0
+   ,ci:['api.blog.163.com'
+       ,'http://photo.163.com/photo/html/crossdomain.html?t=20100205'
+        
+        ,'ud.blog.163.com'
+        
+        
+        
+        ]
+   ,cj:[-3]
+   ,cl:''
+   ,cm:["","blog/","album/","music/","collection/","friends/","profile/","pprank/"]
+   ,cf:0
+   ,co:{pv:false
+       ,ti:4196
+       ,tn:''
+       ,tc:0
+       ,tl:3
+       ,ut:0
+       ,un:''
+       ,um:''
+       ,ui:0
+       ,ud:false}
+   ,cp:{nr:0
+       ,cr:0
+       ,vr:-100
+       ,fr:0}
+   ,cs:0
+   ,ct:{'nav':['首页','日志','相册','音乐','收藏','博友','关于我'],'enabled':[0,1,6],'defaultnav':parseInt('1111111',2)}
+   ,cu:false
+   ,cv:false
+  };
+  window.UD = {};
+  UD.host = {
+      userId:100768914
+     ,userName:'zhumeng8337797'
+     ,nickName:'zhuzhu'
+     ,baseUrl:'http://zhumeng8337797.blog.163.com/'
+     ,gender:'他'
+     ,email:'zhumeng8337797@163.com'
+     ,photo163Name:'zhumeng8337797'
+     ,photo163HostName:'zhumeng8337797'
+     ,TOKEN_HTMLMODULE:''
+     ,photoblogguide:false
+  };
+</script>
+    <script type="text/javascript" src="http://b1.bst.126.net/newpage/r/j/pc.js?v=8972442615"></script>
+    <script type="text/javascript" src="http://b1.bst.126.net/newpage/r/j/m/m-3/pm.js?v=8142997212"></script>
+  <script src="http://analytics.163.com/ntes.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    _ntes_nacc='blog';neteaseTracker();
+    
+    new Image().src = 'http://blog.163.com/newpage/images/analyse.png?s=p&t='+new Date().getTime();
+  </script>
+</body>
+</html>

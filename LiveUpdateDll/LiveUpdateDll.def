@@ -1,0 +1,6 @@
+; LiveUpdateDll.def : Declares the module parameters for the DLL.
+
+LIBRARY      "LiveUpdateDll"
+
+EXPORTS
+    ; Explicit exports can go here

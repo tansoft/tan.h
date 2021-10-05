@@ -1,0 +1,482 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\AllTest.rc2""  // 非 Microsoft Visual C++ 编辑过的资源\r\n"
+    "#include ""afxres.rc""         // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\AllTest.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "关于 AllTest"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "AllTest Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2007",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_ALLTEST_DIALOG DIALOGEX 0, 0, 321, 199
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "AllTest"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,264,7,50,16
+    PUSHBUTTON      "取消",IDCANCEL,264,25,50,16
+    PUSHBUTTON      "THDebug",IDC_BUTTON1,7,7,61,20
+    PUSHBUTTON      "THArith",IDC_BUTTON2,77,7,61,20
+    PUSHBUTTON      "THStruct",IDC_BUTTON3,148,7,60,20
+    PUSHBUTTON      "THString",IDC_BUTTON4,7,33,61,20
+    PUSHBUTTON      "THThread",IDC_BUTTON5,77,33,61,20
+    PUSHBUTTON      "THPopupDlgDll",IDC_BUTTON6,148,33,61,20
+    PUSHBUTTON      "THLogicCalc",IDC_BUTTON7,7,61,61,19
+    PUSHBUTTON      "THRegExpDll",IDC_BUTTON8,77,61,61,19
+    PUSHBUTTON      "THScript",IDC_BUTTON9,148,62,61,19
+    PUSHBUTTON      "THNetWork",IDC_BUTTON10,7,87,60,20
+    PUSHBUTTON      "THSqliteDll",IDC_BUTTON11,77,87,60,20
+    PUSHBUTTON      "THINet",IDC_BUTTON12,148,87,61,20
+    PUSHBUTTON      "THSerialPort",IDC_BUTTON13,7,115,59,18
+    PUSHBUTTON      "THRemoteHookDll",IDC_BUTTON14,78,115,59,19
+    PUSHBUTTON      "THLiveUpdateDll",IDC_BUTTON15,148,115,59,19
+    EDITTEXT        IDC_EDIT1,14,159,49,10,ES_AUTOHSCROLL
+    LTEXT           "崩溃地址(16进制使用0x):",IDC_STATIC,7,145,111,8
+    PUSHBUTTON      "THDebugMap",IDC_BUTTON16,77,158,48,12
+    PUSHBUTTON      "SkinDemo",IDC_BUTTON17,146,149,59,13
+    PUSHBUTTON      "THErIcCard",IDC_BUTTON18,218,62,53,18
+    PUSHBUTTON      "THFile",IDC_BUTTON19,219,86,53,20
+    PUSHBUTTON      "THFlash",IDC_BUTTON20,218,115,53,19
+    LTEXT           "Static",IDC_STATICR,213,143,101,49
+END
+
+IDD_DEMOSSK DIALOGEX 0, 0, 521, 379
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Skin++皮肤效果显示"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Button按钮",IDC_BUTTON1,14,18,41,13
+    PUSHBUTTON      "禁止按钮",IDC_BUTTON2,60,18,41,13
+    PUSHBUTTON      "平板按钮",IDC_BUTTON3,107,18,41,13,BS_FLAT
+    PUSHBUTTON      "禁止按钮",IDC_BUTTON4,151,18,41,13,BS_FLAT
+    CONTROL         "Check复选",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,14,37,46,9
+    CONTROL         "选中状态",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,63,37,40,9
+    CONTROL         "三态状态",IDC_CHECK3,"Button",BS_AUTO3STATE | 
+                    WS_TABSTOP,112,37,40,9
+    CONTROL         "禁止状态",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,14,49,40,9
+    CONTROL         "选中禁止",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,63,49,40,9
+    CONTROL         "三态禁止",IDC_CHECK6,"Button",BS_AUTO3STATE | 
+                    WS_TABSTOP,112,49,40,9
+    CONTROL         "Button按下",IDC_CHECK7,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,14,62,41,13
+    CONTROL         "按下状态",IDC_CHECK8,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,60,62,41,13
+    CONTROL         "三态状态",IDC_CHECK9,"Button",BS_AUTO3STATE | 
+                    BS_PUSHLIKE | WS_TABSTOP,106,62,41,13
+    CONTROL         "禁止状态",IDC_CHECK10,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,14,78,41,13
+    CONTROL         "按下禁止",IDC_CHECK11,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,60,78,41,13
+    CONTROL         "三态禁止",IDC_CHECK12,"Button",BS_AUTO3STATE | 
+                    BS_PUSHLIKE | WS_TABSTOP,106,78,41,13
+    EDITTEXT        IDC_EDIT1,14,126,27,12,ES_AUTOHSCROLL
+    CONTROL         "Button按下",IDC_CHECK13,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_FLAT | WS_TABSTOP,158,62,41,13
+    CONTROL         "按下状态",IDC_CHECK14,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_FLAT | WS_TABSTOP,204,62,41,13
+    CONTROL         "三态状态",IDC_CHECK15,"Button",BS_AUTO3STATE | 
+                    BS_PUSHLIKE | BS_FLAT | WS_TABSTOP,250,62,41,13
+    CONTROL         "禁止状态",IDC_CHECK16,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_FLAT | WS_TABSTOP,158,78,41,13
+    CONTROL         "按下禁止",IDC_CHECK17,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_FLAT | WS_TABSTOP,204,78,41,13
+    CONTROL         "三态禁止",IDC_CHECK18,"Button",BS_AUTO3STATE | 
+                    BS_PUSHLIKE | BS_FLAT | WS_TABSTOP,250,78,41,13
+    EDITTEXT        IDC_EDIT2,44,126,27,12,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,73,126,27,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT4,103,126,27,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT5,15,138,27,24,ES_MULTILINE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT7,103,138,27,24,ES_MULTILINE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT6,73,138,27,24,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    CONTROL         "Check复选",IDC_CHECK19,"Button",BS_AUTOCHECKBOX | 
+                    BS_FLAT | WS_TABSTOP,161,37,54,9
+    CONTROL         "选中状态",IDC_CHECK20,"Button",BS_AUTOCHECKBOX | 
+                    BS_FLAT | WS_TABSTOP,211,37,40,9
+    CONTROL         "三态状态",IDC_CHECK21,"Button",BS_AUTO3STATE | BS_FLAT | 
+                    WS_TABSTOP,259,37,40,9
+    CONTROL         "禁止状态",IDC_CHECK22,"Button",BS_AUTOCHECKBOX | 
+                    BS_FLAT | WS_TABSTOP,161,49,40,9
+    CONTROL         "选中禁止",IDC_CHECK23,"Button",BS_AUTOCHECKBOX | 
+                    BS_FLAT | WS_TABSTOP,210,49,40,9
+    CONTROL         "三态禁止",IDC_CHECK24,"Button",BS_AUTO3STATE | BS_FLAT | 
+                    WS_TABSTOP,259,49,40,9
+    COMBOBOX        IDC_COMBO1,55,181,39,54,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO2,97,181,36,54,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO3,55,195,39,54,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO4,97,195,36,54,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO5,55,209,38,40,CBS_SIMPLE | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO6,97,209,35,40,CBS_SIMPLE | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Button按钮",IDC_STATIC,7,7,297,93
+    GROUPBOX        "Edit编辑框",IDC_STATIC,7,104,130,65,BS_FLAT
+    LTEXT           "正常       密码       只读       禁止",IDC_STATIC,16,
+                    114,109,10
+    GROUPBOX        "Combo选择框",IDC_STATIC,7,172,132,98
+    LTEXT           "DropDown\r\n\r\nDropList\r\n\r\nSimple\r\n\r\n\r\n\r\n\r\nComboEx",
+                    IDC_STATIC,14,181,38,84
+    LISTBOX         IDC_LIST1,360,17,72,34,LBS_SORT | LBS_HASSTRINGS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST2,437,17,70,34,LBS_SORT | LBS_HASSTRINGS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "RadioButton",IDC_STATIC,145,104,203,65
+    CONTROL         "Radio单选",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,150,114,43,10
+    CONTROL         "选中状态",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,150,
+                    126,43,10
+    CONTROL         "禁止状态",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,150,141,43,10
+    CONTROL         "禁止选中",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,150,
+                    153,43,10
+    CONTROL         "Radio单选",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON | 
+                    BS_FLAT | WS_GROUP,197,114,43,10
+    CONTROL         "选中状态",IDC_RADIO6,"Button",BS_AUTORADIOBUTTON | 
+                    BS_FLAT,197,127,43,10
+    CONTROL         "禁止状态",IDC_RADIO7,"Button",BS_AUTORADIOBUTTON | 
+                    BS_FLAT | WS_GROUP,197,142,43,10
+    CONTROL         "禁止选中",IDC_RADIO8,"Button",BS_AUTORADIOBUTTON | 
+                    BS_FLAT,197,155,43,10
+    CONTROL         "Radio单选",IDC_RADIO9,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE | WS_GROUP,248,114,43,10
+    CONTROL         "选中状态",IDC_RADIO10,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE,248,127,43,10
+    CONTROL         "禁止状态",IDC_RADIO11,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE | WS_GROUP,248,142,43,10
+    CONTROL         "禁止选中",IDC_RADIO12,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE,248,155,43,10
+    CONTROL         "Radio单选",IDC_RADIO13,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE | BS_FLAT | WS_GROUP,299,114,43,10
+    CONTROL         "选中状态",IDC_RADIO14,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE | BS_FLAT,299,127,43,10
+    CONTROL         "禁止状态",IDC_RADIO15,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE | BS_FLAT | WS_GROUP,299,142,43,10
+    CONTROL         "禁止选中",IDC_RADIO16,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE | BS_FLAT,299,155,43,10
+    LTEXT           "Static状态栏1",IDC_STATIC,13,316,47,11
+    GROUPBOX        "Static状态栏",IDC_STATIC,7,304,88,68
+    CONTROL         "Static状态栏1",IDC_STATIC1,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,13,330,47,11,WS_EX_CLIENTEDGE
+    LTEXT           "Static状态栏1",IDC_STATIC,13,345,47,11
+    CONTROL         "Static状态栏1",IDC_STATIC2,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,13,357,47,11,WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,71,316,19,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,71,326,19,9
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDVERT,64,319,1,45
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,72,340,18,1
+    CONTROL         "",IDC_STATIC,"Static",SS_GRAYRECT,71,344,18,10
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT,71,357,19,11,
+                    WS_EX_CLIENTEDGE
+    SCROLLBAR       IDC_SCROLLBAR1,163,184,51,9
+    SCROLLBAR       IDC_SCROLLBAR2,149,184,9,57,SBS_VERT
+    CONTROL         "",IDC_SLIDER1,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,163,198,54,15
+    CONTROL         "",IDC_SLIDER2,"msctls_trackbar32",TBS_TOP | TBS_NOTICKS | 
+                    WS_TABSTOP,163,213,54,15
+    CONTROL         "",IDC_SLIDER3,"msctls_trackbar32",TBS_NOTICKS | 
+                    WS_TABSTOP,163,228,54,15
+    CONTROL         "",IDC_SLIDER4,"msctls_trackbar32",TBS_VERT | TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,217,183,13,58
+    CONTROL         "",IDC_SPIN1,"msctls_updown32",UDS_ARROWKEYS,154,244,9,
+                    23
+    CONTROL         "",IDC_SPIN2,"msctls_updown32",UDS_ARROWKEYS,167,244,9,
+                    23
+    CONTROL         "",IDC_SPIN3,"msctls_updown32",UDS_ARROWKEYS | UDS_HORZ,
+                    187,251,19,9
+    CONTROL         "",IDC_SPIN4,"msctls_updown32",UDS_ARROWKEYS | UDS_HORZ,
+                    211,251,19,9
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,272,200,
+                    64,9
+    CONTROL         "",IDC_PROGRESS2,"msctls_progress32",WS_BORDER,272,211,
+                    64,9
+    CONTROL         "",IDC_PROGRESS3,"msctls_progress32",WS_BORDER | 0x1,272,
+                    222,64,9
+    CONTROL         "",IDC_PROGRESS4,"msctls_progress32",WS_BORDER | 0x1,272,
+                    233,64,9
+    CONTROL         "",IDC_PROGRESS5,"msctls_progress32",WS_BORDER | 0x4,239,
+                    196,9,51
+    CONTROL         "",IDC_PROGRESS6,"msctls_progress32",WS_BORDER | 0x4,253,
+                    196,9,51
+    CONTROL         "",IDC_HOTKEY1,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,
+                    265,183,37,12
+    CONTROL         "",IDC_HOTKEY2,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,
+                    305,183,36,12
+    LTEXT           "HotKey",IDC_STATIC,238,185,28,9
+    GROUPBOX        "Misc",IDC_STATIC,145,172,203,99
+    CONTROL         "",IDC_LIST3,"SysListView32",LVS_ALIGNLEFT | WS_BORDER | 
+                    WS_TABSTOP,360,54,72,46
+    GROUPBOX        "ListBox && ListCtrl",IDC_STATIC,353,7,161,243
+    CONTROL         "",IDC_LIST4,"SysListView32",LVS_ALIGNLEFT | WS_BORDER | 
+                    WS_TABSTOP,437,54,70,46
+    CONTROL         "",IDC_LIST5,"SysListView32",LVS_SMALLICON | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,360,102,72,46
+    CONTROL         "",IDC_LIST6,"SysListView32",LVS_SMALLICON | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,437,102,70,46
+    CONTROL         "",IDC_LIST7,"SysListView32",LVS_LIST | LVS_ALIGNLEFT | 
+                    WS_BORDER | WS_TABSTOP,360,150,72,46
+    CONTROL         "",IDC_LIST8,"SysListView32",LVS_LIST | LVS_ALIGNLEFT | 
+                    WS_BORDER | WS_TABSTOP,437,150,70,46
+    CONTROL         "",IDC_LIST9,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | 
+                    WS_BORDER | WS_TABSTOP,360,198,72,46
+    CONTROL         "",IDC_LIST10,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | 
+                    WS_BORDER | WS_TABSTOP,437,198,70,46
+    CONTROL         "",IDC_TREE1,"SysTreeView32",TVS_NOSCROLL | WS_BORDER | 
+                    WS_TABSTOP,104,281,51,41
+    GROUPBOX        "TreeCtrl",IDC_STATIC,100,271,169,101
+    CONTROL         "",IDC_TREE2,"SysTreeView32",TVS_NOSCROLL | WS_BORDER | 
+                    WS_TABSTOP,104,326,51,41
+    CONTROL         "",IDC_TREE3,"SysTreeView32",TVS_CHECKBOXES | 
+                    TVS_NOSCROLL | WS_BORDER | WS_TABSTOP,158,281,51,41
+    CONTROL         "",IDC_TREE4,"SysTreeView32",TVS_CHECKBOXES | 
+                    TVS_NOSCROLL | WS_BORDER | WS_TABSTOP,158,326,51,41
+    CONTROL         "",IDC_TREE5,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_NOSCROLL | 
+                    WS_BORDER | WS_TABSTOP,213,281,51,41
+    CONTROL         "",IDC_TREE6,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_NOSCROLL | 
+                    WS_BORDER | WS_TABSTOP,213,326,51,41
+    CONTROL         "",IDC_TAB1,"SysTabControl32",0x0,386,261,54,43
+    CONTROL         "",IDC_TAB2,"SysTabControl32",0x0,445,261,53,43
+    GROUPBOX        "Tab",IDC_STATIC,377,252,137,120
+    CONTROL         "",IDC_TAB3,"SysTabControl32",TCS_BUTTONS,386,307,54,19
+    CONTROL         "",IDC_TAB4,"SysTabControl32",TCS_BUTTONS,445,307,53,19
+    CONTROL         "",IDC_TAB5,"SysTabControl32",0x0,387,323,54,43,
+                    WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_TAB6,"SysTabControl32",0x0,446,323,53,43,
+                    WS_EX_CLIENTEDGE
+    GROUPBOX        "DateTime",IDC_STATIC,273,272,101,100
+    CONTROL         "",IDC_DATETIMEPICKER1,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,276,281,52,14
+    CONTROL         "",IDC_DATETIMEPICKER2,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,276,297,52,14
+    CONTROL         "",IDC_DATETIMEPICKER3,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,329,281,
+                    42,14
+    CONTROL         "",IDC_DATETIMEPICKER4,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,329,297,
+                    42,14
+    CONTROL         "",IDC_MONTHCALENDAR1,"SysMonthCal32",MCS_NOTODAY | 
+                    MCS_NOTODAYCIRCLE | WS_TABSTOP,277,314,92,51
+    CONTROL         "",IDC_IPADDRESS1,"SysIPAddress32",WS_TABSTOP,244,251,86,
+                    11
+    CONTROL         "",IDC_COMBOBOXEX1,"ComboBoxEx32",CBS_DROPDOWN | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,54,252,40,39
+    CONTROL         "",IDC_COMBOBOXEX2,"ComboBoxEx32",CBS_DROPDOWN | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,97,252,36,43
+    PUSHBUTTON      "SkinFile",IDC_BUTTON5,309,15,40,14
+    PUSHBUTTON      "RemoveSkin",IDC_BUTTON6,309,33,40,13
+END
+
+IDD_THMAGNETICDLG DIALOG  0, 0, 186, 95
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 9, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,16
+    PUSHBUTTON      "Cancel",IDCANCEL,129,26,50,16
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "TODO: <文件说明>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "AllTest.exe"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "AllTest.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "翻译", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_ALLTEST_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 314
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 192
+    END
+
+    IDD_DEMOSSK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 514
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 372
+    END
+
+    IDD_THMAGNETICDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 AllTest(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\AllTest.rc2"  // 非 Microsoft Visual C++ 编辑过的资源
+#include "afxres.rc"         // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,561 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\HttpServer.rc2""  // 非 Microsoft Visual C++ 编辑过的资源\r\n"
+    "#include ""afxres.rc""         // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\HttpServer.ico"
+IDI_ICONOFF             ICON                    "res\\iconoff.ico"
+IDI_ICONON              ICON                    "res\\iconon.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "关于 HttpServer"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "HttpServer Version 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2008",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_HTTPSERVER_DIALOG DIALOGEX 0, 0, 320, 200
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "天塑微型Web服务器 1.0"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            "",IDC_STATELIGHT,246,14,20,20,SS_REALSIZEIMAGE
+    PUSHBUTTON      "启动(&S)",IDC_BTNRUN,265,16,41,15
+    PUSHBUTTON      "浏览(&B)",IDC_BUTTON1,256,42,50,13
+    CONTROL         "实时状态(&R)",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,255,64,51,9
+    PUSHBUTTON      "设置(&U)",IDC_BTNRUN2,257,90,41,15
+    EDITTEXT        IDC_EDIT6,279,117,23,10,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "%",IDC_STATIC,306,118,7,7
+    LTEXT           "缓存击中率：",IDC_STATIC,234,118,42,7
+    PUSHBUTTON      "清空缓存",IDC_BUTTON5,261,135,35,11
+END
+
+IDD_PROPPAGE_BASE DIALOGEX 0, 0, 270, 174
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "基本"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_EDIT1,64,23,23,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,64,38,23,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "?",IDC_BUTTON4,90,38,12,11
+    CONTROL         "开机自动运行(&A)",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,19,86,79,10
+    CONTROL         "启动程序后自动开始Web服务(&S)",IDC_CHECK2,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,19,98,136,10
+    CONTROL         "启动时隐藏主窗口(&H)",IDC_CHECK3,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,19,110,93,10
+    LTEXT           "监听端口：",IDC_STATIC,17,24,45,10
+    LTEXT           "DynIP SID：",IDC_STATIC,17,39,45,10
+    GROUPBOX        "网络：",IDC_STATIC,7,7,171,49
+    GROUPBOX        "启动：",IDC_STATIC,7,67,170,68
+    CONTROL         "启动Https服务(&S)",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,95,24,78,10
+END
+
+IDD_PROPPAGE_DIRECTORY DIALOGEX 0, 0, 270, 174
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "目录"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "磁盘路径：",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,15,23,54,11
+    CONTROL         "映像文件：",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,15,
+                    39,53,11
+    GROUPBOX        "本地目录：",IDC_STATIC,7,7,187,51
+    EDITTEXT        IDC_EDIT3,73,22,89,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT4,73,38,89,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON2,166,22,17,12
+    PUSHBUTTON      "...",IDC_BUTTON3,166,38,17,12
+    CONTROL         "允许列出目录信息(&L)",IDC_CHECK1,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,16,78,93,8
+    CONTROL         "UTF-8 AUTOFIX GB2312",IDC_CHECK2,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,16,89,93,10
+    GROUPBOX        "Web目录：",IDC_STATIC,7,64,130,103
+    CONTROL         "使用默认文件(&D)：",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,105,82,10
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | 
+                    WS_BORDER | WS_TABSTOP,29,119,77,41
+    PUSHBUTTON      "^",IDC_BUTTON1,110,121,17,17
+    PUSHBUTTON      "v",IDC_BUTTON5,110,142,17,17
+    GROUPBOX        "Static",IDC_STATIC,129,66,134,101
+    CONTROL         "限制文件类型：",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,129,65,74,11
+    LTEXT           "限制允许访问的文件类型：",IDC_STATIC,151,77,106,9
+    CONTROL         "",IDC_LIST4,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | 
+                    WS_BORDER | WS_TABSTOP,147,91,102,67
+END
+
+IDD_PROPPAGE_PERFORMANCE DIALOGEX 0, 0, 270, 174
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "性能"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_EDIT1,115,29,24,11,ES_AUTOHSCROLL
+    CONTROL         "限制最多的线程数为：",IDC_CHECK1,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,51,42,94,13
+    EDITTEXT        IDC_EDIT2,151,43,22,11,ES_AUTOHSCROLL
+    PUSHBUTTON      "?",IDC_BUTTON4,190,30,9,9
+    GROUPBOX        "",IDC_STATIC,27,63,222,63
+    CONTROL         "使用磁盘缓存(&C)：",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,32,62,83,10
+    CONTROL         "限制缓冲内存大小：",IDC_RADIO7,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,40,77,84,8
+    CONTROL         "以空闲内存动态调整(&A)",IDC_RADIO6,"Button",
+                    BS_AUTORADIOBUTTON,40,92,98,11
+    EDITTEXT        IDC_EDIT4,127,75,27,11,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT5,137,92,27,11,ES_AUTOHSCROLL
+    PUSHBUTTON      "清空缓存",IDC_BUTTON1,185,75,41,12
+    CONTROL         "监测文件变化(&N)",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,40,111,86,8
+    CONTROL         "轻量级访问(&U)",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,32,149,66,10
+    CONTROL         "小型站点(&S)",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,
+                    110,149,57,10
+    CONTROL         "中型站点(&M)",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,
+                    189,149,58,10
+    LTEXT           "基准线程数：",IDC_STATIC,52,30,52,9
+    GROUPBOX        "预设模式：",IDC_STATIC,18,137,238,30
+    GROUPBOX        "指标值：",IDC_STATIC,17,7,239,126
+    LTEXT           "MB",IDC_STATIC,161,76,10,8
+    LTEXT           "%",IDC_STATIC,168,93,8,8
+    GROUPBOX        "线程池：",IDC_STATIC,27,18,222,40
+    PUSHBUTTON      "?",IDC_BUTTON7,190,93,9,9
+END
+
+IDD_PROPPAGE_SCRIPT DIALOGEX 0, 0, 270, 174
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "脚本"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "使用脚本：",IDC_STATIC,7,7,256,89
+    CONTROL         "使用脚本(&U)：",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,7,64,11
+    PUSHBUTTON      "添加",IDC_BUTTON2,91,19,21,10
+    PUSHBUTTON      "编辑",IDC_BUTTON3,117,19,21,10
+    PUSHBUTTON      "删除",IDC_BUTTON4,143,19,21,10
+    LISTBOX         IDC_LIST1,33,32,135,41,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "限制脚本运行时间(&L)",IDC_CHECK2,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,34,78,89,11
+    EDITTEXT        IDC_EDIT1,124,77,24,12,ES_AUTOHSCROLL
+    GROUPBOX        "",IDC_STATIC,7,100,256,67
+    CONTROL         "使用Session区分客户端连接(&S)",IDC_CHECK3,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,99,130,11
+    EDITTEXT        IDC_EDIT2,97,116,24,12,ES_AUTOHSCROLL
+    CONTROL         "使用Session Cookieless模式(&L)",IDC_CHECK5,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,33,135,130,10
+    PUSHBUTTON      "?",IDC_BUTTON1,172,134,13,12
+    LTEXT           "秒",IDC_STATIC,153,80,9,10
+    LTEXT           "脚本后缀名：",IDC_STATIC,32,20,51,9
+    LTEXT           "秒",IDC_STATIC,127,118,9,10
+    LTEXT           "Session超时时间",IDC_STATIC,33,118,61,10
+END
+
+IDD_PROPPAGE_UPLOAD DIALOGEX 0, 0, 270, 174
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "上传"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Static",IDC_STATIC,19,18,228,73
+    CONTROL         "把Post的文件数据保存为文件(&F)",IDC_CHECK1,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,23,16,130,11
+    CONTROL         "文件保存到当前目录(&C)",IDC_RADIO1,"Button",
+                    BS_AUTORADIOBUTTON,34,33,141,8
+    CONTROL         "把上传文件集中到目录(&S)",IDC_RADIO2,"Button",
+                    BS_AUTORADIOBUTTON,34,49,105,8
+    EDITTEXT        IDC_EDIT1,142,49,75,10,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "...",IDC_BUTTON1,224,49,18,10
+    CONTROL         "如果文件已存在则自动改名(&A)",IDC_CHECK2,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,32,68,147,11
+    PUSHBUTTON      "?",IDC_BUTTON2,183,32,8,9
+END
+
+IDD_PROPPAGE_AUTH DIALOGEX 0, 0, 270, 174
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "安全"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "匿名访问(&A)",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,21,21,58,8
+    CONTROL         "基础认证(&B)(不推荐)",IDC_RADIO2,"Button",
+                    BS_AUTORADIOBUTTON,21,33,87,8
+    CONTROL         "摘要认证(&D)",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,21,
+                    46,60,8
+    PUSHBUTTON      "?",IDC_BUTTON3,110,33,11,9
+    EDITTEXT        IDC_EDIT1,18,84,99,11,ES_AUTOHSCROLL
+    PUSHBUTTON      "增加",IDC_BUTTON1,175,16,24,11
+    PUSHBUTTON      "编辑",IDC_BUTTON5,202,16,24,11
+    PUSHBUTTON      "删除",IDC_BUTTON6,229,16,24,11
+    LISTBOX         IDC_LIST1,129,32,125,77,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "",IDC_STATIC,7,123,256,51
+    CONTROL         "访问Ip限制(&I)：",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,14,121,64,13
+    EDITTEXT        IDC_EDIT2,74,135,163,11,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,74,149,163,11,ES_AUTOHSCROLL
+    PUSHBUTTON      "?",IDC_BUTTON2,243,135,11,9
+    GROUPBOX        "访问控制：",IDC_STATIC,7,7,256,110
+    LTEXT           "主机名(客户访问时浏览器中显示名称)：",IDC_STATIC,17,65,
+                    100,18
+    LTEXT           "允许Ip范围：",IDC_STATIC,20,135,48,9
+    LTEXT           "限制Ip范围：",IDC_STATIC,19,150,48,9
+    LTEXT           "帐户列表：",IDC_STATIC,130,17,42,9
+END
+
+IDD_PROPPAGE_LOG DIALOGEX 0, 0, 270, 174
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "日志记录"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "日志：",IDC_STATIC,7,7,256,160
+    GROUPBOX        "记录级别：",IDC_STATIC,19,22,232,27
+    CONTROL         "记录错误(&E)",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,29,34,62,9
+    CONTROL         "记录信息(&I)",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,101,34,62,9
+    CONTROL         "记录详细交互(&D)",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,170,34,74,9
+    GROUPBOX        "日志文件：",IDC_STATIC,19,54,232,62
+    CONTROL         "保存到单一文件",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,36,72,88,9
+    CONTROL         "按天保存为单独文件\n(日期叠加到文件名后)",IDC_RADIO2,
+                    "Button",BS_AUTORADIOBUTTON | BS_MULTILINE,129,67,99,21
+    PUSHBUTTON      "...",IDC_BUTTON1,195,92,18,11
+    EDITTEXT        IDC_EDIT1,49,92,142,11,ES_AUTOHSCROLL
+END
+
+IDD_PROPPAGE_MULSERVICE DIALOGEX 0, 0, 270, 174
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "多站点"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Static",IDC_STATIC,7,7,243,52
+    CONTROL         "支持域名绑定(&H)",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,14,7,80,10
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | 
+                    WS_BORDER | WS_TABSTOP,29,25,183,30
+    GROUPBOX        "Static",IDC_STATIC,7,60,256,55
+    CONTROL         "支持虚拟目录(&V)",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,60,107,10
+    CONTROL         "",IDC_LIST2,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | 
+                    WS_BORDER | WS_TABSTOP,29,82,183,30
+    GROUPBOX        "Static",IDC_STATIC,7,112,256,55
+    CONTROL         "支持源地址路由(&S)",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,112,107,10
+    CONTROL         "",IDC_LIST3,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | 
+                    WS_BORDER | WS_TABSTOP,29,134,183,30
+    LTEXT           "域名服务对应表：",IDC_STATIC,26,16,144,9
+    LTEXT           "虚拟目录服务对应表：",IDC_STATIC,27,71,144,9
+    LTEXT           "源地址路由对应表：",IDC_STATIC,27,122,144,9
+END
+
+IDD_PROPPAGE_PLUGIN DIALOGEX 0, 0, 270, 174
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "插件"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Static",IDC_STATIC,7,7,256,83
+    CONTROL         "使用插件：",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,7,56,11
+    LTEXT           "插件列表：",IDC_STATIC,30,18,152,10
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | 
+                    WS_BORDER | WS_TABSTOP,37,28,178,56
+    CONTROL         "使用内置常用JavaScript，包括日历组件，对话框，Mootool(&S) /tsmisc/js/calendar.js mootool.js",
+                    IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,107,
+                    239,17
+    GROUPBOX        "内置插件：",IDC_STATIC,7,96,256,71
+    CONTROL         "使用内置播放器(&F) /tsmisc/flash/player.swf music",
+                    IDC_CHECK5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,124,
+                    179,12
+    CONTROL         "使用内置常用脚本(&T)    /tsmisc/ts/login.tsp counter.tsp",
+                    IDC_CHECK6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,139,
+                    194,12
+    PUSHBUTTON      "用法帮助(&H)",IDC_BUTTON2,206,125,48,15
+END
+
+IDD_PROPPAGE_CUSTOM DIALOGEX 0, 0, 270, 174
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "自定义"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "错误响应：",IDC_STATIC,7,78,256,89
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | 
+                    WS_BORDER | WS_TABSTOP,39,92,178,68
+    GROUPBOX        "MIME类型：",IDC_STATIC,7,7,256,55
+    CONTROL         "",IDC_LIST2,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | 
+                    WS_BORDER | WS_TABSTOP,9,14,220,41
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,3,0,0
+ PRODUCTVERSION 1,3,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "Comments", "天塑微型Http服务器"
+            VALUE "CompanyName", "天塑软件"
+            VALUE "FileDescription", "天塑微型Http服务器"
+            VALUE "FileVersion", "1.3.0.0"
+            VALUE "InternalName", "HttpServer.exe"
+            VALUE "LegalCopyright", "天塑软件 保留所有权利。"
+            VALUE "LegalTrademarks", "天塑软件"
+            VALUE "OriginalFilename", "HttpServer.exe"
+            VALUE "ProductName", "天塑微型Http服务器"
+            VALUE "ProductVersion", "1.3.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_HTTPSERVER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+
+    IDD_PROPPAGE_BASE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 263
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 167
+    END
+
+    IDD_PROPPAGE_DIRECTORY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 263
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 167
+    END
+
+    IDD_PROPPAGE_PERFORMANCE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 263
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 167
+    END
+
+    IDD_PROPPAGE_SCRIPT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 263
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 167
+    END
+
+    IDD_PROPPAGE_UPLOAD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 263
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 167
+    END
+
+    IDD_PROPPAGE_AUTH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 263
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 167
+    END
+
+    IDD_PROPPAGE_LOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 263
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 167
+    END
+
+    IDD_PROPPAGE_MULSERVICE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 263
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 167
+    END
+
+    IDD_PROPPAGE_PLUGIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 263
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 167
+    END
+
+    IDD_PROPPAGE_CUSTOM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 263
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 167
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "tray"
+    BEGIN
+        MENUITEM "exit",                        ID_TRAY_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 HttpServer(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\HttpServer.rc2"  // 非 Microsoft Visual C++ 编辑过的资源
+#include "afxres.rc"         // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

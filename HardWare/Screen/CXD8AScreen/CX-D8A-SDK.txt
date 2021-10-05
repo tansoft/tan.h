@@ -1,0 +1,20 @@
+RS232 2400bps n 8 1
+ESC/POS 指令集
+
+指令集：
+1.波特率
+ STX B0 9600 bps
+ STX B2 2400 bps(默认)
+2.初始化
+ ESC@ (1BH 40H)
+3.清屏
+ CLR (0CH)
+4.显示数字
+ ESC Q A 12.1 CR
+ (1BH 51H 41H num 0DH)
+5.小灯控制
+ 单价灯亮 ESC s1(1BH 73H 31H)
+ 总计灯亮 ESC s2(1BH 73H 32H)
+ 收款灯亮 ESC s3(1BH 73H 33H)
+ 找零灯亮 ESC s4(1BH 73H 34H)
+ 全灭 ESC s1(1BH 73H 30H)

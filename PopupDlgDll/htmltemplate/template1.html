@@ -1,0 +1,38 @@
+<html><head>
+<title>卓越网</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<script type="text/JavaScript">
+<!--
+function OpenUrl(idx)
+{
+	if (idx==1)
+		window.open("http://tansoft.cn", '_blank');
+	else
+		window.open("http://tinim.com", '_blank');
+	document.location="popupcmd://CloseWindow";
+}
+function MoveWindow()
+{
+	document.location="popupcmd://MoveWindow";
+}
+//-->
+</script>
+</head>
+<body LEFTMARGIN=0 RIGHTMARGIN=0 TOPMARGIN=0 BOTTOMARGIN=0 border=0 style='word-wrap: break-word;' >
+<div id="PopupSettings" style="display:none;">
+ [dlgtype]0[/dlgtype]
+ [posx]ex-w-5[/posx]
+ [posy]ey-h-5[/posy]
+ [displaytype]3[/displaytype]
+ [closetype]2[/closetype]
+ [timeout]20[/timeout]
+ [showtype]-1[/showtype]</div>
+<IMG SRC="template1.gif" border="0" usemap="#buttons" />
+<map name="buttons">
+<area id="CloseBtn" shape="rect" coords="230,3,248,21" href="popupcmd://CloseWindow" />
+<area id="TitleBar" shape="rect" coords="0,0,250,22" onMouseDown="MoveWindow();" />
+<area id="AdArea" shape="rect" coords="3,21,247,128" href="#" onclick="OpenUrl(1);" />
+<area id="ShowBtn" shape="rect" coords="6,134,51,154" href="#" onclick="OpenUrl(2);" />
+</map>
+</body>
+</html>

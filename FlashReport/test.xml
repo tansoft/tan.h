@@ -1,0 +1,28 @@
+<chart caption='БъЬт' showDivLineValues='0' PYAxisName='Sales' SYAxisName='Total Downloads' xAxisName='1212' labelStep='2' staggerLines='5' labelDisplay='STAGGER'>
+   <categories>
+      <category label='Jan'/>
+      <category label='Feb'/>
+      <category label='Mar'/>
+   </categories>
+
+   <dataset seriesName='Product A Sales'>
+      <set value='230' />
+      <set value='245' />
+      <set value='250' />
+   </dataset>
+   <dataset seriesName='Product B Sales'>
+      <set value='130' />
+      <set value='145' />
+      <set value='50' />
+   </dataset>
+   <dataset seriesName='Total Downloads' parentYAxis='S'>
+      <set value='13000' />
+      <set value='14500' />
+      <set value='5000' />
+   </dataset>
+
+   <trendlines>
+      <line startValue='300' color='91C728' displayValue='Target' showOnTop='1'/>
+   </trendlines>
+
+</chart>

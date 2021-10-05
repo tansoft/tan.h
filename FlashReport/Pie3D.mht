@@ -1,0 +1,2155 @@
+From: <ÓÉ Microsoft Internet Explorer 5 ±£´æ>
+Subject: FusionCharts v3 - XML Structure
+Date: Wed, 21 Jan 2009 18:17:15 +0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_000B_01C97BF4.7CC965A0"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.3350
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_000B_01C97BF4.7CC965A0
+Content-Type: text/html;
+	charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.fusioncharts.com/docs/Contents/ChartSS/Pie3D.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>FusionCharts v3 - XML Structure</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Dgb2312"><LINK=20
+href=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/ChartStyle.css"=
+=20
+rel=3Dstylesheet>
+<META content=3D"MSHTML 6.00.2900.3492" name=3DGENERATOR></HEAD>
+<BODY leftMargin=3D15>&nbsp;<SPAN class=3DpageHeader>Pie 3D Chart =
+Specification=20
+Sheet</SPAN> <BR>&nbsp;<SPAN class=3DtextBold>SWF: </SPAN><SPAN=20
+class=3Dtext>Pie3D.swf</SPAN> <BR><BR>
+<TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"98%" align=3Dcenter>
+  <TBODY>
+  <TR>
+    <TD><A name=3Dtop></A><SPAN class=3Dtext><B>Quick Links</B> (within =
+this=20
+      page)</SPAN> </TD></TR></TBODY></TABLE>
+<TABLE class=3DtableYellowBorder cellSpacing=3D2 cellPadding=3D4 =
+width=3D"98%"=20
+align=3Dcenter>
+  <TBODY>
+  <TR class=3DtrLightYellowBg>
+    <TD width=3D"33%"><SPAN class=3Dtext>&nbsp;<B>Chart</B> </SPAN></TD>
+    <TD width=3D"33%"><SPAN class=3Dtext>&nbsp;<B>Data</B> </SPAN></TD>
+    <TD width=3D"34%"><SPAN class=3Dtext>&nbsp;<B>Others</B> =
+</SPAN></TD></TR>
+  <TR>
+    <TD class=3DtrVeryLightYellowBg vAlign=3Dtop width=3D"33%"><IMG =
+height=3D9=20
+      =
+src=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Images/Bullet.gi=
+f"=20
+      width=3D9>&nbsp;<A=20
+      =
+href=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Pie3D.html#char=
+tImage">Chart=20
+      Image</A><BR><IMG height=3D9=20
+      =
+src=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Images/Bullet.gi=
+f"=20
+      width=3D9>&nbsp;<A=20
+      =
+href=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Pie3D.html#Obje=
+cts">Chart=20
+      Objects</A><BR><IMG=20
+      =
+src=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Images/Bullet.gi=
+f">&nbsp;<A=20
+      =
+href=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Pie3D.html#Anch=
+or1">Functional=20
+      Attributes</A><BR><IMG=20
+      =
+src=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Images/Bullet.gi=
+f">&nbsp;<A=20
+      =
+href=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Pie3D.html#Anch=
+or2">Titles=20
+      and Axis Names</A><BR><IMG=20
+      =
+src=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Images/Bullet.gi=
+f">&nbsp;<A=20
+      =
+href=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Pie3D.html#Anch=
+or3">Chart=20
+      Cosmetics</A><BR><IMG=20
+      =
+src=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Images/Bullet.gi=
+f">&nbsp;<A=20
+      =
+href=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Pie3D.html#Anch=
+or8">Tool-tip</A><BR><IMG=20
+      =
+src=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Images/Bullet.gi=
+f">&nbsp;<A=20
+      =
+href=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Pie3D.html#Anch=
+or6">Paddings=20
+      and Margins</A><BR></TD>
+    <TD vAlign=3Dtop width=3D"33%"><IMG height=3D9=20
+      =
+src=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Images/Bullet.gi=
+f"=20
+      width=3D9>&nbsp;<A=20
+      =
+href=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Pie3D.html#samp=
+leXML">Sample=20
+      XML Data</A><BR><IMG=20
+      =
+src=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Images/Bullet.gi=
+f">&nbsp;<A=20
+      =
+href=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Pie3D.html#Anch=
+or20">&lt;set&gt;=20
+      element</A><BR><IMG=20
+      =
+src=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Images/Bullet.gi=
+f">&nbsp;<A=20
+      =
+href=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Pie3D.html#Anch=
+or4">Plot=20
+      Cosmetics</A><BR><IMG=20
+      =
+src=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Images/Bullet.gi=
+f">&nbsp;<A=20
+      =
+href=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Pie3D.html#Anch=
+or11">Pie=20
+      / Doughnut Properties</A><BR><IMG=20
+      =
+src=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Images/Bullet.gi=
+f">&nbsp;<A=20
+      =
+href=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Pie3D.html#Anch=
+or12">Smart=20
+      Labels and Lines</A><BR></TD>
+    <TD class=3DtrVeryLightYellowBg vAlign=3Dtop width=3D"34%"><IMG=20
+      =
+src=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Images/Bullet.gi=
+f">&nbsp;<A=20
+      =
+href=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Pie3D.html#Anch=
+or7">Number=20
+      Formatting</A><BR><IMG=20
+      =
+src=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Images/Bullet.gi=
+f">&nbsp;<A=20
+      =
+href=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Pie3D.html#Anch=
+or9">Font=20
+      Properties</A><BR></TD></TR></TBODY></TABLE><BR><A =
+name=3DchartImage></A>
+<TABLE cellPadding=3D2 width=3D"98%" align=3Dcenter>
+  <TBODY>
+  <TR>
+    <TD align=3Dmiddle><SPAN class=3Dtext>&nbsp;Pie 3D chart looks as=20
+      under:</SPAN> </TD></TR>
+  <TR>
+    <TD align=3Dmiddle><IMG class=3DimageBorder alt=3D"Pie 3D chart"=20
+      =
+src=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Images/Pie_3D.jp=
+g">=20
+    </TD></TR></TBODY></TABLE><BR><A name=3DsampleXML></A>
+<TABLE cellPadding=3D2 width=3D"98%" align=3Dcenter>
+  <TBODY>
+  <TR>
+    <TD align=3Dleft><SPAN class=3Dtext>&nbsp;Sample XML for Pie 3D =
+chart:</SPAN>=20
+    </TD></TR></TBODY></TABLE>
+<TABLE class=3DtableYellowBorder cellPadding=3D2 width=3D"98%" =
+align=3Dcenter>
+  <TBODY>
+  <TR>
+    <TD class=3DcodeBlock align=3Dleft>&lt;chart caption=3D'Company =
+Revenue'=20
+      showPercentageValues=3D'1'&gt;<BR>&nbsp;&nbsp;&nbsp;&lt;set =
+label=3D'Services'=20
+      value=3D'26' /&gt;<BR>&nbsp;&nbsp;&nbsp;&lt;set label=3D'Hardware' =
+value=3D'32'=20
+      /&gt;<BR>&nbsp;&nbsp;&nbsp;&lt;set label=3D'Software' value=3D'42' =
+
+      /&gt;<BR>&lt;/chart&gt; </TD></TR>
+  <TR align=3Dmiddle>
+    <TD align=3Dright><A=20
+      =
+href=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Pie3D.html#top"=
+><IMG=20
+      height=3D15 alt=3D"Back to Top"=20
+      =
+src=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Images/Top.gif" =
+
+      width=3D15 border=3D0> </A></TD></TR></TBODY></TABLE><BR><A =
+name=3DObjects>
+<TABLE cellSpacing=3D0 cellPadding=3D3 width=3D"98%" align=3Dcenter>
+  <TBODY>
+  <TR>
+    <TD><SPAN class=3DtextBold>Chart Objects =
+</SPAN></TD></TR></TBODY></TABLE>
+<TABLE class=3DtableYellowBorder cellSpacing=3D2 cellPadding=3D4 =
+width=3D"98%"=20
+align=3Dcenter>
+  <TBODY>
+  <TR class=3DtrLightYellowBg>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3DtextBold>Object Name =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"35%"><SPAN class=3DtextBold>Description =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3DtextBold>Features =
+Supported=20
+    </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3DtextBold>Animation =
+Parameters=20
+      Supported </SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>BACKGROUND =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"35%"><SPAN class=3Dtext>BACKGROUND refers =
+to the=20
+      entire background of the chart. </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>
+      <LI>Animation<BR>
+      <LI>Shadow<BR>
+      <LI>Glow<BR>
+      <LI>Bevel<BR>
+      <LI>Blur<BR></SPAN></LI></TD>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>
+      <LI>_alpha<BR>
+      <LI>_x<BR>
+      <LI>_y<BR>
+      <LI>_xScale<BR>
+      <LI>_yScale<BR></SPAN></LI></TD></TR>
+  <TR class=3DtrVeryLightYellowBg>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>CAPTION =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"35%"><SPAN class=3Dtext>CAPTION refers to =
+the heading=20
+      of the chart. </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>
+      <LI>Animation<BR>
+      <LI>Font<BR>
+      <LI>Shadow<BR>
+      <LI>Glow<BR>
+      <LI>Bevel<BR>
+      <LI>Blur<BR></SPAN></LI></TD>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>
+      <LI>_alpha<BR>
+      <LI>_x<BR>
+      <LI>_y<BR></SPAN></LI></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>DATALABELS =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"35%"><SPAN class=3Dtext>DATALABELS refer =
+to the x-axis=20
+      labels of the data. </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>
+      <LI>Font<BR>
+      <LI>Shadow<BR>
+      <LI>Glow<BR>
+      <LI>Bevel<BR>
+      <LI>Blur<BR></SPAN></LI></TD>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext></SPAN></TD></TR>
+  <TR class=3DtrVeryLightYellowBg>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>DATAPLOT =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"35%"><SPAN class=3Dtext>DATAPLOT refers to =
+the actual=20
+      plot of the chart. For example, in Column 2D chart, columns are =
+referred=20
+      to as DATAPLOT. In Pie chart, it's the pies. In Bubble chart, it's =
+the=20
+      bubbles and so on. </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext></SPAN></TD>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext></SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>SUBCAPTION =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"35%"><SPAN class=3Dtext>SUBCAPTION refers =
+to the=20
+      sub-heading of the chart. </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>
+      <LI>Animation<BR>
+      <LI>Font<BR>
+      <LI>Shadow<BR>
+      <LI>Glow<BR>
+      <LI>Bevel<BR>
+      <LI>Blur<BR></SPAN></LI></TD>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>
+      <LI>_alpha<BR>
+      <LI>_x<BR>
+      <LI>_y<BR></SPAN></LI></TD></TR>
+  <TR class=3DtrVeryLightYellowBg>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>TOOLTIP =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"35%"><SPAN class=3Dtext>TOOLTIP refers to =
+the tool tip=20
+      shown when mouse is hovered over the data plots. </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>
+      <LI>Font<BR></SPAN></LI></TD>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext></SPAN></TD></TR>
+  <TR>
+    <TD style=3D"BORDER-TOP: #fe9b00 1px solid" align=3Dright =
+colSpan=3D4><A=20
+      =
+href=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Pie3D.html#top"=
+><IMG=20
+      height=3D15 alt=3D"Back to Top"=20
+      =
+src=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Images/Top.gif" =
+
+      width=3D15 border=3D0> </A></TD></TR></TBODY></TABLE><BR>
+<TABLE cellPadding=3D2 width=3D"98%" align=3Dcenter>
+  <TBODY>
+  <TR class=3DtrLightBlueBg>
+    <TD align=3Dleft><SPAN class=3Dheader>&nbsp;&lt;chart&gt; element=20
+      Attributes</SPAN> </TD></TR></TBODY></TABLE><A name=3DAnchor1></A>
+<TABLE cellPadding=3D2 width=3D"98%" align=3Dcenter>
+  <TBODY>
+  <TR>
+    <TD><SPAN class=3Dheader>Functional Attributes </SPAN></TD></TR>
+  <TR>
+    <TD class=3Dtext>These attributes let you control a variety of =
+functional=20
+      elements on the chart. For example, you can opt to show/hide data =
+labels,=20
+      data values, y-axis values. You can also set chart limits and =
+extended=20
+      properties. </TD></TR>
+  <TR>
+    <TD class=3Dtext><BR></TD></TR></TBODY></TABLE>
+<TABLE class=3DtableGreyBorder cellPadding=3D4 width=3D"98%" =
+align=3Dcenter>
+  <TBODY>
+  <TR class=3DtrAttHeader>
+    <TD width=3D"25%"><SPAN class=3DtextBold>Attribute Name </SPAN></TD>
+    <TD width=3D"15%"><SPAN class=3DtextBold>Type </SPAN></TD>
+    <TD width=3D"15%"><SPAN class=3DtextBold>Range </SPAN></TD>
+    <TD width=3D"45%"><SPAN class=3DtextBold>Description =
+</SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>animation =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Boolean =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0/1 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>This attribute =
+lets you set=20
+      the configuration whether the chart should appear in an animated =
+fashion.=20
+      If you do not want to animate any part of the chart, set this as =
+0.=20
+    </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>palette =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Number =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>1-5 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>FusionCharts v3 =
+introduces the=20
+      concept of Color Palettes. Each chart has 5 pre-defined color =
+palettes=20
+      which you can choose from. Each palette renders the chart in a =
+different=20
+      color theme. Valid values are 1-5. </SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>showZeroPies =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Boolean =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0/1 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Configuration =
+whether to show=20
+      pies with 0 values (and their values). Otherwise, they won't show =
+up in=20
+      the chart. </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>showPercentValues =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Boolean =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0/1 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Whether to show =
+percentage=20
+      values in labels of the chart? </SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN =
+class=3Dtext>showPercentInToolTip=20
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Boolean =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0/1 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Whether to show =
+percentage=20
+      values in tool tip? </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>showLabels =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Boolean =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0/1 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Whether to show =
+labels on the=20
+      chart? </SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>showValues =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Boolean =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0/1 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Whether to show =
+values on the=20
+      chart? </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>labelSepChar =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>String =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Character =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>The character to =
+separate the=20
+      data label and data values on the chart. </SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>defaultAnimation =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Boolean =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0/1 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>By default, each =
+chart=20
+      animates some of its elements. If you wish to switch off the =
+default=20
+      animation patterns, you can set this attribute to 0. It can be=20
+      particularly useful when you want to define your own animation =
+patterns=20
+      using STYLE feature. </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>clickURL =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>String =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext></SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>The entire chart =
+can now act=20
+      as a hotspot. Use this URL to define the hotspot link for the =
+chart. The=20
+      link can be specified in FusionCharts Link Format. =
+</SPAN></TD></TR>
+  <TR align=3Dmiddle>
+    <TD class=3DtrAttHeader align=3Dright colSpan=3D4><A=20
+      =
+href=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Pie3D.html#top"=
+><IMG=20
+      height=3D15 alt=3D"Back to Top"=20
+      =
+src=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Images/Top.gif" =
+
+      width=3D15 border=3D0> </A></TD></TR></TBODY></TABLE><BR><BR><A =
+name=3DAnchor2></A>
+<TABLE cellPadding=3D2 width=3D"98%" align=3Dcenter>
+  <TBODY>
+  <TR>
+    <TD><SPAN class=3Dheader>Chart Titles and Axis Names =
+</SPAN></TD></TR>
+  <TR>
+    <TD class=3Dtext>Using these attributes, you can set the various =
+headings=20
+      and titles of chart like caption, sub-caption, x-axis and y-axis =
+names=20
+      etc. </TD></TR>
+  <TR>
+    <TD class=3Dtext><BR></TD></TR></TBODY></TABLE>
+<TABLE class=3DtableGreyBorder cellPadding=3D4 width=3D"98%" =
+align=3Dcenter>
+  <TBODY>
+  <TR class=3DtrAttHeader>
+    <TD width=3D"25%"><SPAN class=3DtextBold>Attribute Name </SPAN></TD>
+    <TD width=3D"15%"><SPAN class=3DtextBold>Type </SPAN></TD>
+    <TD width=3D"60%"><SPAN class=3DtextBold>Description =
+</SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>caption =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>String =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"60%"><SPAN class=3Dtext>Caption of the =
+chart.=20
+    </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>subCaption =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>String =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"60%"><SPAN class=3Dtext>Sub-caption of the =
+chart.=20
+      </SPAN></TD></TR>
+  <TR align=3Dmiddle>
+    <TD class=3DtrAttHeader align=3Dright colSpan=3D3><A=20
+      =
+href=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Pie3D.html#top"=
+><IMG=20
+      height=3D15 alt=3D"Back to Top"=20
+      =
+src=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Images/Top.gif" =
+
+      width=3D15 border=3D0> </A></TD></TR></TBODY></TABLE><BR><BR><A =
+name=3DAnchor3></A>
+<TABLE cellPadding=3D2 width=3D"98%" align=3Dcenter>
+  <TBODY>
+  <TR>
+    <TD><SPAN class=3Dheader>Chart Cosmetics </SPAN></TD></TR>
+  <TR>
+    <TD class=3Dtext>The following attributes let you configure chart =
+cosmetics=20
+      like background color, background alpha, canvas color &amp; alpha =
+etc.=20
+  </TD></TR>
+  <TR>
+    <TD class=3Dtext><BR></TD></TR></TBODY></TABLE>
+<TABLE class=3DtableGreyBorder cellPadding=3D4 width=3D"98%" =
+align=3Dcenter>
+  <TBODY>
+  <TR class=3DtrAttHeader>
+    <TD width=3D"25%"><SPAN class=3DtextBold>Attribute Name </SPAN></TD>
+    <TD width=3D"15%"><SPAN class=3DtextBold>Type </SPAN></TD>
+    <TD width=3D"15%"><SPAN class=3DtextBold>Range </SPAN></TD>
+    <TD width=3D"45%"><SPAN class=3DtextBold>Description =
+</SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>showBorder =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Boolean =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0/1 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Whether to show a =
+border=20
+      around the chart or not? </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>borderColor =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Color </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext></SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Border color of =
+the chart.=20
+      </SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>borderThickness =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Number =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>In Pixels =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Border thickness =
+of the chart.=20
+      </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>borderAlpha =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Number =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0-100 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Border alpha of =
+the chart.=20
+      </SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>bgColor =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Color </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext></SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>This attribute =
+sets the=20
+      background color for the chart. You can set any hex color code as =
+the=20
+      value of this attribute. To specify a gradient as background =
+color,=20
+      separate the hex color codes of each color in the gradient using =
+comma.=20
+      Example: FF5904,FFFFFF. Remember to remove # and any spaces in =
+between.=20
+      See the gradient specification page for more details. =
+</SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>bgAlpha =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Number =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0-100 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Sets the alpha =
+(transparency)=20
+      for the background. If you've opted for gradient background, you =
+need to=20
+      set a list of alpha(s) separated by comma. See the gradient =
+specification=20
+      page for more details. </SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>bgRatio =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Number =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0-100 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>If you've opted =
+for a gradient=20
+      background, this attribute lets you set the ratio of each color=20
+      constituent. See the gradient specification page for more details. =
+
+    </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>bgAngle =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Number =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0-360 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Angle of the =
+background color,=20
+      in case of a gradient. See the gradient specification page for =
+more=20
+      details. </SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>bgSWF </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>String =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext></SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>To place any Flash =
+movie as=20
+      background of the chart, enter the (path and) name of the =
+background SWF.=20
+      It should be in the same domain as the chart. </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>bgSWFAlpha =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Number =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0-100 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Helps you specify =
+alpha for=20
+      the loaded background SWF. </SPAN></TD></TR>
+  <TR align=3Dmiddle>
+    <TD class=3DtrAttHeader align=3Dright colSpan=3D4><A=20
+      =
+href=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Pie3D.html#top"=
+><IMG=20
+      height=3D15 alt=3D"Back to Top"=20
+      =
+src=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Images/Top.gif" =
+
+      width=3D15 border=3D0> </A></TD></TR></TBODY></TABLE><BR><BR><A =
+name=3DAnchor4></A>
+<TABLE cellPadding=3D2 width=3D"98%" align=3Dcenter>
+  <TBODY>
+  <TR>
+    <TD><SPAN class=3Dheader>Data Plot Cosmetics </SPAN></TD></TR>
+  <TR>
+    <TD class=3Dtext>These attributes let you configure how your plot =
+(colums,=20
+      lines, area, pie or any data that you're plotting) would appear on =
+the=20
+      chart. <BR><BR>If the plots can show borders, you can control the =
+border=20
+      properties using the attributes listed below. Or, if they support =
+gradient=20
+      fills, you can again configure various properties of the gradient =
+using=20
+      these attributes.<BR><BR>Various other controls over plot =
+cosmetics can be=20
+      attained using this set of attributes. </TD></TR>
+  <TR>
+    <TD class=3Dtext><BR></TD></TR></TBODY></TABLE>
+<TABLE class=3DtableGreyBorder cellPadding=3D4 width=3D"98%" =
+align=3Dcenter>
+  <TBODY>
+  <TR class=3DtrAttHeader>
+    <TD width=3D"25%"><SPAN class=3DtextBold>Attribute Name </SPAN></TD>
+    <TD width=3D"15%"><SPAN class=3DtextBold>Type </SPAN></TD>
+    <TD width=3D"15%"><SPAN class=3DtextBold>Range </SPAN></TD>
+    <TD width=3D"45%"><SPAN class=3DtextBold>Description =
+</SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>showPlotBorder =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Boolean =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0/1 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Whether the =
+column, area, pie=20
+      etc. border would show up. </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>plotBorderColor =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Color </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext></SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Color for column, =
+area, pie=20
+      border </SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN =
+class=3Dtext>plotBorderThickness </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Number =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0-5 (Pixels) =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Thickness for =
+column, area,=20
+      pie border </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>plotBorderAlpha =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Number =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0-100 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Alpha for column, =
+area, pie=20
+      border </SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>plotFillAlpha =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Number =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0-100 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>This attribute =
+lets you set=20
+      the fill alpha for plot. </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>use3DLighting =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Boolean =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0/1 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Whether to use =
+advanced=20
+      gradients and shadow effects to create better looking 3D charts?=20
+  </SPAN></TD></TR>
+  <TR align=3Dmiddle>
+    <TD class=3DtrAttHeader align=3Dright colSpan=3D4><A=20
+      =
+href=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Pie3D.html#top"=
+><IMG=20
+      height=3D15 alt=3D"Back to Top"=20
+      =
+src=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Images/Top.gif" =
+
+      width=3D15 border=3D0> </A></TD></TR></TBODY></TABLE><BR><BR><A =
+name=3DAnchor11></A>
+<TABLE cellPadding=3D2 width=3D"98%" align=3Dcenter>
+  <TBODY>
+  <TR>
+    <TD><SPAN class=3Dheader>Pie / Doughnut Properties </SPAN></TD></TR>
+  <TR>
+    <TD class=3Dtext>The following attributes let you control various=20
+      functionalities of pie/doughnut chart. </TD></TR>
+  <TR>
+    <TD class=3Dtext><BR></TD></TR></TBODY></TABLE>
+<TABLE class=3DtableGreyBorder cellPadding=3D4 width=3D"98%" =
+align=3Dcenter>
+  <TBODY>
+  <TR class=3DtrAttHeader>
+    <TD width=3D"25%"><SPAN class=3DtextBold>Attribute Name </SPAN></TD>
+    <TD width=3D"15%"><SPAN class=3DtextBold>Type </SPAN></TD>
+    <TD width=3D"15%"><SPAN class=3DtextBold>Range </SPAN></TD>
+    <TD width=3D"45%"><SPAN class=3DtextBold>Description =
+</SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>slicingDistance =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Number =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>In Pixels =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>If you've opted to =
+slice a=20
+      particular pie/doughnut slice, using this attribute you can =
+control the=20
+      distance between the slice and the center of chart. =
+</SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>pieRadius =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Number =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>In Pixels =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>This attribute =
+lets you=20
+      explicitly set the outer radius of the chart. FusionCharts =
+automatically=20
+      calculates the best fit pie radius for the chart. This attribute =
+is useful=20
+      if you want to enforce one of your own values. </SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>startingAngle =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Number =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0-360 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>By default, the =
+pie chart=20
+      starts from angle 0 i.e., the first pie starts plotting from 0 =
+angle. If=20
+      you want to change the starting angle of the chart, use this =
+attribute.=20
+      </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>enableRotation =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Boolean =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0/1 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>The doughnut/pie =
+charts have=20
+      three modes: Slicing, Rotation and Link. If any links are defined, =
+the=20
+      chart works in Link mode. Otherwise, it starts in Slicing mode. If =
+you=20
+      need to enable rotation by default, set this attribute to 1. =
+</SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>pieInnerFaceAlpha =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Number =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0-100 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Alpha of the pie =
+inner face=20
+      </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>pieOuterFaceAlpha =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Number =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0-100 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Alpha of the pie =
+outer face=20
+      </SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>pieYScale =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Number =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>30-80 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>This attribute =
+alters the=20
+      y-perspective of the pie in percentage figures. 100 percent means =
+the full=20
+      pie face is visible and 0 percent means only the side face is =
+visible.=20
+      </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>pieSliceDepth =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Number =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>In Pixels =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>This attribute =
+controls the=20
+      pie 3D Depth. </SPAN></TD></TR>
+  <TR align=3Dmiddle>
+    <TD class=3DtrAttHeader align=3Dright colSpan=3D4><A=20
+      =
+href=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Pie3D.html#top"=
+><IMG=20
+      height=3D15 alt=3D"Back to Top"=20
+      =
+src=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Images/Top.gif" =
+
+      width=3D15 border=3D0> </A></TD></TR></TBODY></TABLE><BR><BR><A =
+name=3DAnchor12></A>
+<TABLE cellPadding=3D2 width=3D"98%" align=3Dcenter>
+  <TBODY>
+  <TR>
+    <TD><SPAN class=3Dheader>Smart Lines &amp; Labels </SPAN></TD></TR>
+  <TR>
+    <TD class=3Dtext>Starting FusionCharts v3, the pie and doughnut =
+charts can=20
+      now have smart labels and lines.<BR><BR>Smart labels/lines are =
+data=20
+      connector lines which connect the pie/doughnut slices to their =
+respective=20
+      labels without over-lapping even in cases where there are lots of =
+labels=20
+      located near each other.<BR><BR>You can configure the smart =
+labels/lines=20
+      properties using the attributes below. </TD></TR>
+  <TR>
+    <TD class=3Dtext><BR></TD></TR></TBODY></TABLE>
+<TABLE class=3DtableGreyBorder cellPadding=3D4 width=3D"98%" =
+align=3Dcenter>
+  <TBODY>
+  <TR class=3DtrAttHeader>
+    <TD width=3D"25%"><SPAN class=3DtextBold>Attribute Name </SPAN></TD>
+    <TD width=3D"15%"><SPAN class=3DtextBold>Type </SPAN></TD>
+    <TD width=3D"15%"><SPAN class=3DtextBold>Range </SPAN></TD>
+    <TD width=3D"45%"><SPAN class=3DtextBold>Description =
+</SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>enableSmartLabels =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Boolean =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0/1 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Whether to use =
+smart labels or=20
+      not? </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>skipOverlapLabels =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Boolean =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0/1 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Whether to skip =
+labels that=20
+      are overlapping even when using smart labels? If not, they might =
+overlap=20
+      if there are too many labels. </SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>isSmartLineSlanted =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Boolean =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0/1 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>The smart lines =
+(smart label=20
+      connector lines) can appear in two ways: Slanted or Straight. This =
+
+      attribute lets you choose between them. </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>smartLineColor =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Color </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Hex Code =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Color of smart =
+label connector=20
+      lines. </SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>smartLineThickness =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Number =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>In Pixels =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Thickness of smart =
+label=20
+      connector lines. </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>smartLineAlpha =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Number =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0-100 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Alpha of smart =
+label connector=20
+      lines. </SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>labelDistance =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Number =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>In Pixels =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>This attribute =
+helps you set=20
+      the distance of the label/value text boxes from the pie/doughnut =
+edge.=20
+      </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN =
+class=3Dtext>smartLabelClearance </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Number =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>In Pixels =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Clearance distance =
+of a label=20
+      (for sliced-in pies) from an adjacent sliced out pies. =
+</SPAN></TD></TR>
+  <TR align=3Dmiddle>
+    <TD class=3DtrAttHeader align=3Dright colSpan=3D4><A=20
+      =
+href=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Pie3D.html#top"=
+><IMG=20
+      height=3D15 alt=3D"Back to Top"=20
+      =
+src=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Images/Top.gif" =
+
+      width=3D15 border=3D0> </A></TD></TR></TBODY></TABLE><BR><BR><A =
+name=3DAnchor7></A>
+<TABLE cellPadding=3D2 width=3D"98%" align=3Dcenter>
+  <TBODY>
+  <TR>
+    <TD><SPAN class=3Dheader>Number Formatting </SPAN></TD></TR>
+  <TR>
+    <TD class=3Dtext>FusionCharts v3 offers you a lot of options to =
+format your=20
+      numbers on the chart. <BR><BR>Using the attributes below, you can =
+control=20
+      a myriad of options like:
+      <LI>Formatting of commas and decimals
+      <LI>Number prefixes and suffixes
+      <LI>Decimal places to which the numbers would round to
+      <LI>Scaling of numbers based on a user defined scale
+      <LI>Custom number input formats </LI></TD></TR>
+  <TR>
+    <TD class=3Dtext><BR></TD></TR></TBODY></TABLE>
+<TABLE class=3DtableGreyBorder cellPadding=3D4 width=3D"98%" =
+align=3Dcenter>
+  <TBODY>
+  <TR class=3DtrAttHeader>
+    <TD width=3D"25%"><SPAN class=3DtextBold>Attribute Name </SPAN></TD>
+    <TD width=3D"15%"><SPAN class=3DtextBold>Type </SPAN></TD>
+    <TD width=3D"15%"><SPAN class=3DtextBold>Range </SPAN></TD>
+    <TD width=3D"45%"><SPAN class=3DtextBold>Description =
+</SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>formatNumber =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Boolean =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0/1 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>This configuration =
+determines=20
+      whether the numbers displayed on the chart will be formatted using =
+commas,=20
+      e.g., 40,000 if formatNumber=3D'1' and 40000 if formatNumber=3D'0 =
+'=20
+  </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>formatNumberScale =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Boolean =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0/1 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Configuration =
+whether to add K=20
+      (thousands) and M (millions) to a number after truncating and =
+rounding it=20
+      - e.g., if formatNumberScale is set to 1, 1043 would become 1.04K =
+(with=20
+      decimals set to 2 places). Same with numbers in millions - a M =
+will added=20
+      at the end. For more details, please see Advanced Number =
+Formatting=20
+      section. </SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>defaultNumberScale =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>String =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext></SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>The default unit =
+of the=20
+      numbers that you're providing to the chart. For more details, =
+please see=20
+      Advanced Number Formatting section. </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>numberScaleUnit =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>String =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext></SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Unit of each block =
+of the=20
+      scale. For more details, please see Advanced Number Formatting =
+section.=20
+      </SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>numberScaleValue =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>String =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext></SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Range of the =
+various blocks=20
+      that constitute the scale. For more details, please see Advanced =
+Number=20
+      Formatting section. </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>numberPrefix =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>String =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Character =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Using this =
+attribute, you=20
+      could add prefix to all the numbers visible on the graph. For =
+example, to=20
+      represent all dollars figure on the chart, you could specify this=20
+      attribute to ' $' to show like $40000, $50000. For more details, =
+please=20
+      see Advanced Number Formatting section. </SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>numberSuffix =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>String =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Character =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Using this =
+attribute, you=20
+      could add suffix to all the numbers visible on the graph. For =
+example, to=20
+      represent all figure quantified as per annum on the chart, you =
+could=20
+      specify this attribute to ' /a' to show like 40000/a, 50000/a. For =
+more=20
+      details, please see Advanced Number Formatting section. =
+</SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>decimalSeparator =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>String =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Character =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>This option helps =
+you specify=20
+      the character to be used as the decimal separator in a number. For =
+more=20
+      details, please see Advanced Number Formatting section. =
+</SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>thousandSeparator =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>String =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Character =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>This option helps =
+you specify=20
+      the character to be used as the thousands separator in a number. =
+For more=20
+      details, please see Advanced Number Formatting section. =
+</SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>inDecimalSeparator =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>String =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Character =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>In some countries, =
+commas are=20
+      used as decimal separators and dots as thousand separators. In =
+XML, if you=20
+      specify such values, it will give a error while converting to =
+number. So,=20
+      FusionCharts accepts the input decimal and thousand separator from =
+user,=20
+      so that it can covert it accordingly into the required format. =
+This=20
+      attribute lets you input the decimal separator. For more details, =
+please=20
+      see Advanced Number Formatting section. </SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN =
+class=3Dtext>inThousandSeparator </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>String =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Character =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>In some countries, =
+commas are=20
+      used as decimal separators and dots as thousand separators. In =
+XML, if you=20
+      specify such values, it will give a error while converting to =
+number. So,=20
+      FusionCharts accepts the input decimal and thousand separator from =
+user,=20
+      so that it can covert it accordingly into the required format. =
+This=20
+      attribute lets you input the thousand separator. For more details, =
+please=20
+      see Advanced Number Formatting section. </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>decimals =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Number =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0-10 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Number of decimal =
+places to=20
+      which all numbers on the chart would be rounded to. =
+</SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>forceDecimals =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Boolean =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0-1 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Whether to add 0 =
+padding at=20
+      the end of decimal numbers? For example, if you set decimals as 2 =
+and a=20
+      number is 23.4. If forceDecimals is set to 1, FusionCharts will =
+convert=20
+      the number to 23.40 (note the extra 0 at the end) =
+</SPAN></TD></TR>
+  <TR align=3Dmiddle>
+    <TD class=3DtrAttHeader align=3Dright colSpan=3D4><A=20
+      =
+href=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Pie3D.html#top"=
+><IMG=20
+      height=3D15 alt=3D"Back to Top"=20
+      =
+src=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Images/Top.gif" =
+
+      width=3D15 border=3D0> </A></TD></TR></TBODY></TABLE><BR><BR><A =
+name=3DAnchor9></A>
+<TABLE cellPadding=3D2 width=3D"98%" align=3Dcenter>
+  <TBODY>
+  <TR>
+    <TD><SPAN class=3Dheader>Font Properties </SPAN></TD></TR>
+  <TR>
+    <TD class=3Dtext>Using the attributes below, you can define the =
+generic font=20
+      properties for all the text on the chart. These attributes allow =
+you a=20
+      high level control over font properties. <BR><BR>If you intend to =
+specify=20
+      font properties for individual chart elements (like Caption, =
+sub-caption=20
+      etc.), you'll need to use the STYLES feature of FusionCharts v3. =
+Using=20
+      STYLES, you can also specify advanced font properties like Bold, =
+Italics,=20
+      HTML Mode etc. </TD></TR>
+  <TR>
+    <TD class=3Dtext><BR></TD></TR></TBODY></TABLE>
+<TABLE class=3DtableGreyBorder cellPadding=3D4 width=3D"98%" =
+align=3Dcenter>
+  <TBODY>
+  <TR class=3DtrAttHeader>
+    <TD width=3D"25%"><SPAN class=3DtextBold>Attribute Name </SPAN></TD>
+    <TD width=3D"15%"><SPAN class=3DtextBold>Type </SPAN></TD>
+    <TD width=3D"15%"><SPAN class=3DtextBold>Range </SPAN></TD>
+    <TD width=3D"45%"><SPAN class=3DtextBold>Description =
+</SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>baseFont =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>String =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Font Name =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>This attribute =
+lets you set=20
+      the font face (family) of all the text (data labels, values etc.) =
+on=20
+      chart. If you specify outCnvBaseFont attribute also, then this =
+attribute=20
+      controls only the font face of text within the chart canvas =
+bounds.=20
+    </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>baseFontSize =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Number =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0-72 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>This attribute =
+sets the base=20
+      font size of the chart i.e., all the values and the names in the =
+chart=20
+      which lie on the canvas will be displayed using the font size =
+provided=20
+      here. </SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>baseFontColor =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Color </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext></SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>This attribute =
+sets the base=20
+      font color of the chart i.e., all the values and the names in the =
+chart=20
+      which lie on the canvas will be displayed using the font color =
+provided=20
+      here. </SPAN></TD></TR>
+  <TR align=3Dmiddle>
+    <TD class=3DtrAttHeader align=3Dright colSpan=3D4><A=20
+      =
+href=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Pie3D.html#top"=
+><IMG=20
+      height=3D15 alt=3D"Back to Top"=20
+      =
+src=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Images/Top.gif" =
+
+      width=3D15 border=3D0> </A></TD></TR></TBODY></TABLE><BR><BR><A =
+name=3DAnchor8></A>
+<TABLE cellPadding=3D2 width=3D"98%" align=3Dcenter>
+  <TBODY>
+  <TR>
+    <TD><SPAN class=3Dheader>Tool-tip </SPAN></TD></TR>
+  <TR>
+    <TD class=3Dtext>These attributes let you control the tool tip. You =
+can set=20
+      the background color, border color, separator character and few =
+other=20
+      details. </TD></TR>
+  <TR>
+    <TD class=3Dtext><BR></TD></TR></TBODY></TABLE>
+<TABLE class=3DtableGreyBorder cellPadding=3D4 width=3D"98%" =
+align=3Dcenter>
+  <TBODY>
+  <TR class=3DtrAttHeader>
+    <TD width=3D"25%"><SPAN class=3DtextBold>Attribute Name </SPAN></TD>
+    <TD width=3D"15%"><SPAN class=3DtextBold>Type </SPAN></TD>
+    <TD width=3D"15%"><SPAN class=3DtextBold>Range </SPAN></TD>
+    <TD width=3D"45%"><SPAN class=3DtextBold>Description =
+</SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>showToolTip =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Boolean =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0/1 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Whether to show =
+tool tip on=20
+      chart? </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>toolTipBgColor =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Color </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext></SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Background Color =
+for tool tip.=20
+      </SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>toolTipBorderColor =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Color </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext></SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Border Color for =
+tool tip.=20
+      </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>toolTipSepChar =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>String =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext></SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>The character =
+specified as the=20
+      value of this attribute separates the name and value displayed in =
+tool=20
+      tip. </SPAN></TD></TR>
+  <TR align=3Dmiddle>
+    <TD class=3DtrAttHeader align=3Dright colSpan=3D4><A=20
+      =
+href=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Pie3D.html#top"=
+><IMG=20
+      height=3D15 alt=3D"Back to Top"=20
+      =
+src=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Images/Top.gif" =
+
+      width=3D15 border=3D0> </A></TD></TR></TBODY></TABLE><BR><BR><A =
+name=3DAnchor6></A>
+<TABLE cellPadding=3D2 width=3D"98%" align=3Dcenter>
+  <TBODY>
+  <TR>
+    <TD><SPAN class=3Dheader>Chart Padding &amp; Margins =
+</SPAN></TD></TR>
+  <TR>
+    <TD class=3Dtext>The following attributes help you control chart =
+margins and=20
+      paddings. <BR><BR>FusionCharts v3 allows you manually customize =
+the=20
+      padding of various elements on the chart to allow advanced =
+manipulation=20
+      and control over chart visualization. Padding in FusionCharts is =
+always=20
+      defined in pixels, unless the attribute itself suggests some other =
+scale=20
+      (like <SPAN class=3DCodeInline>plotSpacePercent</SPAN>). =
+<BR><BR>You can=20
+      also define the chart margins. Chart Margins refer to the empty =
+space left=20
+      on the top, bottom, left and right of the chart. That means, =
+FusionCharts=20
+      wouldn't plot anything in that space.<BR><BR>It's not necessary =
+for you to=20
+      specify any padding/margin values. FusionCharts automatically =
+assumes the=20
+      best values for the same, if you do not specify the same. =
+</TD></TR>
+  <TR>
+    <TD class=3Dtext><BR></TD></TR></TBODY></TABLE>
+<TABLE class=3DtableGreyBorder cellPadding=3D4 width=3D"98%" =
+align=3Dcenter>
+  <TBODY>
+  <TR class=3DtrAttHeader>
+    <TD width=3D"25%"><SPAN class=3DtextBold>Attribute Name </SPAN></TD>
+    <TD width=3D"15%"><SPAN class=3DtextBold>Type </SPAN></TD>
+    <TD width=3D"15%"><SPAN class=3DtextBold>Range </SPAN></TD>
+    <TD width=3D"45%"><SPAN class=3DtextBold>Description =
+</SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>captionPadding =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Number =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>In Pixels =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>This attribute =
+lets you=20
+      control the space (in pixels) between the sub-caption and top of =
+the chart=20
+      canvas. If the sub-caption is not defined, it controls the space =
+between=20
+      caption and top of chart canvas. If neither caption, nor =
+sub-caption is=20
+      defined, this padding does not come into play. </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>chartLeftMargin =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Number =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>In Pixels =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Amount of empty =
+space that you=20
+      want to put on the left side of your chart. Nothing is rendered in =
+this=20
+      space. </SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>chartRightMargin =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Number =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>In Pixels =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Amount of empty =
+space that you=20
+      want to put on the right side of your chart. Nothing is rendered =
+in this=20
+      space. </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>chartTopMargin =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Number =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>In Pixels =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Amount of empty =
+space that you=20
+      want to put on the top of your chart. Nothing is rendered in this =
+space.=20
+      </SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>chartBottomMargin =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Number =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>In Pixels =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Amount of empty =
+space that you=20
+      want to put on the bottom of your chart. Nothing is rendered in =
+this=20
+      space. </SPAN></TD></TR>
+  <TR align=3Dmiddle>
+    <TD class=3DtrAttHeader align=3Dright colSpan=3D4><A=20
+      =
+href=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Pie3D.html#top"=
+><IMG=20
+      height=3D15 alt=3D"Back to Top"=20
+      =
+src=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Images/Top.gif" =
+
+      width=3D15 border=3D0> </A></TD></TR></TBODY></TABLE><BR><BR><A =
+name=3DAnchor20></A>
+<TABLE cellPadding=3D2 width=3D"98%" align=3Dcenter>
+  <TBODY>
+  <TR>
+    <TD><SPAN class=3Dheader><SPAN class=3Dheader>&lt;set&gt; =
+element</SPAN>=20
+      </SPAN></TD></TR>
+  <TR>
+    <TD class=3Dtext>Each <SPAN class=3DCodeInline>&lt;set&gt;</SPAN> =
+element=20
+      (child of <SPAN class=3DCodeInline>&lt;chart&gt;</SPAN> or <SPAN=20
+      class=3DCodeInline>&lt;dataset&gt;</SPAN> element) represents a =
+set of data=20
+      which is to be plotted on the graph and determines a set of data =
+which=20
+      would appear on the chart. <BR><BR>For a single series chart, a =
+typical=20
+      <SPAN class=3DCodeInline>&lt;set&gt;</SPAN> element would look=20
+      like:<BR><SPAN class=3DCodeInline>&lt;set label=3D'January' =
+value=3D'17400'=20
+      /&gt;</SPAN><BR><BR>For a multi-series chart, it could look =
+like:<BR><SPAN=20
+      class=3DCodeInline>&lt;dataset seriesName=3D'2006'&gt;<BR>&lt;set=20
+      value=3D'35445' /&gt;<BR>&lt;set value=3D'35675' /&gt;<BR>.... and =
+so on=20
+      ....<BR>&lt;/dataset&gt;</SPAN><BR><BR>In multi-series/combination =
+charts,=20
+      you should again note that the number of <SPAN=20
+      class=3DCodeInline>&lt;category&gt;</SPAN> elements should be =
+equal to the=20
+      number of data points in each data sets, i.e., if you mention =
+twelve=20
+      categories (twelve months), the data for both years (2005 &amp; =
+2006)=20
+      should also contain twelve <SPAN =
+class=3DCodeInline>&lt;set&gt;</SPAN>=20
+      elements (twelve rows of data). </TD></TR>
+  <TR>
+    <TD class=3Dtext><BR></TD></TR></TBODY></TABLE>
+<TABLE class=3DtableGreyBorder cellPadding=3D4 width=3D"98%" =
+align=3Dcenter>
+  <TBODY>
+  <TR class=3DtrAttHeader>
+    <TD width=3D"25%"><SPAN class=3DtextBold>Attribute Name </SPAN></TD>
+    <TD width=3D"15%"><SPAN class=3DtextBold>Type </SPAN></TD>
+    <TD width=3D"15%"><SPAN class=3DtextBold>Range </SPAN></TD>
+    <TD width=3D"45%"><SPAN class=3DtextBold>Description =
+</SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>borderColor =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Color </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Hex Code =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>If you want to set =
+border=20
+      color of individual pie/doughnut data items, you can specify using =
+this=20
+      attribute. </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>isSliced =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Boolean =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>0/1 </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>This attribute =
+determines=20
+      whether the pie appears as a part of the total chart or is sliced =
+out as=20
+      an individual item. </SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>label </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>String =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext></SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>This attribute =
+determines the=20
+      label for the data item. The label appears on the x-axis of chart. =
+
+    </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>value </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Number =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext></SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>Numerical value =
+for the data=20
+      item. This value would be plotted on the chart. </SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>color </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Color </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>Hex Code =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>If you want to =
+define your own=20
+      colors for the data items on chart, use this attribute to specify =
+color=20
+      for the data item. This attribute accepts hex color codes without =
+#.=20
+      </SPAN></TD></TR>
+  <TR class=3DtrLightBlueBg>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>link </SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>String =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext></SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>You can define =
+links for=20
+      individual data items. That enables the end user to click on data =
+items=20
+      (columns, lines, bars etc.) and drill down to other pages. To =
+define the=20
+      link for data items, use the link attribute. You can define links =
+that=20
+      open in same window, new window, pop-up window or frames. Please =
+see=20
+      "Advanced Charting &gt; Drill Down Charts" for more information. =
+Also,=20
+      you'll need to URL Encode all the special characters (like ? and =
+&amp;)=20
+      present in the link. </SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop width=3D"25%"><SPAN class=3Dtext>toolText =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext>String =
+</SPAN></TD>
+    <TD vAlign=3Dtop width=3D"15%"><SPAN class=3Dtext></SPAN></TD>
+    <TD vAlign=3Dtop width=3D"45%"><SPAN class=3Dtext>By default, =
+FusionCharts shows=20
+      the data item name and value as tool tip text for that data item. =
+But, if=20
+      you want to display more information for the data item as tool =
+tip, you=20
+      can use this attribute to specify the same. </SPAN></TD></TR>
+  <TR align=3Dmiddle>
+    <TD class=3DtrAttHeader align=3Dright colSpan=3D4><A=20
+      =
+href=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Pie3D.html#top"=
+><IMG=20
+      height=3D15 alt=3D"Back to Top"=20
+      =
+src=3D"http://www.fusioncharts.com/docs/Contents/ChartSS/Images/Top.gif" =
+
+      width=3D15 border=3D0> =
+</A></TD></TR></TBODY></TABLE><BR><BR></BODY></HTML>
+
+------=_NextPart_000_000B_01C97BF4.7CC965A0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.fusioncharts.com/docs/Contents/ChartSS/Images/Bullet.gif
+
+R0lGODlhCQAJAIAAAP+ZAP///yH5BAUUAAEALAAAAAAJAAkAAAIPDI5gyRfbXnMQSXZnqrYAADs=
+
+------=_NextPart_000_000B_01C97BF4.7CC965A0
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://www.fusioncharts.com/docs/Contents/ChartSS/Images/Pie_3D.jpg
+
+/9j/4AAQSkZJRgABAAEAYABgAAD//gAfTEVBRCBUZWNobm9sb2dpZXMgSW5jLiBWMS4wMQD/2wCE
+AAICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMDAgIDAgICAwQDAwMDBAQEAgME
+BAQEBAMEBAMBAgICAgICAgICAgMCAgIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMD
+AwMDAwMDAwMDAwMDAwMDA//EAaIAAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKCwEAAwEBAQEB
+AQEBAQAAAAAAAAECAwQFBgcICQoLEAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEU
+MoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2Rl
+ZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK
+0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+foRAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYS
+QVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNU
+VVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5
+usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/AABEIAUYB4gMBEQACEQEDEQH/
+2gAMAwEAAhEDEQA/AP38oAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgA
+oAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACg
+AoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoA57xL4u8KeC
+7GLVPGHifw94T0ye7jsINR8S61puhWM19LDPcRWUV3qlzBFJdvb2t1KsKuXKW0rBdsbETKcKavOS
+gtk5NJX7a27CbUd2orz0OhqhhQAUAFABQByfijx74F8D/Yf+E08aeE/CH9p/af7N/wCEo8R6P4f/
+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
+BQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAF
+ABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUA
+FABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAU
+AFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQA
+UAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQ
+AUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFAB
+QAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFA
+BQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAF
+ABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUA
+FABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAU
+AFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQA
+UAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQ
+AUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFAB
+QAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFA
+BQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAF
+ABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUA
+FABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAU
+AFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQA
+UAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQ
+AUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFAB
+QAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFA
+BQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAF
+ABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUA
+FABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAU
+AFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQAUAFABQA
+UAFABQAUAFABQAUAFABQAUAFAHOSeIZGlkXTNC1jXLeJjE1/psmhR2RnQkSwxSatrdk9w0ZAV5IY
+5Ig26PzDJHIkeDrO7VOjOqlpzRdNRut0nOcW7dWk1fS900p5rbRckuqtb8WtjzTWvHni7S/iLDod
+ymk6F4ZbVtA0vTk1rwh41ubPxVZ61Fp0L6zD8XNIll8L+CNWXXNQvtHsPCet6dNfarfaBZwR3dqn
+i7Tp7IlUnGqo6RhdJXjK0k7a+0XuRd24qEleTSV1zxaV2pW2St0f57Lsk97eaKjftG/DcX3xL023
+uru+vPhd4e8ZeJdZtbCbQbu+1Cx+HkxsfGcVlpUOuHUNGu9P1dobCNfEtroCak9wt1pEmoadHLew
+r6zSTqq93RUpNK17Q0lZXurPT3lHm3jeOoc8Vzf3U392/pbzt5XR0J+L+hQyzwXeheLNNmg/4VjI
+tvqWmWdhePZ/F34i6z8N/Bt5Jp9xqa3Wnb9Q0ZtTu7PUILO+srG+t0uLRNTS5020r20Vpyyjb2ej
+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
+2GhspB80OlFQQ1yu15w/7hliHmy4XdbSLcaK3a0c/KL6Q7yWsvstLVz8XlFfj/wPPr0Oijjjgjjh
+hjSGKFFjiijVY44o41CpHGigBEVQAFAAAAA6VskopJLlUdElpa22nSxW3lY4u9+HPhC/8Rp4putO
+u21Nbuw1K4tY9c1+28Oalq+krbJpOu634PttUj0HXvENgLDSvsmralpt1e2x0LSGgnjbSLE2kOlB
+y57a6O13y3Wzcb8rasrNptWjZ+6rLlV77W+7Ty2uu/kuxUufhb4Ku/8AhLIprHVjp/jfSdd0XxJo
+Mfizxdb+Frqz8Ubm8RTWfhO311NG0TVtSmkuri51TTLGzvpbjUL65e5Nxf3Uk46NP39HaaalHmly
+2e9o35U31aSd23e7YuVa+e6u7fdsjW1fwN4W17xT4P8AGmq6X9r8TeAf+Eg/4RLUvtuowf2V/wAJ
+Tp0Wk69/odtdx2t99q0+GOL/AEyC48rbuh8tyWLlThKcJtXlTvyu70urPS9ndd7+Q2ldO2sdjJvv
+hb4KvbO3s/sOraZ9k1bxRrVtf+HfFni7wtrsN5401258TeK4U8R+GtdsdVGk6pr919uuNL+2fYXm
+s7Bvsw/s2zFqnRp2Ss48rk04ylF+8+aXvRadm9Wr2ulporLlXpa+za31eq/I1v8AhCfD6eKf+Exg
+j1ay1pvmvE07xL4l0zQtVuBp39kJqGveE9P1eHQ/EOrJpaWtomoanp13dJDpmnRpMq6ZZi2fs4qf
+Orxl5Sklta7imot20u03ZLXRWdknfa3m/Tbb+vI56H4SeELaGC3iPiGZF8Q+GvEeoz6z4p1/xXq+
+tzeDL6TW/CWlan4k8YahqutJ4e0jxP5GuWum2Wo2cCXsM25WttV1W21SVRgrLXRxk7ycm+R3inKT
+crRl7ySaV/JyTXKl30a63221d3ZPX/h2a3jD4eeGfHU2hXHiEeIVuPDN3eX+hz6B408aeDprC+v7
+GXS7m9EvhDxBpjT3f9mXN7aJNOZXig1G+hiZI765WdzpQqcvNf3btWlKNm1b7LXS69G11Y3FO2/u
+7WbX5WKmq/C3wVrf9m/2rY6td/2dpNnoE+/xZ4uT/hJNC0/zPsui+PfJ11P+FkaSv2nUN1n4r/tm
+GT+2dW8xG/te++1jo03a6fupL4papbKevvrfSfMtX/M7rlWnlpu/x7/O/XudDrfhPw54lmtJfEOk
+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
+NpJJK3W+rXnZOz+b367u61vFPwls/E+l+CorfSNJ8Iajpn/CH6draeGNe12w0vSvC3hq4TWD4d0a
+z0a00iDxN9hu4bjTfDt/f2mlXHhiTXrnxNoLadrFhFb3dToqSp2ioOPKnytpKMdeVJKPNbaDaThd
+zhyyVmON7actrbdl00tfy2turMs/CPwD4o8DabqWj+ItVsr7SFstF0nS9Ks77UdT02abSYL211bx
+Xa2Op2dvD4CstetZtJhT4e6Gk3h/w7H4fVNKnlXUrgRlGlKnFxm04pJJataXTlZpKKkrL2Ufchb3
+XqwjFxVnsunp18r/AMq0VtDuZfBegR7ZdHsoPDV/Ed0Oo+Hra10y4U/3LiOGAQ39sSBut7uKaM4B
+2hgGCeForWlFUJraVNKD+aStJf3ZJryuHJFfCuVrqtP+H9GQjXNU0H914otklsl4XxNpUMhsQoO1
+W1fTt0k+kORgtKjXFt1LSw5CBe1qUdMRG8F/y9gny/8Ab8dXD1XNHzjsHM4fEtF9pbfNdPxXodbD
+NDcRRz28sU8EqLJFNDIskUkbDKvHIhKuhHIIJFdCaaTi009mtvk0WvLYlpgBIA9AOeeAAKNvJIDy
+XxX8ZPCXhoyWtrMde1OPcptNNdTbwyKduy51AhoojuBBWITupHzIK/L+J/Fnhbhz2mHoVv7azGnd
+ewwkk6cJLS1XE2lShZppqmqs4te9BH0eW8L5ljlGpOH1Og7e/VTUmv7lPST8nLli+kmfPXiH4x+N
+NfLxW92mhWTbgtvpO+KcocgCW/ZjOz7TgmJoVOPuCvwPP/F3i7O+elhsTHI8HK6VPBc0KvLrbnxM
+m6rlZ2bpulF78iPuMDwrleC5ZVKbxdWNveq2cb+VNWjbspKT82eYu8s0jSzSSTSuxZ5ZXaSR2PVn
+dySzE9ya/NKlWtiKkqtapOrUm3KU5ycpSb3blJttvq27n0MYxpxUIRUIxVkkkkktkktEl2Q5UojG
+3lYG7fIsLFj2x/T3rRRt5WJv+BMsYHQYx+HSrSt8hbeViQJjtjH4dKaVvKwtvkOCfp/Sna3yC9vk
+Hl+386LBcTZj8KLW+QfhYaUx7Y/DpSt+AJ/KxE0Y9MY/DpU8vysNafI1tHUq0y7sKNhVOB8zbtx/
+75jX8vfn+nfo0472eP4pyqT/AI9DB4qC009hUrUqjtv731ilfouVbX1/KPFLDOWGyjFpaUqlajJ/
+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
+eOPE/iS3vpl8EWfh6x03OnSrU5prTmtf4bJc8pNT63tJyj7O69rKSb9koJJRlFrz9O7evnrdcv2m
+/s2Pruu00CgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAo
+AKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgA
+oAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACg
+AoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKAC
+gAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKA
+CgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAK
+ACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoA
+KACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAo
+AKAP/9k=
+
+------=_NextPart_000_000B_01C97BF4.7CC965A0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.fusioncharts.com/docs/Contents/ChartSS/Images/Top.gif
+
+R0lGODlhDwAPALMAAP//zP//mf/MzP/Mmf/MZv/MM/+ZZv+ZM/+ZAP///wAAAAAAAAAAAAAAAAAA
+AAAAACH5BAUUAAkALAAAAAAPAA8AAARBMBFEq0UkjXO7mR3XdYQAjtQBJEKBImoiA+JVDAkwrPR1
+CLJJJleDrTYwXK9SEARqv6fPZSkYXthsBYk9ZAbZTAQAOw==
+
+------=_NextPart_000_000B_01C97BF4.7CC965A0
+Content-Type: text/css;
+	charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.fusioncharts.com/docs/Contents/ChartSS/ChartStyle.css
+
+.pageHeader {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; COLOR: #291e40; FONT-FAMILY: =
+Verdana
+}
+.quickLinksText {
+	FONT-SIZE: 8pt; COLOR: #291e40; FONT-FAMILY: Verdana; FONT-DECORATION: =
+underline
+}
+.tableGreyBorder {
+	BORDER-RIGHT: #57686a 1px solid; BORDER-TOP: #57686a 1px solid; =
+BORDER-LEFT: #57686a 1px solid; BORDER-BOTTOM: #57686a 1px solid
+}
+.tableYellowBorder {
+	BORDER-RIGHT: #fe9b00 1px solid; BORDER-TOP: #fe9b00 1px solid; =
+BORDER-LEFT: #fe9b00 1px solid; BORDER-BOTTOM: #fe9b00 1px solid
+}
+.trAttHeader {
+	BACKGROUND: #fef2cf
+}
+.trGreyBg {
+	BACKGROUND: #f1f1f1
+}
+.trLightBlueBg {
+	BACKGROUND: #f7f4fb
+}
+.trDarkGreyBg {
+	BACKGROUND: #999999
+}
+.trDarkYellowBg {
+	BACKGROUND: #fccc22
+}
+.trLightYellowBg {
+	BACKGROUND: #feecb4
+}
+.trVeryLightYellowBg {
+	BACKGROUND: #fffcf0
+}
+.text {
+	FONT-SIZE: 8pt; COLOR: #291e40; FONT-FAMILY: Verdana
+}
+.header {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #291e40; FONT-FAMILY: =
+Verdana
+}
+.textbold {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: #291e40; FONT-FAMILY: Verdana
+}
+.textError {
+	FONT-SIZE: 8pt; COLOR: #ff0000; FONT-FAMILY: Verdana
+}
+.codeBlock {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FONT-SIZE: 12px; BACKGROUND: =
+#fffcf0; PADDING-BOTTOM: 10px; COLOR: #291e40; PADDING-TOP: 10px; =
+FONT-FAMILY: Courier New; LETTER-SPACING: -0.2pt
+}
+.codeInline {
+	FONT-SIZE: 12px; COLOR: #291e40; FONT-FAMILY: Courier New; =
+LETTER-SPACING: -0.2pt
+}
+A:hover {
+	COLOR: #fccc22
+}
+A {
+	FONT-SIZE: 8pt; COLOR: #291e40; FONT-FAMILY: Verdana; TEXT-DECORATION: =
+none
+}
+.imageBorder {
+	BORDER-RIGHT: #57686a 1px solid; BORDER-TOP: #57686a 1px solid; =
+BORDER-LEFT: #57686a 1px solid; BORDER-BOTTOM: #57686a 1px solid
+}
+
+------=_NextPart_000_000B_01C97BF4.7CC965A0--

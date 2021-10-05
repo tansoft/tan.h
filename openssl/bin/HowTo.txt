@@ -1,0 +1,26 @@
+创建服务器证书：
+
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout privateKey.key -out certificate.crt -config openssl.cnf
+CN
+GuangDong
+GuangZhou
+xxx
+xxx
+127.0.0.1
+xxx@xxx.com
+
+openssl req -out CSR.csr -key privateKey.key -new -config openssl.cnf
+CN
+GuangDong
+GuangZhou
+xxx
+xxx
+127.0.0.1
+xxx@xxx.com
+123456
+
+openssl x509 -x509toreq -in certificate.crt -out CSR.csr -signkey privateKey.key
+
+openssl x509 -outform der -in certificate.crt -out certificate.der
+
+openssl x509 -inform der -in certificate.der -out certificate.pem

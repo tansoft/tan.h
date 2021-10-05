@@ -1,0 +1,12 @@
+<html>
+<script type="text/JavaScript" src="FusionCharts.js"></script>
+<body>
+<div id="chartdiv" align="center"></div><br>
+    <script type="text/JavaScript">
+        var chart = new FusionCharts("MSColumn3DLineDY.swf","ChartId", "800", "450", "0", "0");
+        var datasheet='test.xml?r='+Math.random();
+        chart.setDataURL(datasheet);
+        chart.render("chartdiv");
+    </script>
+</body>
+</html>

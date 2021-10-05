@@ -1,0 +1,6 @@
+; RegExpDll.def : Declares the module parameters.
+
+LIBRARY      "RegExpDll.DLL"
+
+EXPORTS
+	CheckRegExp		PRIVATE

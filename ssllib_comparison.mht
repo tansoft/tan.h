@@ -1,0 +1,890 @@
+From: <ÓÉ Windows Internet Explorer 7 ±£´æ>
+Subject: GNU TLS Library - GNU Project - Free Software Foundation (FSF)
+Date: Tue, 22 Sep 2009 23:46:57 +0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01CA3BDE.F8CC5680"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5579
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01CA3BDE.F8CC5680
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.gnu.org/software/gnutls/comparison.html
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" =
+"http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML lang=3Den xml:lang=3D"en" =
+xmlns=3D"http://www.w3.org/1999/xhtml"><HEAD><TITLE>GNU TLS Library - =
+GNU Project - Free Software Foundation (FSF)</TITLE>
+<META http-equiv=3Dcontent-type content=3Dtext/html;charset=3Dutf-8>
+<META content=3Dgnutls name=3Dkeywords><LINK rev=3Dmade=20
+href=3D"mailto:somebody@gnutls.org"><LINK =
+href=3D"http://www.gnu.org/gnu.css"=20
+type=3Dtext/css rel=3Dstylesheet><LINK =
+href=3D"graphics/gnutls-logo-icon.png"=20
+type=3Dimage/png rel=3Dicon>
+<META content=3D"MSHTML 6.00.6000.16890" name=3DGENERATOR></HEAD>
+<BODY text=3D#000000 vLink=3D#9900dd aLink=3D#ff0000 link=3D#1f00ff =
+bgColor=3D#ffffff>
+<DIV align=3Dcenter>
+<P></P>
+<H1>The GNU Transport Layer Security Library <BR>[News]</H1>
+<P></P><A =
+href=3D"http://www.gnu.org/software/gnutls/gnutls-logo.html"><IMG=20
+height=3D86 alt=3D"Gnutls Logo"=20
+src=3D"http://www.gnu.org/software/gnutls/graphics/gnutls-logo.png" =
+width=3D94=20
+align=3Dleft border=3D0> </A><A=20
+href=3D"http://www.gnu.org/software/gnutls/gnutls.html">[Overview]</A> =
+&nbsp; <A=20
+href=3D"http://www.gnu.org/software/gnutls/news.html">[News]</A> &nbsp; =
+<A=20
+href=3D"http://www.gnu.org/software/gnutls/download.html">[Download]</A> =
+&nbsp; <A=20
+href=3D"http://www.gnu.org/software/gnutls/commercial.html">[Commercial=20
+Support]</A> &nbsp; <A=20
+href=3D"http://www.gnu.org/software/gnutls/lists.html">[Mailing =
+lists]</A> &nbsp;=20
+<A=20
+href=3D"http://www.gnu.org/software/gnutls/documentation.html">[Documenta=
+tion]</A>=20
+<BR><A =
+href=3D"http://www.gnu.org/software/gnutls/security.html">[Security=20
+Advisories]</A> <!--&nbsp; <a href=3D"future.html">[Future plans]</a> =
+-->&nbsp; <A=20
+href=3D"http://www.gnu.org/software/gnutls/others.html">[Related =
+projects]</A>=20
+&nbsp; <A=20
+href=3D"http://www.gnu.org/software/gnutls/programs.html">[Applications]<=
+/A>=20
+&nbsp; <A=20
+href=3D"http://www.gnu.org/software/gnutls/contrib.html">[Contributors]</=
+A> <BR><A=20
+href=3D"http://www.gnu.org/software/gnutls/comparison.html">[Comparison]<=
+/A>=20
+&nbsp; <A href=3D"http://www.gnu.org/software/gnutls/server.html">[Test=20
+Server]</A> &nbsp; <A =
+href=3D"http://www.gnu.org/software/gnutls/bugs.html">[Bug=20
+tracker]</A> <BR><BR><BR></DIV>
+<P></P>
+<DIV align=3Dcenter>
+<P>Below is a comparison of different free TLS implementations.=20
+<P>The colors <FONT color=3Dlightgreen>green</FONT> and <FONT =
+color=3Dred>red</FONT>=20
+indicates good and bad situations. Some of these choices may be somewhat =
+
+subjective. Based on your feedback, we'd might consider to change =
+specific items=20
+to yellow.=20
+<P>We compare stable versions for each software. The software compared =
+includes=20
+<A href=3D"http://www.gnu.org/software/gnutls/">GnuTLS</A> 2.8.x, <A=20
+href=3D"http://www.openssl.org/">OpenSSL</A> 0.9.8k, <A=20
+href=3D"http://www.mozilla.org/projects/security/pki/nss/">NSS</A> =
+3.12.4, and <A=20
+href=3D"http://yassl.com/">YaSSL</A> 1.9.6.=20
+<H1>Protocol support</H1>
+<TABLE summary=3D"">
+  <TBODY>
+  <TR bgColor=3D#ccdbe2>
+    <TH></TH>
+    <TH><B>SSLv2.0</B> [1]</TH>
+    <TH><B>SSLv3.0</B></TH>
+    <TH><B>TLSv1.0</B></TH>
+    <TH><B>TLSv1.1</B></TH>
+    <TH><B>TLSv1.2</B></TH></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>GnuTLS</B></TD>
+    <TD bgColor=3Dlightgreen>No</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>OpenSSL</B></TD>
+    <TD bgColor=3Dred>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dred>No</TD>
+    <TD bgColor=3Dred>No</TD></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>NSS</B></TD>
+    <TD bgColor=3Dlightgreen>Yes, off by default</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dred>No?</TD>
+    <TD bgColor=3Dred>No?</TD></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>yaSSL</B></TD>
+    <TD bgColor=3Dlightgreen>No</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD></TR></TBODY></TABLE>
+<TABLE summary=3D"">
+  <TBODY>
+  <TR>
+    <TD>Notes:</TD></TR>
+  <TR>
+    <TD>[1]: <A=20
+      =
+href=3D"http://www.gnu.org/software/gnutls/manual/html_node/On-SSL-2-and-=
+older-protocols.html">SSLv2=20
+      is insecure</A>.</TD></TR></TBODY></TABLE>
+<H1>Key exchange algorithms</H1>
+<TABLE summary=3D"">
+  <TBODY>
+  <TR bgColor=3D#ccdbe2>
+    <TH></TH>
+    <TH><B>Anon-RSA</B></TH>
+    <TH><B>RSA</B></TH>
+    <TH><B>RSA EXPORT</B></TH>
+    <TH><B>DHE-RSA</B></TH>
+    <TH><B>DHE-DSS</B></TH>
+    <TH><B>SRP-DSS</B></TH>
+    <TH><B>SRP-RSA</B></TH>
+    <TH><B>SRP</B></TH>
+    <TH><B>PSK</B></TH>
+    <TH><B>DHE-PSK</B></TH>
+    <TH><B>ECC</B></TH></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>GnuTLS</B></TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dred>No</TD></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>OpenSSL</B></TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dred>No</TD>
+    <TD bgColor=3Dred>No</TD>
+    <TD bgColor=3Dred>No</TD>
+    <TD bgColor=3Dred>No</TD>
+    <TD bgColor=3Dred>No</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>NSS</B></TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dred>No</TD>
+    <TD bgColor=3Dred>No</TD>
+    <TD bgColor=3Dred>No</TD>
+    <TD bgColor=3Dred>No</TD>
+    <TD bgColor=3Dred>No</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>YaSSL</B></TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>No</TD>
+    <TD bgColor=3Dlightgreen>No</TD>
+    <TD bgColor=3Dlightgreen>No</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dred>No</TD></TR></TBODY></TABLE>
+<H1>Encryption algorithms</H1>
+<TABLE summary=3D"">
+  <TBODY>
+  <TR bgColor=3D#ccdbe2>
+    <TH></TH>
+    <TH><B>AES-256 CBC</B></TH>
+    <TH><B>AES-128 CBC</B></TH>
+    <TH><B>3DES CBC</B></TH>
+    <TH><B>DES CBC</B></TH>
+    <TH><B>RC4-128 CBC</B></TH>
+    <TH><B>RC4-40 [1]</B></TH>
+    <TH><B>RC2-40 [1]</B></TH>
+    <TH><B>Camellia</B></TH></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>GnuTLS</B></TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes, off by default</TD>
+    <TD bgColor=3Dlightgreen>Yes, off by default</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>OpenSSL</B></TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dred>Yes?</TD>
+    <TD bgColor=3Dred>Yes?</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>NSS</B></TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dred>Yes?</TD>
+    <TD bgColor=3Dred>Yes?</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>YaSSL</B></TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes, off by default</TD>
+    <TD bgColor=3Dlightgreen>Yes, off by default</TD>
+    <TD bgColor=3Dred>No</TD></TR></TBODY></TABLE>
+<TABLE summary=3D"">
+  <TBODY>
+  <TR>
+    <TD>Notes:</TD></TR>
+  <TR>
+    <TD>[1]: 40-bit encryption is insecure.</TD></TR></TBODY></TABLE>
+<H1>Compression</H1>
+<TABLE summary=3D"">
+  <TBODY>
+  <TR bgColor=3D#ccdbe2>
+    <TH></TH>
+    <TH><B>ZLIB</B></TH>
+    <TH><B>LZO [1]</B></TH></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>GnuTLS</B></TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes, off by default</TD></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>OpenSSL</B></TD>
+    <TD bgColor=3Dlightgreen>Yes?</TD>
+    <TD bgColor=3Dred>No</TD></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>NSS</B></TD>
+    <TD bgColor=3Dred>No?</TD>
+    <TD bgColor=3Dred>No</TD></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>YaSSL</B></TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dred>No</TD></TR></TBODY></TABLE>
+<TABLE summary=3D"">
+  <TBODY>
+  <TR>
+    <TD>Notes:</TD></TR>
+  <TR>
+    <TD>[1]: LZO compression is non-standard.</TD></TR></TBODY></TABLE>
+<H1>Extensions</H1>
+<TABLE summary=3D"">
+  <TBODY>
+  <TR bgColor=3D#ccdbe2>
+    <TH></TH>
+    <TH><B>OpenPGP</B></TH>
+    <TH><B>SRP</B></TH>
+    <TH><B>PSK</B></TH>
+    <TH><B>TLS/IA</B></TH>
+    <TH><B>Supplemental Data</B></TH>
+    <TH><B>Session Ticket</B> (RFC 5077)</TH></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>GnuTLS</B></TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dlightgreen>Yes (2.9.x)</TD></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>OpenSSL</B></TD>
+    <TD bgColor=3Dred>No</TD>
+    <TD bgColor=3Dred>No</TD>
+    <TD bgColor=3Dred>No</TD>
+    <TD bgColor=3Dred>No?</TD>
+    <TD bgColor=3Dred>No?</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>NSS</B></TD>
+    <TD bgColor=3Dred>No</TD>
+    <TD bgColor=3Dred>No</TD>
+    <TD bgColor=3Dred>No</TD>
+    <TD bgColor=3Dred>No</TD>
+    <TD bgColor=3Dred>No?</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>YaSSL</B></TD>
+    <TD bgColor=3Dred>No</TD>
+    <TD bgColor=3Dred>No</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD>
+    <TD bgColor=3Dred>No</TD>
+    <TD bgColor=3Dred>No</TD>
+    <TD bgColor=3Dlightgreen>Yes</TD></TR></TBODY></TABLE>
+<H1>Code size</H1>
+<TABLE summary=3D"">
+  <TBODY>
+  <TR bgColor=3D#ccdbe2>
+    <TH></TH>
+    <TH><B>kLOC</B></TH>
+    <TH><B>Debian etch x86</B></TH>
+    <TH><B>OpenWRT 2008-05-11 [1]</B></TH></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>GnuTLS</B></TD>
+    <TD>60kLoc (core library)</TD>
+    <TD>Total 944kb-1250kb<BR>445kb (libgnutls)<BR>327kb =
+(libgcrypt)<BR>73kb=20
+      (libtasn1)<BR>11kb (libgpg-error)<BR>78kb (libz, optional)<BR>53kb =
+
+      (libgnutls-extra, optional)<BR>129kb (libopencdk, =
+optional)<BR>124kb=20
+      (liblzo, optional)</TD>
+    <TD>Total 323kb<BR>153kb (libgnutls)<BR>104kb (libgcrypt)<BR>26kb=20
+      (libtasn1)<BR>5kb (libgpg-error)<BR>35kb (zlib)</TD></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>OpenSSL</B></TD>
+    <TD>?</TD>
+    <TD>Total 1649kb<BR>252kb (libssl)<BR>1319kb (libcrypto)<BR>78kb =
+(libz)</TD>
+    <TD>Total 506kb<BR>471kb (libopenssl)<BR>35kb (zlib)</TD></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>NSS</B></TD>
+    <TD>?</TD>
+    <TD>Total 1136kb<BR>152kb (libssl3)<BR>462kb (libnss3)<BR>193kb=20
+      (libnspr4)<BR>307kb (libsoftokn3)<BR>14kb (libplc4)<BR>8kb=20
+    (libplds4)<BR></TD>
+    <TD>Not ported</TD></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>YaSSL</B></TD>
+    <TD>15kLoc</TD>
+    <TD>Total 90kb</TD>
+    <TD>Total 60kb</TD></TR></TBODY></TABLE>
+<TABLE summary=3D"">
+  <TBODY>
+  <TR>
+    <TD>Notes:</TD></TR>
+  <TR>
+    <TD>[1]: Build tree available from <A=20
+      =
+href=3D"http://josefsson.org/openwrt/">http://josefsson.org/openwrt/</A>.=
+=20
+      Built using default settings for all packages for a Asus WL-500gP =
+as per=20
+      2008-05-11.</TD></TR></TBODY></TABLE>
+<H1>Development environment</H1>
+<TABLE summary=3D"">
+  <TBODY>
+  <TR bgColor=3D#ccdbe2>
+    <TH></TH>
+    <TH><B>Namespace</B></TH>
+    <TH><B>Build tools</B></TH>
+    <TH><B>API manual</B></TH>
+    <TH><B>Crypto library</B></TH>
+    <TH><B>ASN.1 library</B></TH>
+    <TH><B>X.509 library</B></TH>
+    <TH><B>OpenPGP library</B></TH></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>GnuTLS</B></TD>
+    <TD>gnutls_*</TD>
+    <TD>Autoconf, automake, libtool</TD>
+    <TD>Texinfo (HTML, PDF, etc), GTK-DOC, Devhelp</TD>
+    <TD>External, libgcrypt</TD>
+    <TD>External, libtasn1</TD>
+    <TD>Included, monolithic</TD>
+    <TD>External, OpenCDK</TD></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>OpenSSL</B></TD>
+    <TD>SSL_*<BR>SHA1_*<BR>MD5_*<BR>EVP_*<BR>...</TD>
+    <TD>Makefile</TD>
+    <TD>Man pages</TD>
+    <TD>Included, monolithic</TD>
+    <TD>Included, monolithic</TD>
+    <TD>Included, monolithic</TD>
+    <TD>Not applicable</TD></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>NSS</B></TD>
+    <TD>CERT_*<BR>SEC_*<BR>SECKEY_*<BR>NSS_*<BR>PK11_*<BR>...</TD>
+    <TD>Makefile</TD>
+    <TD>Online HTML</TD>
+    <TD>Included, PKCS#11 based [1]</TD>
+    <TD>Included, monolithic</TD>
+    <TD>Included, monolithic</TD>
+    <TD>Not applicable</TD></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>YaSSL</B></TD>
+    <TD>yaSSL_*, CyaSSL_*, SSL_*</TD>
+    <TD>Autoconf, automake, libtool,<BR>MSVC project workspaces, XCode=20
+    projects</TD>
+    <TD>API manual (html)</TD>
+    <TD>Included, monolithic</TD>
+    <TD>Included, monolithic</TD>
+    <TD>Included, monolithic</TD>
+    <TD>Not applicable</TD></TR></TBODY></TABLE>
+<TABLE summary=3D"">
+  <TBODY>
+  <TR>
+    <TD>Notes:</TD></TR>
+  <TR>
+    <TD>[1]: On the fly =
+replaceable/augmentable.</TD></TR></TBODY></TABLE>
+<H1>Portability concerns</H1>
+<TABLE summary=3D"">
+  <TBODY>
+  <TR bgColor=3D#ccdbe2>
+    <TH></TH>
+    <TH><B>Platform requirements</B></TH>
+    <TH><B>Network requirements</B></TH>
+    <TH><B>Thread-safety</B></TH>
+    <TH><B>Random seed</B></TH></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>GnuTLS</B></TD>
+    <TD>C89</TD>
+    <TD>POSIX read() and write(). API to supply your own =
+replacement.</TD>
+    <TD>Thread-safe, although libgcrypt needs mutex hooks</TD>
+    <TD>Random seed set through libgcrypt</TD></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>OpenSSL</B></TD>
+    <TD>C89?</TD>
+    <TD>?</TD>
+    <TD>Needs mutex callbacks</TD>
+    <TD>Set through native API</TD></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>NSS</B></TD>
+    <TD>NSPR [1]</TD>
+    <TD>NSPR [1]</TD>
+    <TD>NSPR [1]</TD>
+    <TD>Platform dependent [2]</TD></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>YaSSL</B></TD>
+    <TD>C89</TD>
+    <TD>POSIX send() and recv(). API to supply your own =
+replacement.</TD>
+    <TD>Thread-safe, needs mutex hooks if PThreads or WinThreads not=20
+      available, can be turned off</TD>
+    <TD>Random seed set through TaoCrypt</TD></TR></TBODY></TABLE>
+<TABLE summary=3D"">
+  <TBODY>
+  <TR>
+    <TD>Notes:</TD></TR>
+  <TR>
+    <TD>[1]: NSPR (and NSS) has (have) been ported to the following =
+platforms=20
+      (that rrelyea@redhat.com know about): AIX, BSD, BeOS, HP-UX, IRIX, =
+Linux,=20
+      Mac OS X, Mac OS 9, OS/2, Solaris, OpenVMS, Amiga DE, Windows, =
+WinCE, Sony=20
+      playstation.</TD></TR>
+  <TR>
+    <TD>[2]: For Unix/Linux it uses /dev/urandom if available, for =
+Windows it=20
+      uses CAPI. For all platforms it gets data from clock, and tries to =
+open=20
+      system files. NSS has a set of platform dependent functions is =
+uses to=20
+      determine randomness. </TR></TBODY></TABLE>
+<H1>Project status</H1>
+<TABLE summary=3D"">
+  <TBODY>
+  <TR bgColor=3D#ccdbe2>
+    <TH></TH>
+    <TH><B>License</B></TH>
+    <TH><B>Copyright owner</B></TH>
+    <TH><B>Origin</B></TH></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>GnuTLS</B></TD>
+    <TD>LGPL (core library), GPL (tools)</TD>
+    <TD>FSF</TD>
+    <TD>EU (Greece and Sweden)</TD></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>OpenSSL</B></TD>
+    <TD><A href=3D"http://www.openssl.org/source/license.html">OpenSSL=20
+      license</A>, BSD with <A=20
+      href=3D"http://www.gnu.org/philosophy/bsd.html">advertising =
+clause</A></TD>
+    <TD>Eric Young, Tim Hudson, Sun, OpenSSL project, ...?</TD>
+    <TD>Australia</TD></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>NSS</B></TD>
+    <TD>MPL, GPL or LGPL</TD>
+    <TD>Netscape Inc, Sun, RedHat, RSA Security, ...?</TD>
+    <TD>US</TD></TR>
+  <TR bgColor=3D#e5e5e5>
+    <TD bgColor=3D#e0d7d7><B>YaSSL</B></TD>
+    <TD>GPL, Commercial available</TD>
+    <TD>Licenses from yassl.com</TD>
+    <TD>US</TD></TR></TBODY></TABLE>
+<H1>Request for Help</H1>
+<TABLE summary=3D"">
+  <TBODY>
+  <TR>
+    <TD>I need your help to maintain this page. Particular things which =
+has=20
+      been suggested to incorporate into this page, but I don't know how =
+to do=20
+      include:</TD>
+  <TR>
+    <TD>
+      <UL>
+        <LI>Add a column on certificate management/storage and PKCS =
+#11/token=20
+        support. </LI></UL></TD></TR>
+  <TR>
+    <TD>
+      <UL>
+        <LI>Add table for things like OCSP and CRL processing support.=20
+    </LI></UL></TD></TR></TBODY></TABLE></DIV>
+<P></P>
+<DIV class=3Dcopyright>
+<P>Please send FSF &amp; GNU inquiries to <A=20
+href=3D"mailto:gnu@gnu.org">mailto:gnu@gnu.org</A>. There are also <A=20
+href=3D"http://www.gnu.org/contact/">other ways to contact</A> the =
+FSF.<BR>Please=20
+send broken links and other corrections or suggestions to <A=20
+href=3D"mailto:bug-gnutls@gnu.org">mailto:bug-gnutls@gnu.org</A>.</P>
+<P>Copyright =C2=A9 2009 Free Software Foundation, Inc.</P>
+<P>Verbatim copying and distribution of this entire article are =
+permitted=20
+worldwide, without royalty, in any medium, provided this notice, and the =
+
+copyright notice, are preserved.</P>
+<P>Updated: <!-- timestamp start -->$Date: 2009/09/03 05:34:12 $ <!-- =
+timestamp end --></P></DIV>
+<DIV></DIV></BODY></HTML>
+
+------=_NextPart_000_0000_01CA3BDE.F8CC5680
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://www.gnu.org/software/gnutls/graphics/gnutls-logo.png
+
+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
+A82ySYdb8WnOAAAAAElFTkSuQmCC
+
+------=_NextPart_000_0000_01CA3BDE.F8CC5680
+Content-Type: text/css;
+	charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.gnu.org/gnu.css
+
+
+@media Screen   =20
+{
+HTML {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+BODY {
+	PADDING-RIGHT: 1em; PADDING-LEFT: 1em; PADDING-BOTTOM: 1em; MARGIN: =
+0px; COLOR: #333; PADDING-TOP: 1em; FONT-FAMILY: sans-serif; =
+BACKGROUND-COLOR: #fff
+}
+H1 {
+	BORDER-TOP-WIDTH: 0px; FONT-WEIGHT: bold; BORDER-LEFT-WIDTH: 0px; =
+BORDER-BOTTOM-WIDTH: 0px; COLOR: #000; FONT-FAMILY: sans-serif; =
+BACKGROUND-COLOR: transparent; BORDER-RIGHT-WIDTH: 0px
+}
+H2 {
+	BORDER-TOP-WIDTH: 0px; FONT-WEIGHT: bold; BORDER-LEFT-WIDTH: 0px; =
+BORDER-BOTTOM-WIDTH: 0px; COLOR: #000; FONT-FAMILY: sans-serif; =
+BACKGROUND-COLOR: transparent; BORDER-RIGHT-WIDTH: 0px
+}
+H3 {
+	BORDER-TOP-WIDTH: 0px; FONT-WEIGHT: bold; BORDER-LEFT-WIDTH: 0px; =
+BORDER-BOTTOM-WIDTH: 0px; COLOR: #000; FONT-FAMILY: sans-serif; =
+BACKGROUND-COLOR: transparent; BORDER-RIGHT-WIDTH: 0px
+}
+H4 {
+	BORDER-TOP-WIDTH: 0px; FONT-WEIGHT: bold; BORDER-LEFT-WIDTH: 0px; =
+BORDER-BOTTOM-WIDTH: 0px; COLOR: #000; FONT-FAMILY: sans-serif; =
+BACKGROUND-COLOR: transparent; BORDER-RIGHT-WIDTH: 0px
+}
+H5 {
+	BORDER-TOP-WIDTH: 0px; FONT-WEIGHT: bold; BORDER-LEFT-WIDTH: 0px; =
+BORDER-BOTTOM-WIDTH: 0px; COLOR: #000; FONT-FAMILY: sans-serif; =
+BACKGROUND-COLOR: transparent; BORDER-RIGHT-WIDTH: 0px
+}
+H6 {
+	BORDER-TOP-WIDTH: 0px; FONT-WEIGHT: bold; BORDER-LEFT-WIDTH: 0px; =
+BORDER-BOTTOM-WIDTH: 0px; COLOR: #000; FONT-FAMILY: sans-serif; =
+BACKGROUND-COLOR: transparent; BORDER-RIGHT-WIDTH: 0px
+}
+H1 {
+	FONT-SIZE: 1.7em
+}
+A:link {
+	COLOR: #1f00ff; BACKGROUND-COLOR: transparent; TEXT-DECORATION: =
+underline
+}
+A:visited {
+	COLOR: #9900dd; BACKGROUND-COLOR: transparent; TEXT-DECORATION: =
+underline
+}
+A:hover {
+	COLOR: red; BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline
+}
+.center {
+	TEXT-ALIGN: center
+}
+.italic {
+	FONT-STYLE: italic
+}
+.bold {
+	FONT-WEIGHT: bold
+}
+.quote {
+	MARGIN-LEFT: 40px; MARGIN-RIGHT: 40px
+}
+.hrsmall {
+	MARGIN-LEFT: 20px; WIDTH: 80px; HEIGHT: 1px
+}
+.td_title {
+	BORDER-RIGHT: #3366cc thin solid; BORDER-TOP: #3366cc thin solid; =
+FONT-WEIGHT: bold; BORDER-LEFT: #3366cc thin solid; COLOR: #3366cc; =
+BORDER-BOTTOM: #3366cc thin solid; BACKGROUND-COLOR: #f2f2f9
+}
+.td_con {
+	PADDING-LEFT: 8px; PADDING-BOTTOM: 3px; COLOR: #303030; PADDING-TOP: =
+3px; BACKGROUND-COLOR: #fefefe
+}
+.translations {
+	BACKGROUND-COLOR: transparent
+}
+.fsflink {
+	BORDER-BOTTOM: #3366cc thin solid
+}
+.fsflink_rtl {
+	PADDING-RIGHT: 0.2em; PADDING-BOTTOM: 0.2em; BORDER-BOTTOM: #3366cc =
+thin solid
+}
+.trans {
+	PADDING-LEFT: 1em
+}
+.trans_rtl {
+	PADDING-RIGHT: 1em
+}
+IMG {
+	BORDER-TOP-WIDTH: 0px! important; BORDER-LEFT-WIDTH: 0px! important; =
+BORDER-BOTTOM-WIDTH: 0px! important; BORDER-RIGHT-WIDTH: 0px! important
+}
+P {
+	FONT-SIZE: 1em
+}
+TD.side {
+	BORDER-LEFT-COLOR: white; BORDER-BOTTOM-COLOR: white; VERTICAL-ALIGN: =
+top; WIDTH: 150px; COLOR: #3366cc; BORDER-TOP-STYLE: none; =
+BORDER-TOP-COLOR: white; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: =
+none; BORDER-RIGHT-COLOR: white; BORDER-BOTTOM-STYLE: none
+}
+DIV.copyright {
+	PADDING-RIGHT: 0.4em; BORDER-TOP: #06c 2px solid; PADDING-LEFT: 0.4em; =
+BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0.4em; =
+PADDING-TOP: 0.4em; BORDER-RIGHT-WIDTH: 0px
+}
+#footer {
+	PADDING-RIGHT: 0.4em; BORDER-TOP: #06c 2px solid; PADDING-LEFT: 0.4em; =
+BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0.4em; =
+PADDING-TOP: 0.4em; BORDER-RIGHT-WIDTH: 0px
+}
+.translations-list {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+.translations-list LI {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+#validation {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+#validation LI {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+#translations UL {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+#translations UL LI {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+.translations-list LI {
+	PADDING-RIGHT: 0.3em; PADDING-LEFT: 0.3em; MARGIN: 0px; BORDER-LEFT: =
+#aaa 1px solid
+}
+#translations UL LI {
+	PADDING-RIGHT: 0.3em; PADDING-LEFT: 0.3em; MARGIN: 0px; BORDER-LEFT: =
+#aaa 1px solid
+}
+.translations-list LI:first-child {
+	PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px
+}
+.footnoteref {
+	VERTICAL-ALIGN: text-top
+}
+.ss > LI {
+	MARGIN-TOP: 1em; MARGIN-BOTTOM: 0.2em
+}
+.ss > DT {
+	MARGIN-TOP: 1em; MARGIN-BOTTOM: 0.2em
+}
+.ss > LI > P {
+	MARGIN-TOP: 0.4em; MARGIN-BOTTOM: 0px
+}
+.ss > DD > P {
+	MARGIN-TOP: 0.4em; MARGIN-BOTTOM: 0px
+}
+UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; LIST-STYLE-IMAGE: =
+url(http://www.fsf.org/bullet.gif); PADDING-BOTTOM: 0px; MARGIN: 0.5em =
+0px 0px 1.5em; LINE-HEIGHT: 1.5em; PADDING-TOP: 0px; LIST-STYLE-TYPE: =
+square
+}
+OL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0.5em 0px 0px 1.5em; LINE-HEIGHT: 1.5em; PADDING-TOP: 0px
+}
+UL A {
+	TEXT-DECORATION: underline
+}
+OL A {
+	TEXT-DECORATION: underline
+}
+DT {
+	FONT-WEIGHT: bold
+}
+DT A {
+	TEXT-DECORATION: underline
+}
+DD {
+	MARGIN-BOTTOM: 1em; LINE-HEIGHT: 1.5em
+}
+DD A {
+	TEXT-DECORATION: underline
+}
+DD.link A {
+	COLOR: black; TEXT-DECORATION: none
+}
+FIELDSET {
+	BORDER-RIGHT: #666666 1px solid; PADDING-RIGHT: 1em; BORDER-TOP: =
+#666666 1px solid; PADDING-LEFT: 1em; PADDING-BOTTOM: 1em; MARGIN: 1em =
+0em; BORDER-LEFT: #666666 1px solid; WIDTH: auto; LINE-HEIGHT: 1.5em; =
+PADDING-TOP: 0em; BORDER-BOTTOM: #666666 1px solid
+}
+LEGEND {
+	PADDING-RIGHT: 0.5em; PADDING-LEFT: 0.5em; FONT-SIZE: 90%; BACKGROUND: =
+white; PADDING-BOTTOM: 0.5em; PADDING-TOP: 0.5em
+}
+FORM {
+	MARGIN: 0px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+ABBR {
+	CURSOR: help; COLOR: black; BORDER-BOTTOM: black 1px dotted; =
+BACKGROUND-COLOR: transparent
+}
+ACRONYM {
+	CURSOR: help; COLOR: black; BORDER-BOTTOM: black 1px dotted; =
+BACKGROUND-COLOR: transparent
+}
+.explain {
+	CURSOR: help; COLOR: black; BORDER-BOTTOM: black 1px dotted; =
+BACKGROUND-COLOR: transparent
+}
+Q {
+	FONT-STYLE: italic; FONT-FAMILY: serif
+}
+BLOCKQUOTE {
+	FONT-STYLE: italic; FONT-FAMILY: serif
+}
+INS {
+	COLOR: green; TEXT-DECORATION: none
+}
+DEL {
+	COLOR: red; TEXT-DECORATION: line-through
+}
+.netscape4 {
+	DISPLAY: none
+}
+.field {
+	LEFT: 0px; MARGIN: 0px 1em 1em 0px; TOP: 0px
+}
+A:link ACRONYM {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: =
+0px; COLOR: blue; BORDER-RIGHT-WIDTH: 0px
+}
+A:visited ACRONYM {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: =
+0px; COLOR: purple; BORDER-RIGHT-WIDTH: 0px
+}
+A:hover ACRONYM {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: =
+0px; COLOR: red; BORDER-RIGHT-WIDTH: 0px
+}
+.highlight {
+	BACKGROUND-COLOR: #ffc
+}
+#top {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; WIDTH: 800px; PADDING-TOP: 0px
+}
+#top IMG {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; FLOAT: left; =
+BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+#top-stack {
+	MARGIN-TOP: 65px; FLOAT: left; MARGIN-LEFT: 7px
+}
+#top-stack IMG {
+	FLOAT: left
+}
+.clear {
+	CLEAR: both
+}
+
+}
+
+------=_NextPart_000_0000_01CA3BDE.F8CC5680--
