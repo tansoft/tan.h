@@ -18,6 +18,7 @@
 * 对话框组件：THDlgItemXXX
 * 对话框位置控制：THResizeDialogRect
 * 自适应对话框：THResizeDlg
+* Html控件：THWebCtrl
 * 数据库数据显示可以使用：THDBQueryCtrls 里的 THDBQueryXXX 系列组件。
 * 图片处理：THBitmap，THMemDC
 * 自动更新：THLiveUpdate，THLiveUpdateDll
@@ -37,14 +38,17 @@
 * THSpeedCounting：计数器
 
 ## 文字处理、内存处理
+* 常用类型定义：THBase
+* 常用数据结构：THStruct
 * 编码处理：THCharset
 * 字符串：THString
-* 常用数据结构：THStruct
 * 调试：THDebug
 * Guid：THGuid
 * Json处理：THJsonParser
 * 四则运算：THLogicCalc
 * 内存缓冲管理类：THMemBuf，内存管理：THMenManager，内存检查：THMemCheck，对象池管理：THObjectBuffer
+ * THMemBuf 缓冲由块组成,读出大块时需要另起缓冲
+ * THTiniBuf 缓冲由固定大小块组成,new时使用基本大小倍数,读出时可直接引用
 * 正则表达式：THRegExpDll
 * 脚本引擎：THScript
 * stl库扩展：THStlEx
@@ -64,12 +68,14 @@
 * Mp4文件处理：THMp4Parser
 * Swf文件处理：THSwfParser
 * 内存映射：THMapFile
+* 压缩文件： THGZip，THLzma
+* Xml：THTiniXml
 
 ## 进程处理
 * 进程管理：THCmdProcess
-* 线程管理：THThread
+* 线程管理：THThread，线程池：THThreadPool
 * 系统类库：THSystem，THSysMisc，THSysCallRapper
-* 锁：THSyn
+* 锁，事件等：THSyn
 * 类库加载：THDllLoader
 * 崩溃信息：THExceptionHandler
 * IE管理：THIeHandler，THRemoteIeAccess，THIeHtmlElementParser
@@ -87,6 +93,7 @@
 * Socket封装：THRawSocket
 * 广播：THRawBoardcastSocket
 * 客户端连接管理：THRawSocketClients
+* C/S模型： THServer，THClient，THPacketBuffer
 * 封包管理：THSimplePacket
 * 授权管理：THSoftwareAuth
 * ssl：THSsl
@@ -151,88 +158,4 @@
 * doc: doxgen相关配置，可生成说明文档
 * flash: flash相关配置，提供flash控件的皮肤类skinloader，以及所见即所得编辑器wysiwygeditor
 * lib: 提供预编译好的环境。
-
-# 常用类
-
-THBase.h
- 各种常规类型定义
-
-THStruct.h
- 数据结构类，Map，List，Pool
-
-THSyn.h
- 锁，事件
-
-THMath.h
- THArithmetic
- THRegExp
-
-THEncode.h
- THTiniEncode
- THDes
- THAes
-
-THHash.h
- THMd5
- THSha
-
-THZip.h
- THGZip
- THLzma
-
-THString.h:
- 字符串处理类
-
-THThread.h:
- 多线程类
- THThreadPool
-
-THIni.h
- THIni
- THTiniIni
- THTiniXml
-
-THDataFile.h
- 文件数据库类
-
-THDataBase.h
- 数据库封装
-
-THHttp.h
- http协议封装
-
-THNetWork.h
- THRawNetWorkLayer
-
-THCsModel
- THServer
- THClient
- THPacketBuffer
- C/S模型
-
-THBuf.h
- THMemBuf 缓冲由块组成,读出大块时需要另起缓冲
- THTiniBuf 缓冲由固定大小块组成,new时使用基本大小倍数,读出时可直接引用
-
-THSystem.h
- 系统封装
- THFile
- THTime
- THDebug
- 所有系统函数声明
- SysXX
-
-ui:
- THButton
- THStatic
- THStaticButton
- THAniStatic
- THSkinPPW
- THBitmap
- THWebCtrl
-
-win:
- THWinApp
-
-app:
- THLiveupdate
+* misc: 一些资料
